@@ -30,8 +30,22 @@ const travelServices = [
   {
     title: 'Customized Itineraries',
     description: 'We tailor your journey to your preferences and interests',
+    backContent: 'Get personalized travel plans crafted by our expert team, including accommodations, activities, and local experiences.',
     icon: ''
   },
+  {
+    title: 'Visa Assistance',
+    description: 'We assist you with visa applications for your dream destinations',
+    backContent: 'Complete visa support including document preparation, application filing, and status tracking.',
+    icon: ''
+  },
+  {
+    title: 'Travel Insurance',
+    description: 'We provide comprehensive travel insurance to protect your journey',
+    backContent: 'Coverage for medical emergencies, trip cancellations, lost baggage, and other travel-related incidents.',
+    icon: ''
+  },
+  
   // Add more services
 ];
 
@@ -67,7 +81,7 @@ export default function Home() {
           {/* Text Content */}
           <div className="flex-1 space-y-6">
             <h1 className="text-4xl md:text-7xl lg:text-9xl 2xl:text-9xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-black to-[#dc0069]">
-              LET'S EXPLORE
+              Holidays 2025
             </h1>
             <p className="text-gray-600 text-lg max-w-2xl">
               Why stay in one place when there's a whole world to explore? From breathtaking landscapes
@@ -160,12 +174,25 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {travelServices.map((service, index) => (
-              <div key={index} className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 mb-4 text-pink-600">
-                  {service.icon}
+              <div key={index} className="group h-[300px] [perspective:1000px]">
+                <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 p-6 border border-gray-100 shadow-lg rounded-lg bg-white">
+                    <div className="w-12 h-12 mb-4 text-pink-600">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 h-full w-full p-6  rounded-lg bg-[#dc0069] [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className="flex flex-col h-full justify-center items-center text-center">
+                      <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
+                      <p className="text-white">{service.backContent}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>

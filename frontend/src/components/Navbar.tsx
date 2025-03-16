@@ -1,16 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { signout } from '@/services/auth.service';
+import { Popover, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import UserMenu from './UserMenu';
 
 const packageLinks = [
-  { title: 'Family Packages', href: '/packages/all-inclusive' },
-  { title: 'All Exclusive Holidays', href: '/packages/all-exclusive' },
-  { title: 'Family Holidays', href: '/packages/family' },
+  { title: 'Family Packages', href: '/family-packages' },
+  { title: '2025 Holidays', href: '/packages/all-exclusive' },
+  { title: 'Corporate Packages', href: '/corporate' },
+  { title: 'Visa Free Holidays', href: '/visa-free-holidayys' },
   
 ];
 
@@ -19,6 +23,24 @@ const moreLinks = [
   { title: 'Contact Us', href: '/contact-us' },
   { title: 'Blog', href: '/blog' },
   { title: 'FAQs', href: '/faqs' },
+];
+
+const visaCountries = [
+  {
+    name: 'Dubai',
+    href: '/visa-services/dubai',
+    icon: '🇦🇪'
+  },
+  {
+    name: 'Malaysia',
+    href: '/visa-services/malaysia',
+    icon: '🇲🇾'
+  },
+  {
+    name: 'Schengen',
+    href: '/visa-services/schengen',
+    icon: '🇪🇺'
+  }
 ];
 
 const Navbar = () => {
@@ -102,13 +124,45 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+          <Popover className="relative">
+            {() => (
+              <>
+                <Popover.Button className="inline-flex hover:text-pink-600 items-center gap-x-1 text-md font-semibold leading-6 text-gray-900">
+                  Visas
+                  <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                </Popover.Button>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                    <div className="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 shadow-lg ring-1 ring-gray-900/5">
+                      {visaCountries.map((country) => (
+                        <Link
+                          key={country.name}
+                          href={country.href}
+                          className="block p-2 hover:bg-gray-50 rounded-lg"
+                        >
+                          <span className="flex items-center gap-2">
+                            <span>{country.icon}</span>
+                            {country.name}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </>
+            )}
+          </Popover>
           {isLoggedIn ? (
-            <button 
-              onClick={handleSignOut}
-              className="text-pink-600 font-semibold font-mono hover:text-pink-700"
-            >
-              Sign Out
-            </button>
+            <UserMenu />
           ) : (
             <Link 
               href="/sign-in" 
