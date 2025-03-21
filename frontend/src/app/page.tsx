@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HotelList from '../components/HotelList';
 import Features from '../components/Features';
+import HomeHero from '../components/hero/HomeHero';
 
 const popularDestinations = [
   {
@@ -76,62 +77,8 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="container mx-auto px-4">
-      <section className="py-12">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Text Content */}
-          <div className="flex-1 space-y-6">
-            <h1 className="text-4xl md:text-7xl lg:text-9xl 2xl:text-9xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-black to-[#dc0069]">
-              Holidays 2025
-            </h1>
-            <p className="text-gray-600 text-lg max-w-2xl">
-              Why stay in one place when there's a whole world to explore? From breathtaking landscapes
-              to rich cultural experiences, we connect you to destinations across the globe. Start your next
-              adventure today and let's make memories that last a lifetime!
-            </p>
-          </div>
-
-          {/* Image Grid */}
-          <div className="flex-1 grid grid-cols-2 gap-4 h-[600px]">
-            <div className="space-y-4">
-              <div className="relative h-[400px] w-full">
-                <Image
-                  src="/images/sunset-dock.jpg"
-                  alt="Sunset dock view"
-                  fill
-                  className="object-cover rounded-lg"
-                  priority
-                />
-              </div>
-              <div className="relative h-[180px] w-full">
-                <Image
-                  src="/images/palm-sunset.jpg"
-                  alt="Palm trees at sunset"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-4 pt-8">
-              <div className="relative h-[180px] w-full">
-                <Image
-                  src="/images/petronas.jpg"
-                  alt="Petronas Towers"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-              <div className="relative h-[400px] w-full">
-                <Image
-                  src="/images/fountain.jpg"
-                  alt="Modern fountain"
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="py-20">
+        <HomeHero />
       </section>
 
       <section className="py-16 bg-gray-50" aria-label="Popular Destinations">
