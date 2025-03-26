@@ -87,7 +87,7 @@ export default function SchengenVisa() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Schengen Visa Processing Services</h2>
             <p className="text-gray-700 mb-4">
-              The Schengen visa opens doors to 27 European countries, offering unparalleled opportunities for tourism, business, and education. Whether you're planning a European vacation, business meetings, or academic pursuits, our expert visa services ensure a thorough and efficient application process.
+              The Schengen visa opens doors to 27 European countries, offering unparalleled opportunities for tourism, business, and education. Whether you&apos;re planning a European vacation, business meetings, or academic pursuits, our expert visa services ensure a thorough and efficient application process.
             </p>
           </div>
         </div>

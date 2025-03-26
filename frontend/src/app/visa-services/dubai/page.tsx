@@ -87,7 +87,7 @@ export default function DubaiVisa() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Dubai Visa Processing Services</h2>
             <p className="text-gray-700 mb-4">
-              Dubai, the jewel of the United Arab Emirates, attracts millions of visitors annually for its stunning architecture, luxury shopping, vibrant nightlife, and business opportunities. Whether you're planning a short vacation, business trip, or extended stay, our expert visa services ensure a smooth application process.
+              Dubai, the jewel of the United Arab Emirates, attracts millions of visitors annually for its stunning architecture, luxury shopping, vibrant nightlife, and business opportunities. Whether you&apos;re planning a short vacation, business trip, or extended stay, our expert visa services ensure a smooth application process.
             </p>
             
             {/* Additional content sections... */}

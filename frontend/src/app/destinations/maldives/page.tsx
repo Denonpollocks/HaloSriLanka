@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import PackageList from '@/components/PackageList';
-import Features from '@/components/Features';
 import type { Metadata } from 'next';
-import PackageCard from '@/components/PackageCard';
 import Script from 'next/script';
 import { 
   PaperAirplaneIcon, 
@@ -20,6 +17,7 @@ import {
   BeakerIcon,
   HomeModernIcon
 } from '@heroicons/react/24/outline';
+import Breadcrumbs from '@/components/BreadCrumbs';
 
 
 
@@ -114,7 +112,7 @@ export default function MaldivesDestination() {
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-
+      
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         {/* Animated Title */}
@@ -132,7 +130,7 @@ export default function MaldivesDestination() {
 
   
     </header>
-
+    <Breadcrumbs /> 
       {/* Introduction Section */}
       <section className="py-20 bg-gradient-to-b from-white to-pink-50/30">
         <div className="container mx-auto px-4">
@@ -815,7 +813,7 @@ export default function MaldivesDestination() {
     <div className="space-y-6">
       {[
         {
-          question: "What's the best time to visit the Maldives?",
+          question: "What&apos;s the best time to visit the Maldives?",
           answer: "The dry season from December to April offers ideal conditions..."
         },
         {

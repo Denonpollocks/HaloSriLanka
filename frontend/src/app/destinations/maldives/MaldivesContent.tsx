@@ -360,7 +360,7 @@ export default function MaldivesContent() {
               
               <div className="space-y-6">
                 <p className="text-gray-700 text-lg">
-                  Home to 5% of the world's reef area, the Maldives offers exceptional diving opportunities.
+                  Home to 5% of the world&apos;s reef area, the Maldives offers exceptional diving opportunities.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -732,7 +732,7 @@ export default function MaldivesContent() {
     <div className="space-y-6">
       {[
         {
-          question: "What's the best time to visit the Maldives?",
+          question: "What&apos;s the best time to visit the Maldives?",
           answer: "The dry season from December to April offers ideal conditions..."
         },
         {

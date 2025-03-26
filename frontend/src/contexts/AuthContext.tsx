@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect } from 'react';
-import { isAuthenticated, getUser } from '@/services/auth.service';
+import { isAuthenticated } from '@/services/auth.service';
 
 const AuthContext = createContext<{
   isLoggedIn: boolean;

@@ -1,0 +1,591 @@
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import Script from 'next/script';
+import { 
+  PaperAirplaneIcon, 
+  CalendarIcon, 
+  GlobeAsiaAustraliaIcon,
+  TicketIcon,
+  IdentificationIcon,
+  PlusIcon,
+  MinusIcon,
+  CheckIcon,
+  TrophyIcon,
+  UserGroupIcon,
+  BeakerIcon,
+  HomeModernIcon,
+  BuildingOfficeIcon,
+  ShoppingBagIcon,
+  SparklesIcon,
+  CakeIcon,
+  MapIcon
+} from '@heroicons/react/24/outline';
+import Breadcrumbs from '@/components/BreadCrumbs';
+
+export const metadata: Metadata = {
+  title: 'Luxury Dubai Holidays 2024 | Premium Travel Experiences',
+  description: 'Experience luxury Dubai holidays featuring 5-star hotels, desert adventures, and exclusive experiences. Book your 2024 Dubai escape today.',
+  keywords: 'Dubai holidays, luxury Dubai hotels, Burj Khalifa, desert safari, Dubai shopping, Palm Jumeirah',
+  alternates: {
+    canonical: 'https://haloholidays.com/destinations/dubai'
+  },
+  openGraph: {
+    title: 'Luxury Dubai Holidays 2024 | Premium Experiences',
+    description: 'Discover Dubai\'s finest hotels, adventures, and exclusive experiences with luxury holiday packages.',
+    type: 'website',
+    locale: 'en_GB',
+    images: [
+      {
+        url: '/images/destinations/dubai/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dubai Skyline and Luxury Resort'
+      }
+    ]
+  }
+};
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "TravelDestination",
+  "name": "Dubai",
+  "description": "Ultra-modern architecture meets Arabian heritage",
+  "url": "https://haloholidays.com/destinations/dubai",
+  "touristType": ["Luxury", "Shopping", "Adventure", "Culture"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "2100"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "AED",
+    "lowPrice": "2999",
+    "highPrice": "15999",
+    "offerCount": "35"
+  }
+};
+
+const packageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Dubai Luxury Holiday Packages 2024",
+  "description": "Premium Dubai packages including 5-star hotels and exclusive experiences",
+  "brand": {
+    "@type": "Brand",
+    "name": "Halo Holidays"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "AED",
+    "price": "2999",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2024-01-01"
+  }
+};
+
+export default function DubaiDestination() {
+  return (
+    <main className="min-h-screen">
+      <header className="relative h-[80vh] flex items-center">
+        <Image
+          src="/images/destinations/dubai/dubai.jpg"
+          alt="Dubai Skyline with Burj Khalifa"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className={`text-4xl md:text-7xl lg:text-9xl font-medium uppercase text-transparent 
+                        bg-clip-text bg-gradient-to-r from-white via-pink-300 to-white animate-gradientMove`}>
+            Dubai
+          </h1>
+          <p className="text-white text-xl max-w-2xl mt-4">
+            Where luxury meets innovation in the heart of the Arabian Desert
+          </p>
+        </div>
+      </header>
+
+      <Breadcrumbs />   
+
+      <Script id="schema-data" type="application/ld+json">
+        {JSON.stringify([schemaData, packageSchema])}
+      </Script>
+
+      {/* Introduction Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-pink-50/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Why Visit <span className="text-pink-600">Dubai</span> in 2024?
+            </h2>
+            <p className="text-lg text-gray-700">
+              Experience the perfect blend of modern luxury and Arabian heritage
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="relative">
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {/* Stats Card */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <h3 className="text-2xl font-semibold mb-6 text-pink-600">Dubai Highlights</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    {[
+                      { number: "828m", label: "Tallest Building", icon: "🏢" },
+                      { number: "300+", label: "Luxury Hotels", icon: "🌟" },
+                      { number: "16M", label: "Yearly Visitors", icon: "🌍" },
+                      { number: "25°C", label: "Winter Temp", icon: "☀️" }
+                    ].map((stat, index) => (
+                      <div key={index} className="text-center p-4 bg-gray-50 rounded-xl">
+                        <span className="text-2xl mb-2 block">{stat.icon}</span>
+                        <span className="block text-2xl font-bold text-gray-800">{stat.number}</span>
+                        <span className="text-sm text-gray-600">{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 2024 Updates Card */}
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <h3 className="text-2xl font-semibold mb-6 text-pink-600">2024 Travel Updates</h3>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        title: "Dubai Museum",
+                        desc: "New cultural attractions",
+                        icon: "🏛️"
+                      },
+                      {
+                        title: "Metro Extension",
+                        desc: "Enhanced connectivity",
+                        icon: "🚇"
+                      },
+                      {
+                        title: "Expo City",
+                        desc: "Innovation district opens",
+                        icon: "🎪"
+                      },
+                      {
+                        title: "Sustainability",
+                        desc: "Green tourism initiatives",
+                        icon: "🌿"
+                      }
+                    ].map((update, index) => (
+                      <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-pink-50 transition-colors">
+                        <span className="text-2xl">{update.icon}</span>
+                        <div>
+                          <h4 className="font-semibold text-gray-800">{update.title}</h4>
+                          <p className="text-sm text-gray-600">{update.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* World Records Badge */}
+              <div className="border rounded border-pink-500 text-gray-700 p-6 rounded-2xl mt-8">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">World Records</h3>
+                    <p className="text-gray-700">Home to Burj Khalifa, Dubai Mall, and Palm Jumeirah</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Luxury Hotels Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
+            </h2>
+            <p className="text-gray-600">
+              Discover our handpicked collection of Dubai's finest hotels and resorts
+            </p>
+          </div>
+
+          {/* Featured Packages Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {/* Burj Al Arab */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/images/destinations/dubai/burj-al-arab.jpg"
+                  alt="Burj Al Arab"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm font-medium">Jumeirah</p>
+                  <h3 className="text-2xl font-bold">Burj Al Arab</h3>
+                </div>
+                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                  From AED 5,000
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-yellow-400">★</span>
+                  <span className="font-medium">4.9</span>
+                  <span className="text-gray-500 text-sm">(1,500 reviews)</span>
+                </div>
+                
+                <div className="space-y-3">
+                  {['7-Star Luxury', 'Private Beach', 'Skyview Restaurant', 'Butler Service'].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <CheckIcon className="w-5 h-5 text-pink-600" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                  View Package
+                </button>
+              </div>
+            </div>
+
+            {/* Atlantis The Royal */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/images/destinations/dubai/atlantis-royal.jpg"
+                  alt="Atlantis The Royal"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm font-medium">Palm Jumeirah</p>
+                  <h3 className="text-2xl font-bold">Atlantis The Royal</h3>
+                </div>
+                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                  From AED 4,500
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-yellow-400">★</span>
+                  <span className="font-medium">4.8</span>
+                  <span className="text-gray-500 text-sm">(980 reviews)</span>
+                </div>
+                
+                <div className="space-y-3">
+                  {['Celebrity Restaurants', 'Infinity Pools', 'Private Beach', 'Royal Spa'].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <CheckIcon className="w-5 h-5 text-pink-600" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                  View Package
+                </button>
+              </div>
+            </div>
+
+            {/* One&Only The Palm */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative h-[300px] overflow-hidden">
+                <Image
+                  src="/images/destinations/dubai/oneandonly-palm.jpg"
+                  alt="One&Only The Palm"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm font-medium">Palm Jumeirah</p>
+                  <h3 className="text-2xl font-bold">One&Only The Palm</h3>
+                </div>
+                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                  From AED 3,800
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-yellow-400">★</span>
+                  <span className="font-medium">4.9</span>
+                  <span className="text-gray-500 text-sm">(850 reviews)</span>
+                </div>
+                
+                <div className="space-y-3">
+                  {['Beachfront Location', 'Michelin Restaurant', 'Guerlain Spa', 'Marina Views'].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <CheckIcon className="w-5 h-5 text-pink-600" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                  View Package
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experiences Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">Unforgettable Experiences</h2>
+            <p className="text-lg text-gray-700">
+              Discover the best of Dubai through carefully curated experiences
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Modern Marvels",
+                icon: BuildingOfficeIcon,
+                description: "Explore architectural wonders",
+                highlights: ["Burj Khalifa", "Dubai Frame", "Museum of the Future"]
+              },
+              {
+                title: "Desert Adventures",
+                icon: GlobeAsiaAustraliaIcon,
+                description: "Experience Arabian wilderness",
+                highlights: ["Luxury Safaris", "Bedouin Camps", "Dune Bashing"]
+              },
+              {
+                title: "Luxury Lifestyle",
+                icon: ShoppingBagIcon,
+                description: "Indulge in premium experiences",
+                highlights: ["VIP Shopping", "Yacht Tours", "Gold Souks"]
+              }
+            ].map((experience, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <experience.icon className="w-12 h-12 text-pink-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
+                <p className="text-gray-600 mb-4">{experience.description}</p>
+                <ul className="space-y-2">
+                  {experience.highlights.map((highlight, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-700">
+                      <CheckIcon className="w-5 h-5 text-pink-600 mr-2" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Culinary Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">Dubai Culinary Journey</h2>
+            <p className="text-lg text-gray-700">
+              Experience world-class dining and Arabian flavors
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Fine Dining",
+                desc: "Michelin-starred experiences",
+                image: "fine-dining.jpg"
+              },
+              {
+                title: "Arabic Cuisine",
+                desc: "Traditional flavors",
+                image: "arabic-cuisine.jpg"
+              },
+              {
+                title: "Celebrity Chefs",
+                desc: "World-renowned restaurants",
+                image: "celebrity-chef.jpg"
+              }
+            ].map((experience, index) => (
+              <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
+                <Image
+                  src={`/images/destinations/dubai/${experience.image}`}
+                  alt={experience.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-2xl font-bold">{experience.title}</h3>
+                  <p>{experience.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-pink-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-semibold mb-6">2024 Culinary Highlights</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Must-Try Experiences</h4>
+                <ul className="space-y-3">
+                  {['Dining in the Sky', 'Desert BBQ', 'Friday Brunch', 'Gold-infused Coffee'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <CheckIcon className="w-5 h-5 text-pink-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Top Restaurants</h4>
+                <ul className="space-y-3">
+                  {['Ossiano', 'Nobu Dubai', 'Al Mahara'].map((venue, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <TrophyIcon className="w-5 h-5 text-pink-600" />
+                      {venue}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Travel Guide Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            2024 Travel <span className="text-pink-600">Essentials</span>
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Getting There Card */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border border-pink-100">
+              <div className="flex items-center gap-3 mb-6">
+                <PaperAirplaneIcon className="w-8 h-8 text-pink-600" />
+                <h3 className="text-xl font-semibold">Getting There</h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { icon: PaperAirplaneIcon, text: "Direct flights from major cities" },
+                  { icon: GlobeAsiaAustraliaIcon, text: "DXB Airport transfers included" },
+                  { icon: TicketIcon, text: "Visa on arrival for many nations" },
+                  { icon: IdentificationIcon, text: "Fast-track immigration service" }
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3 text-gray-700">
+                    <item.icon className="w-5 h-5 text-pink-600" />
+                    <span>{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* When to Visit Card */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border border-pink-100">
+              <div className="flex items-center gap-3 mb-6">
+                <CalendarIcon className="w-8 h-8 text-pink-600" />
+                <h3 className="text-xl font-semibold">When to Visit</h3>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { season: "Nov-Mar", desc: "Perfect weather, peak season" },
+                  { season: "Apr-Oct", desc: "Hot weather, great deals" }
+                ].map((period, index) => (
+                  <div key={index} className="p-4 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                    <h4 className="font-semibold text-pink-900">{period.season}</h4>
+                    <p className="text-sm mt-2 text-gray-700">{period.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Local Tips Card */}
+            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 border border-pink-100">
+              <div className="flex items-center gap-3 mb-6">
+                <BeakerIcon className="w-8 h-8 text-pink-600" />
+                <h3 className="text-xl font-semibold">Local Tips</h3>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { title: "Dress Code", desc: "Smart casual, modest in malls" },
+                  { title: "Transport", desc: "Metro and luxury taxis" },
+                  { title: "Currency", desc: "UAE Dirham (AED)" },
+                  { title: "Language", desc: "Arabic & English widely used" }
+                ].map((tip, index) => (
+                  <div key={index} className="p-4 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                    <p className="font-semibold text-pink-800">{tip.title}</p>
+                    <p className="text-sm mt-2 text-gray-700">{tip.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Dubai Travel <span className="text-pink-600">FAQs</span>
+          </h2>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: "What's the best time to visit Dubai?",
+                answer: "November to March offers the most pleasant weather with temperatures between 20-25°C. Summer (June-September) is very hot but offers great hotel deals and indoor activities."
+              },
+              {
+                question: "Do I need a visa to visit Dubai?",
+                answer: "Many nationalities receive visa on arrival. Others need to apply in advance. We'll assist with visa requirements during booking."
+              },
+              {
+                question: "Is Dubai safe for tourists?",
+                answer: "Dubai is one of the safest cities globally with very low crime rates. The city has excellent infrastructure and tourist-friendly facilities."
+              },
+              {
+                question: "What should I wear in Dubai?",
+                answer: "While Dubai is modern, modest dress is appreciated. Beachwear is fine at beaches and pools. Smart casual for restaurants and malls."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                <details className="group">
+                  <summary className="flex justify-between items-center cursor-pointer">
+                    <h3 className="text-lg font-semibold">{faq.question}</h3>
+                    <PlusIcon className="w-6 h-6 group-open:hidden" />
+                    <MinusIcon className="w-6 h-6 hidden group-open:block" />
+                  </summary>
+                  <p className="mt-4 text-gray-700">{faq.answer}</p>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 text-white">
+        <div className="container border-b border-gray-200 py-10 mx-auto px-4 text-center">
+          <h2 className="text-3xl text-pink-600 font-bold mb-6">Start Your Dubai Journey</h2>
+          <p className="text-xl text-gray-700 mb-8">Contact our Dubai specialists to plan your perfect 2024 escape</p>
+          <Link 
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors"
+          >
+            Enquire Now
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 
+
 const jost = Jost({
   subsets: ['latin'],
   display: 'swap',
@@ -31,8 +32,11 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <AuthProvider>
           <Navbar />
+          
           <main className="flex-grow">
+        
             {children}
+         
           </main>
           <Footer />
         </AuthProvider>

@@ -90,7 +90,7 @@ export default function MalaysiaVisa() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-6">Malaysia eVisa Processing Services</h2>
               <p className="text-gray-700 mb-4">
-                Malaysia's eVisa system offers a streamlined digital application process for tourists, business visitors, and long-term stays. Our expert visa services ensure a smooth and efficient application process, whether you're planning a tropical vacation, business meetings, or extended stay in Malaysia.
+                Malaysia's eVisa system offers a streamlined digital application process for tourists, business visitors, and long-term stays. Our expert visa services ensure a smooth and efficient application process, whether you&apos;re planning a tropical vacation, business meetings, or extended stay in Malaysia.
               </p>
             </div>
           </div>

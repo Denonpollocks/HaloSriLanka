@@ -43,7 +43,7 @@ const PackageCard = ({
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">
           <div>
-            <h3 className="text-xl font-bold mb-1">{title}</h3>
+            <h3 className="text-xl font-bold mb-1 min-h-12">{title}</h3>
             <p className="text-gray-600 text-sm">📍 {location}</p>
           </div>
           <div className="flex items-center gap-1">
@@ -53,7 +53,7 @@ const PackageCard = ({
           </div>
         </div>
 
-        <p className="text-gray-700 text-sm mb-4 line-clamp-2">{description}</p>
+        <p className="text-gray-700 text-sm mb-4 line-clamp-2 min-h-10">{description}</p>
 
         <div className="space-y-3 mb-4">
           {features.map((feature, index) => (

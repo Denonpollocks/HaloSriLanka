@@ -5,21 +5,21 @@ import Features from '../components/Features';
 
 const popularDestinations = [
   {
-    name: 'Maldives Paradise',
+    name: 'Maldives',
     description: 'Luxury overwater villas and pristine beaches',
-    image: '/images/destinations/maldives.jpg',
+    image: '/images/destinations/maldives/maldives-watervilla.png',
     href: '/maldives'
   },
   {
     name: 'Paris, France',
     description: 'Iconic Eiffel Tower and romantic walks by the Seine',
-    image: '/images/destinations/paris.jpg',
+    image: '/images/destinations/france/france.jpg',
     href: '/paris'
   },
   {
     name: 'Tokyo, Japan',
     description: 'Traditional gardens and modern skyscrapers',
-    image: '/images/destinations/tokyo.jpg',
+    image: '/images/destinations/japan/japan.jpg',
     href: '/tokyo'
 
   },
@@ -141,25 +141,26 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {popularDestinations.map((destination, index) => (
-              <article key={index} className="group relative overflow-hidden rounded-lg">
-                <div className="relative h-[400px] w-full">
-                  
-                  <Image
-                    src={destination.image}
-                    alt={destination.name}
-                    fill
-                    className="object-cover transition-transform group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-0 p-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
-                    <p className="text-sm opacity-90">{destination.description}</p>
-                  </div>
-                  
-                </div>
-                <button className='bg-pink-600 text-white p-2 mx-auto flex mt-3 rounded-md'><Link href={destination.href}>Read More </Link></button>
-              </article>
+            <article key={index} className="group rounded-lg">
+            <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
+              <Image
+                src={destination.image}
+                alt={destination.name}
+                fill
+                className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 p-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
+                <p className="text-sm opacity-90">{destination.description}</p>
+              </div>
+            </div>
+          
+            <button className="bg-pink-600 text-white p-2 mx-auto flex mt-3 rounded-md">
+              <Link href={destination.href}>Read More</Link>
+            </button>
+          </article>
               
             ))}
           </div>

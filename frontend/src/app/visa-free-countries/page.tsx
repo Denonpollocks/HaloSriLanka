@@ -87,7 +87,7 @@ export default function VisaFreeCountries() {
         {/* Hero Section */}
         <header className="relative h-[50vh] md:h-[70vh] flex items-center">
           <Image
-            src="/images/visa-free/hero.jpg"
+            src="/images/visa-free-holidays/visa-free-holidays.jpg"
             alt="Visa Free Travel Destinations"
             fill
             className="object-cover"

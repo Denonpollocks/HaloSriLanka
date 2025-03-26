@@ -1,21 +1,35 @@
 'use client';
 
-import { useEffect, Fragment } from 'react';
+import {  Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { signout } from '@/services/auth.service';
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import UserMenu from './UserMenu';
 
 const packageLinks = [
   { title: 'Family Packages', href: '/family-packages' },
-  { title: '2025 Holidays', href: '/packages/all-exclusive' },
+  { title: '2025 Holidays', href: '/holidays-2025' },
   { title: 'Corporate Packages', href: '/corporate' },
-  { title: 'Visa Free Holidays', href: '/visa-free-holidayys' },
+  { title: 'Visa Free Holidays', href: '/visa-free-holidays' },
   
+];
+
+const destinationLinks = [
+  { title: 'Maldives', href: '/maldives' },
+  { title: 'Thailand', href: '/thailand' },
+  { title: 'Turkey', href: '/turkey' },
+  { title: 'Japan', href: '/japan' },
+  { title: 'Indonesia', href: '/indonesia' },
+  { title: 'Italy', href: '/Italy' },
+  { title: 'Greece', href: '/greece' },
+  { title: 'France', href: '/france' },
+  { title: 'China', href: '/china' },
+  { title: 'Dubai', href: '/dubai' },
+  { title: 'Egypt', href: '/egypt' },
+
 ];
 
 const moreLinks = [
@@ -47,11 +61,11 @@ const Navbar = () => {
   const router = useRouter();
   const { isLoggedIn, setIsLoggedIn } = useAuth();
 
-  const handleSignOut = () => {
-    signout();
-    setIsLoggedIn(false);
-    router.push('/');
-  };
+  // const handleSignOut = () => {
+  //   signout();
+  //   setIsLoggedIn(false);
+  //   router.push('/');
+  // };
 
   return (
     <nav className="w-full sticky border-b border-gray-200 top-0 bg-white py-4 px-6 flex items-center  justify-between z-50">
@@ -84,7 +98,7 @@ const Navbar = () => {
                 {packageLinks.map((link, index) => (
                   <Link
                     key={index}
-                    href={link.href}
+                    href={`/packages/${link.href}`}
                     className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
                   >
                     {link.title}
@@ -94,9 +108,27 @@ const Navbar = () => {
             </div>
           </div>
           
-          <Link href="/corporate" className="text-black font-semibold font-mono hover:text-pink-600">
-            Corporate
-          </Link>
+          <div className="relative group">
+            <button className="text-black font-semibold font-mono hover:text-pink-600 flex items-center">
+              Destinations
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                {destinationLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={`/destinations/${link.href}`}
+                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           <Link href="/news" className="text-black font-semibold font-mono hover:text-pink-600">
             News
           </Link>

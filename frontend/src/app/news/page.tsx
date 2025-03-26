@@ -1,37 +1,47 @@
+import Breadcrumbs from '@/components/BreadCrumbs';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Travel News & Updates | Halo Holidays',
-  description: 'Stay updated with the latest travel news, destination guides, and industry updates from Halo Holidays.',
-  keywords: 'travel news, destination guides, travel updates, Sri Lanka tourism news',
-};
 
 const featuredNews = [
   {
-    title: 'New Direct Flights to Maldives Announced',
-    excerpt: 'Major airlines introduce new routes connecting major cities to the Maldives...',
-    image: '/images/news/flights.jpg',
-    category: 'Industry Updates',
-    date: '2024-03-15',
-    slug: 'new-direct-flights-maldives'
+    title: 'Tourist Arrivals Surge in Sri Lanka',
+    excerpt: 'For the second time in Sri Lankan history, the highest number of tourists to visit the country in a single month has been recorded in January 2025...',
+    image: '/images/news/tourism.jpg',
+    category: 'Tourism Updates',
+    date: '2025-02-06',
+    slug: 'https://www.newsfirst.lk/2025/02/06/tourist-arrivals-surge-in-sri-lanka-sltda-records-highest-number-since-2018',
+    publisher: {
+      name: 'News First',
+      url: 'https://www.newsfirst.lk',
+      logo: 'https://www.newsfirst.lk/logo.png'
+    }
   },
   {
-    title: 'New Direct Flights to Maldives Announced',
-    excerpt: 'Major airlines introduce new routes connecting major cities to the Maldives...',
-    image: '/images/news/flights.jpg',
-    category: 'Industry Updates',
-    date: '2024-03-15',
-    slug: 'new-direct-flights-maldives'
+    title: 'Sri Lanka among top Eid getaways for Omani travellers',
+    excerpt: 'Sri Lanka has emerged as one of the most sought-after international destinations for travellers in Oman this Eid season...',
+    image: '/images/news/Eid.jpg',
+    category: 'Tourism Updates',
+    date: '2025-03-26',
+    slug: 'https://www.dailymirror.lk/breaking-news/Sri-Lanka-among-top-Eid-getaways-for-Omani-travellers/108-305197',
+    publisher: {
+      name: 'Daily Mirror',
+      url: 'https://www.dailymirror.lk',
+      logo: 'https://www.dailymirror.lk/logo.png'
+    }
   },
   {
-    title: 'New Direct Flights to Maldives Announced',
-    excerpt: 'Major airlines introduce new routes connecting major cities to the Maldives...',
-    image: '/images/news/flights.jpg',
-    category: 'Industry Updates',
-    date: '2024-03-15',
-    slug: 'new-direct-flights-maldives'
+    title: 'Refurbished Boeing 777 with Premium Economy and Business Class Starting June 2025',
+    excerpt: 'Emirates is pushing the envelope on enhancing the passenger experience, with plans to introduce Boeing 777s featuring upgraded cabins to eight more destinations within',
+    image: '/images/news/emirates-ttw.jpg',
+    category: 'Airline Updates',
+    date: '2025-03-25',
+    slug: 'https://www.travelandtourworld.com/news/article/portugal-ireland-hong-kong-maldives-india-sri-lanka-and-south-africa-to-experience-emirates-revolutionary-refurbished-boeing-777-with-premium-economy-and-business-class-starting-june-2025/',
+    publisher: {
+      name: 'Travel and Tour World',
+      url: 'https://www.travelandtourworld.com',
+      logo: 'https://www.travelandtourworld.com/logo.png'
+    }
   },
 
   // Add more news items
@@ -45,8 +55,64 @@ const travelGuides = [
     readTime: '8 min read',
     slug: 'tokyo-travel-guide-2024'
   },
+  {
+    title: 'Ultimate Tokyo Travel Guide 2024',
+    excerpt: 'Everything you need to know about visiting Tokyo...',
+    image: '/images/news/tokyo-guide.jpg',
+    readTime: '8 min read',
+    slug: 'tokyo-travel-guide-2024'
+  },
+ 
+
   // Add more guides
 ];
+
+export function generateMetadata() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticleList',
+    'itemListElement': featuredNews.map((article, index) => ({
+      '@type': 'NewsArticle',
+      'position': index + 1,
+      'headline': article.title,
+      'description': article.excerpt,
+      'image': article.image,
+      'datePublished': article.date,
+      'url': article.slug,
+      'publisher': {
+        '@type': 'Organization',
+        'name': article.publisher.name,
+        'url': article.publisher.url,
+        'logo': {
+          '@type': 'ImageObject',
+          'url': article.publisher.logo
+        }
+      },
+      'isAccessibleForFree': true,
+      'copyrightHolder': {
+        '@type': 'Organization',
+        'name': article.publisher.name
+      },
+      'author': {
+        '@type': 'Organization',
+        'name': article.publisher.name,
+        'url': article.publisher.url
+      }
+    }))
+  };
+
+  return {
+    title: 'Travel News & Updates | Halo Holidays',
+    description: 'Stay updated with the latest travel news, destination guides, and industry updates from Halo Holidays.',
+    keywords: 'travel news, destination guides, travel updates, Sri Lanka tourism news',
+    alternates: {
+      canonical: 'https://www.haloholidays.com/news'
+    },
+    other: {
+      'script:ld+json': JSON.stringify(jsonLd)
+    }
+  };
+}
 
 export default function News() {
   return (
@@ -54,7 +120,7 @@ export default function News() {
       {/* Hero Section - Featured News */}
       <section className="relative h-[70vh] flex items-center">
         <Image
-          src="/images/news/hero-news.jpg"
+          src="/images/news/news.jpg"
           alt="Latest Travel News"
           fill
           className="object-cover"
@@ -62,7 +128,7 @@ export default function News() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-7xl lg:text-9xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-white to-pink-600">
+          <h1 className="text-4xl md:text-7xl lg:text-9xl font-medium uppercase text-white bg-clip-text ">
             Travel Updates
           </h1>
           <p className="text-white text-xl max-w-2xl mt-4">
@@ -70,33 +136,62 @@ export default function News() {
           </p>
         </div>
       </section>
-
+      <Breadcrumbs />
       {/* Featured Articles Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Featured Stories</h2>
+          <h2 className="text-3xl font-bold mb-8">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredNews.map((article, index) => (
-              <Link href={`/news/${article.slug}`} key={index}>
-                <article className="group cursor-pointer">
+              <a 
+                href={article.slug}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <article 
+                  className="cursor-pointer"
+                  itemScope 
+                  itemType="https://schema.org/NewsArticle"
+                >
+                  <meta itemProp="datePublished" content={article.date} />
                   <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
                     <Image
                       src={article.image}
                       alt={article.title}
                       fill
                       className="object-cover transition-transform group-hover:scale-110"
+                      itemProp="image"
                     />
                     <div className="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
                       {article.category}
                     </div>
                   </div>
-                  <time className="text-gray-500 text-sm">{article.date}</time>
-                  <h3 className="text-xl font-bold mt-2 group-hover:text-pink-600">
+                  
+                  <time className=" text-gray-500 text-sm" itemProp="datePublished">
+                    {article.date}
+                   
+                  </time>
+                  
+                  <h3 
+                    className="text-xl font-bold mt-2 group-hover:text-pink-600"
+                    itemProp="headline"
+                  >
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 mt-2">{article.excerpt}</p>
+                  <p 
+                    className="text-gray-600 mt-2"
+                    itemProp="description"
+                  >
+                    {article.excerpt}
+                  </p>
+                  <div className="mt-2 text-sm text-gray-500">
+                    Source: <span itemProp="publisher">{article.publisher.name}</span>
+                  </div>
+                  <span className="sr-only">Opens in new tab</span>
                 </article>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

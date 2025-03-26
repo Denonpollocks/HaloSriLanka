@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { sendContactForm } from '@/services/contact.service';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/BreadCrumbs';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -65,13 +66,14 @@ export default function ContactForm() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
-            Let&apos;s Plan Your Next Adventure
+            Lets Plan Your Next Adventure
           </h1>
           <p className="text-white text-xl max-w-2xl">
-            We&apos;re here to help create your perfect holiday experience
+            Were here to help create your perfect holiday experience
           </p>
         </div>
       </section>
+      <Breadcrumbs /> 
 
       <section className="py-16">
         <div className="container mx-auto px-4">
