@@ -10,19 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+  /* Add fallback fonts */
 }
 
 
@@ -30,9 +31,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 50% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -42,3 +45,4 @@ body {
   background-size: 200% 200%;
   animation: gradientMove 6s infinite linear;
 }
+
