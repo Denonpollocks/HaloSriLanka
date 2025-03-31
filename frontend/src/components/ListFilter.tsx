@@ -15,9 +15,17 @@ interface ListFilterProps {
 const ListFilter = ({ countries, onFilterChange }: ListFilterProps) => {
   const [filters, setFilters] = useState({
     country: '',
-    maxPrice: 10000,
+    maxPrice: 1200000,
     days: 0
   });
+
+  const formatPrice = (value: number) => {
+    return new Intl.NumberFormat('en-LK', {
+      style: 'currency',
+      currency: 'LKR',
+      maximumFractionDigits: 0,
+    }).format(value);
+  };
 
   useEffect(() => {
     onFilterChange(filters);
@@ -78,15 +86,23 @@ const ListFilter = ({ countries, onFilterChange }: ListFilterProps) => {
         <div className="flex-1 min-w-[200px]">
           <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
             <CurrencyDollarIcon className="w-5 h-5 text-pink-600" />
-            Maximum Budget
+            Maximum Budget: {formatPrice(filters.maxPrice)}
           </label>
-          <input
-            type="number"
-            value={filters.maxPrice}
-            onChange={(e) => setFilters(prev => ({ ...prev, maxPrice: Number(e.target.value) }))}
-            placeholder="Max Budget"
-            className="w-full rounded-lg border border-gray-200 px-4 py-2.5 focus:ring-2 focus:ring-pink-200 focus:border-pink-500 transition-all"
-          />
+          <div className="px-2">
+            <input
+              type="range"
+              min="50000"
+              max="1200000"
+              step="10000"
+              value={filters.maxPrice}
+              onChange={(e) => setFilters(prev => ({ ...prev, maxPrice: Number(e.target.value) }))}
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-pink-600"
+            />
+            <div className="flex justify-between text-xs text-gray-500 mt-1">
+              <span>{formatPrice(50000)}</span>
+              <span>{formatPrice(1200000)}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

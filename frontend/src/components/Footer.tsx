@@ -54,8 +54,9 @@ const Footer = () => {
 
   return (
     <footer className="container bg-white pt-16 mx-auto px-9">
+      {/* Newsletter Section */}
       <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 items-center">
-      <hr className='border-gray-100 md:mb-6 mb-0' />
+        <hr className='border-gray-100 md:mb-6 mb-0' />
         <div className="container mx-auto px-0 flex flex-col items-start space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 md:items-center">
           <Image src='/round-logo-new.webp' alt='footer logo' width={80} height={80} loading='lazy' className='' />
           <div className='md:w-5/12 2xl:w-7/12'>
@@ -104,30 +105,30 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Status Message */}
       {status.message && (
-        <div className={`text-right ${status.type === 'success' ? 'text-green-600' : 'text-red-600'
-          }`}>
+        <div className={`text-right ${status.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
           {status.message}
         </div>
       )}
 
       {/* Main Footer Links */}
       <div className="md:mt-12 mt-2 border-t border-gray-100 pt-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* Contact Us */}
           <div>
-            <div className="text-lg font-medium">Contact Us</div>
+            <h3 className="text-lg font-medium">Contact Us</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>Customer Care</li>
               <li><a href="tel:+94 70 454 5455" className="text-pink-600 hover:text-blue-500 text-[16px] font-medium">+94 70 454 5455</a></li>
-              {/* <li>Complaints</li>
-                <li><a href="tel:+(1) 302 520 2656" className="text-pink-600 hover:text-blue-500 text-[16px] font-medium">+(1) 302 520 2656</a></li> */}
               <li>Need live support?</li>
               <li><a href="mailto:contact@haloholidays.lk" className="text-pink-600 hover:text-blue-500 text-[16px] font-medium">contact@haloholidays.lk</a></li>
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <div className="text-lg font-medium">Company</div>
+            <h3 className="text-lg font-medium">Company</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/about-us" className="text-gray-700 hover:text-pink-600">About Us</Link></li>
               <li><Link href="/news" className="text-gray-700 hover:text-pink-600">News</Link></li>
@@ -135,28 +136,25 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Support */}
           <div>
-            <div className="text-lg font-medium">Support</div>
+            <h3 className="text-lg font-medium">Support</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/contact-us" className="text-gray-700 hover:text-pink-600">Contact</Link></li>
               <li><Link href="/terms" className="text-gray-700 hover:text-pink-600">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-gray-700 hover:text-pink-600">Cookie Policy</Link></li>
-              {/* <li><Link to="/refund-policy" className="text-gray-700 hover:text-pink-600">Refund Policy</Link></li> */}
-              {/* <li><Link to="/cancellation-policy" className="text-gray-700 hover:text-pink-600">Cancellation Policy</Link></li> */}
               <li><Link href="/sitemap" className="text-gray-700 hover:text-pink-600">Sitemap</Link></li>
             </ul>
           </div>
 
+          {/* Address */}
           <div>
-            <div className="text-lg font-medium">Address</div>
+            <h3 className="text-lg font-medium">Address</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a
-                  href="/"
-                  className="text-pink-600 hover:text-blue-500 text-[16px] font-medium"
-                >
+                <Link href="/" className="text-pink-600 hover:text-blue-500 text-[16px] font-medium">
                   Halo Holidays LK
-                </a>
+                </Link>
               </li>
               <li className="text-gray-700">
                 Level 05, Astoria Tower, 418 R. A. De Mel Mawatha, Colombo 03
@@ -166,42 +164,37 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Book with Confidence */}
           <div>
-            <div className="text-lg font-medium">Book with Confidence</div>
-            <div className="flex mt-4 items-center"> {/* Added items-center to vertically center items */}
+            <h3 className="text-lg font-medium">Book with Confidence</h3>
+            <div className="flex mt-4 items-center">
               <div style={{ width: '80px' }}>
                 <Image src={SLTDA} alt='SLTDA' width="70" height="70" loading='lazy' />
               </div>
               <div className='-mt-4'>
                 <Image src={CA} alt='Civil Aviation' width="110" height="80" loading='lazy' />
               </div>
-              {/* <div className='-mt-1'>
-                  <img src='/featureIcons/visa.svg' alt='Visa' width="60" height="60" loading='lazy' />
-                </div> */}
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="mt-8 border-t border-gray-100 pt-4 text-center sm:text-left">
-        <div className="sm:flex sm:justify-between md:flex md:justify-between">
-          <p className="text-xs text-gray-500 text-[14.5px]">
+      <div className="mt-8 border-t border-gray-100 pt-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-xs text-gray-500 text-[14.5px] mb-4 md:mb-0">
             &copy; {currentYear} by <Link href='/' className='hover:text-blue-500'>Halo Travels and Tours LK</Link> All rights reserved.
           </p>
-          <div className="flex gap-x-5 items-center justify-center md:mt-0 mt-4">
+          <div className="flex gap-x-5 items-center">
             {socialLinks.map(link => (
               <a key={link.id} href={link.link} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
                 <Image src={link.imgSrc} alt={link.alt} width={14} height={14} />
               </a>
             ))}
-            {/* <div className='ml-4'>
-                <CountrySelect />
-              </div> */}
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 

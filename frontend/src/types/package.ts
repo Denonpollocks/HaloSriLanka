@@ -1,5 +1,6 @@
 export interface Package {
     title: string;
+    href: string;
     location: string;
     description: string;
     duration: string;

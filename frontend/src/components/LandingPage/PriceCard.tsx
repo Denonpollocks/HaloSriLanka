@@ -7,7 +7,7 @@ interface PriceCardProps {
   nights: string;
 }
 
-export default function PriceCard({ price, currency = "£", pdfLink, nights }: PriceCardProps) {
+export default function PriceCard({ price, currency = "Rs", pdfLink, nights }: PriceCardProps) {
   return (
     <div className="max-w-sm mx-auto">
       {/* Price Box */}

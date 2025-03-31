@@ -51,11 +51,20 @@ const PackageList = ({ packages }: PackageListProps) => {
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(Math.min(Math.max(1, pageNumber), totalPages));
+    
+    // Add this: Scroll to the top of the package list
+    const packageListElement = document.getElementById('package-list-top');
+    if (packageListElement) {
+      packageListElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
+        {/* Add this ID to the element you want to scroll to */}
+        <div id="package-list-top"></div>
+        
         <ListFilter 
           countries={countries}
           onFilterChange={handleFilterChange}
@@ -63,7 +72,7 @@ const PackageList = ({ packages }: PackageListProps) => {
         
         {filteredPackages.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 gap-8">
               {currentPackages.map((pkg, index) => (
                 <PackageCard key={`${pkg.title}-${index}`} {...pkg} />
               ))}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 interface PackageCardProps {
   title: string;
+  href: string;
   location: string;
   description: string;
   duration: string;
@@ -15,6 +16,7 @@ interface PackageCardProps {
 
 const PackageCard = ({
   title,
+  href,
   location,
   description,
   duration,
@@ -68,11 +70,11 @@ const PackageCard = ({
 
         <div className="flex items-center justify-between pt-4 border-t">
           <div>
-            <span className="text-2xl font-bold">${price}</span>
+            <span className="text-2xl font-bold">Rs.{price.toLocaleString()}</span>
             <span className="text-gray-600 text-sm"> / person</span>
           </div>
           <Link 
-            href={`/packages/${title.toLowerCase().replace(/\s+/g, '-')}`}
+            href={`/tours2/${href}`}
             className="bg-pink-600 text-white px-6 py-2 rounded-md hover:bg-pink-700 transition-colors"
           >
             View Details

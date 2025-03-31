@@ -2,6 +2,7 @@
   export const familyPackages = [
     {
         title: "Bangkok & Pattaya Adventure",
+        href: "bangkok-and-pattaya",
         location: "Thailand",
         description: "An ideal escape with exciting tours, thrilling activities, and plenty of relaxation for everyone",
         features: [
@@ -12,11 +13,12 @@
         price: 289000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
-        duration: "5 Days",
+        image: "/images/packages/cards/family/Bangkok-Pattaya.jpg",
+        duration: "6 Days",
     },
     {
         title: "Singapore & Malaysia Adventure",
+        href: "singapore-and-malaysia",
         location: "Singapore & Malaysia",
         description: "Embark on an unforgettable adventure with thrilling tours, iconic landmarks, and exciting experiences",
         features: [
@@ -28,11 +30,12 @@
         price: 339000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Singapore-Malaysia.jpg",
         duration: "5 Days",
     },
     {
         title: "Shimla & Manali Escape",
+        href: "shimla-and-manali",
         location: "India",
         description: "A scenic journey through the Himalayas with cozy stays, private transfers, and breathtaking landscapes",
         features: [
@@ -44,11 +47,12 @@
         price: 289000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Shimla-Manali.jpg",
         duration: "5 Days",
     },
     {
         title: "Abu Dhabi & Dubai Adventure",
+        href: "abu-dhabi-and-dubai",
         location: "UAE",
         description: "A perfect blend of cultural charm and modern marvels, featuring iconic attractions and unforgettable experiences",
         features: [
@@ -60,11 +64,12 @@
         price: 489000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Abu-Dhabi-Dubai.jpg",
         duration: "5 Days",
     },
     {
         title: "Malaysia City & Adventure Break",
+        href: "malaysia-package",
         location: "Malaysia",
         description: "A quick yet exciting escape to Malaysia’s iconic attractions and fun-filled adventures",
         features: [
@@ -76,11 +81,12 @@
         price: 189000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Malaysia-City.jpg",
         duration: "5 Days",
     },
     {
         title: "Vietnam Discovery Tour",
+        href: "vietnam-discovery-tour",
         location: "Vietnam",
         description: "An unforgettable journey through Vietnam’s cultural heart, scenic landscapes, and a dreamy Halong Bay cruise",
         features: [
@@ -92,11 +98,12 @@
         price: 315000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Vietnam-City.jpg",
         duration: "5 Days",
     },
     {
         title: "Maldives – Triton Beach Escape",
+        href: "maldives-triton-beach-escape",
         location: "Maldives",
         description: "A budget-friendly island escape with beachfront vibes, sea adventures, and unforgettable sunsets",
         features: [
@@ -108,11 +115,12 @@
         price: 140000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Maldives–Triton.jpg",
         duration: "5 Days",
     },
     {
         title: "Azerbaijan Cultural Explorer",
+        href: "azerbaijan-cultural-tour",
         location: "Azerbaijan",
         description: "A perfect blend of ancient wonders and modern charm – explore Azerbaijan's iconic sites and scenic gems",
         features: [
@@ -124,11 +132,12 @@
         price: 439000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Azerbaijan.jpg",
         duration: "5 Days",
     },
     {
         title: "Golden Triangle Tour",
+        href: "golden-triangle-tour",
         location: "India",
         description: "Discover India’s most iconic cities with rich history, stunning architecture, and immersive experiences",
         features: [
@@ -140,11 +149,12 @@
         price: 275000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Golden-Triangle.jpg",
         duration: "5 Days",
     },
     {
         title: "Cambodia Cultural Escape",
+        href: "cambodia-cultural-tour",
         location: "Cambodia",
         description: "An immersive journey through Cambodia’s ancient temples and rich heritage",
         features: [
@@ -156,11 +166,12 @@
         price: 381000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Cambodia-Cultural.jpg",
         duration: "5 Days",
     },
     {
         title: "Oman Nature & Culture Tour",
+        href: "oman-cultural-tour",
         location: "Oman",
         description: "A scenic and cultural escape through Oman’s deserts, coastlines, and capital city.",
         features: [
@@ -172,11 +183,12 @@
         price: 255400,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Oman-Nature.jpg",
         duration: "5 Days",
     },
     {
         title: "Maldives – Makunudu Island Escape",
+        href: "maldives-makunudu-island-escape",
         location: "Maldives",
         description: "An idyllic island retreat with beach bungalow stays, gourmet dining, and underwater adventures",
         features: [
@@ -188,11 +200,12 @@
         price: 386000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Maldives-Makunudu.jpg",
         duration: "5 Days",
     },
     {
         title: "Maldives – Medhufushi Island Retreat",
+        href: "maldives-medhufushi-island-retreat",
         location: "Maldives",
         description: "Experience the best of both worlds – beachside bliss and overwater luxury in the heart of paradise",
         features: [
@@ -204,11 +217,12 @@
         price: 555000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Maldives–Medhufushi.jpg",
         duration: "5 Days",
     },
     {
         title: "Egypt – Ancient Wonders Tour",
+        href: "egypt-ancient-wonders-tour",
         location: "Egypt",
         description: "Step into the land of pharaohs and pyramids with immersive tours across Egypt’s iconic landmarks",
         features: [
@@ -220,7 +234,7 @@
         price: 282000,
         rating: 4.5,
         reviewCount: 148,
-        image: "/images/packages/sunset-fishing.jpg",
+        image: "/images/packages/cards/family/Egypt–Ancient.jpg",
         duration: "5 Days",
     }
 ]

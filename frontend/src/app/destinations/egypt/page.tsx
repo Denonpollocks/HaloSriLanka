@@ -17,6 +17,7 @@ import {
   HomeModernIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import { egyptHotels } from '@/data/hotels/Egypt/egyptHotels';
 
 export const metadata: Metadata = {
   title: 'Luxury Egypt Holidays 2024 | Ancient Wonders & Nile Experiences',
@@ -81,6 +82,7 @@ const packageSchema = {
 };
 
 export default function EgyptDestination() {
+  
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -204,131 +206,52 @@ export default function EgyptDestination() {
               2024's Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of Egypt's finest hotels and resorts
+              Discover our handpicked collection of Dubai's finest hotels and resorts
             </p>
           </div>
 
-          {/* Featured Packages Grid */}
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* Four Seasons Nile Plaza */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/egypt/four-seasons-nile.jpg"
-                  alt="Four Seasons Nile Plaza"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Cairo</p>
-                  <h3 className="text-2xl font-bold">Four Seasons Nile Plaza</h3>
+            { egyptHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From $450
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(950 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Nile Views', 'Luxury Spa', 'Fine Dining', 'Rooftop Pool'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Oberoi Luxor */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/egypt/oberoi-luxor.jpg"
-                  alt="Oberoi Luxor"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Luxor</p>
-                  <h3 className="text-2xl font-bold">Oberoi Luxor</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From $380
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(780 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Valley Views', 'Private Dock', 'Egyptian Spa', 'Gourmet Dining'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Sofitel Legend Old Cataract */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/egypt/sofitel-aswan.jpg"
-                  alt="Sofitel Legend Old Cataract"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Aswan</p>
-                  <h3 className="text-2xl font-bold">Sofitel Legend Old Cataract</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From $420
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(850 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Historic Property', 'Nile Views', 'French Restaurant', 'Luxury Spa'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -584,3 +507,6 @@ export default function EgyptDestination() {
     </main>
   );
 }
+
+   // Add this export to your page
+   export const dynamic = 'force-static';

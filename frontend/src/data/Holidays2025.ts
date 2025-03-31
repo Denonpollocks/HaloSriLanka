@@ -2,6 +2,7 @@ export const holidays2025 = [
     {
       title: "Bangkok & Elephant Sanctuary Experience",
       location: "Thailand",
+      href: "bangkok-and-elephant-sanctuary",
       description: "Explore bustling Bangkok and connect with nature at Chiang Mai's ethical elephant sanctuary",
       duration: "7 Days",
       price: 999,
@@ -18,6 +19,7 @@ export const holidays2025 = [
     {
       title: "Langkawi Beach & Rainforest Escape",
       location: "Malaysia",
+      href: "langkawi-beach-and-rainforest-escape",
       description: "Unwind on pristine beaches and explore tropical rainforests on Malaysia’s Langkawi island",
       duration: "6 Days",
       price: 879,
@@ -34,6 +36,7 @@ export const holidays2025 = [
     {
       title: "Tokyo Disney & Mt. Fuji Family Holiday",
       location: "Japan",
+      href: "tokyo-disney-and-mt-fuji-family-holiday",
       description: "A magical family experience combining Tokyo Disneyland with scenic Mount Fuji adventures",
       duration: "6 Days",
       price: 1399,
@@ -50,7 +53,8 @@ export const holidays2025 = [
     {
       title: "Singapore City & Sentosa Island Fun",
       location: "Singapore",
-      description: "Family-friendly escape to Singapore with adventure at Sentosa and city highlights",
+      href: "singapore-city-and-sentosa-island-fun",
+    description: "Family-friendly escape to Singapore with adventure at Sentosa and city highlights",
       duration: "5 Days",
       price: 1149,
       image: "/images/packages/cards/Singapore-City.jpg",
@@ -65,6 +69,7 @@ export const holidays2025 = [
     },
     {
       title: "Dubai Desert & Theme Park Combo",
+      href: "dubai-desert-and-theme-park-combo",
       location: "Dubai",
       description: "Thrill-filled family escape with dune bashing and access to Dubai’s world-class parks",
       duration: "6 Days",
@@ -81,6 +86,7 @@ export const holidays2025 = [
     },
     {
       title: "Kyoto Heritage & Cherry Blossom Tour",
+      href: "kyoto-heritage-and-cherry-blossom-tour",
       location: "Japan",
       description: "Cultural immersion in Kyoto during cherry blossom season with traditional experiences",
       duration: "5 Days",
@@ -97,6 +103,7 @@ export const holidays2025 = [
     },
     {
       title: "Penang Street Food & Culture Tour",
+      href: "penang-street-food-and-culture-tour",
       location: "Malaysia",
       description: "Savor Malaysia’s best street food and dive into rich heritage in colorful Penang",
       duration: "4 Days",
@@ -113,6 +120,7 @@ export const holidays2025 = [
     },
     {
       title: "Dubai Atlantis Water & Wildlife Retreat",
+      href: "dubai-atlantis-water-and-wildlife-retreat",
       location: "Dubai",
       description: "Stay at Atlantis The Palm with included waterpark fun and aquarium experience",
       duration: "5 Days",
@@ -129,6 +137,7 @@ export const holidays2025 = [
     },
     {
       title: "Chiang Mai Jungle & Waterfalls Adventure",
+      href: "chiang-mai-jungle-and-waterfalls-adventure",
       location: "Thailand",
       description: "An eco-friendly Thai escape to waterfalls, jungle treks, and night markets",
       duration: "6 Days",
@@ -145,6 +154,7 @@ export const holidays2025 = [
     },
     {
       title: "Singapore Luxury Staycation & River Cruise",
+      href: "singapore-luxury-staycation-and-river-cruise",
       location: "Singapore",
       description: "Stylish city break with rooftop views, fine dining, and river cruise experiences",
       duration: "3 Days",
@@ -161,6 +171,7 @@ export const holidays2025 = [
     },
     {
       title: "Osaka Universal Studios & City Explorer",
+      href: "osaka-universal-studios-and-city-explorer",
       location: "Japan",
       description: "Family fun meets Japanese pop culture in Osaka's vibrant city and top theme park",
       duration: "5 Days",
@@ -177,6 +188,7 @@ export const holidays2025 = [
     },
     {
       title: "Kuala Lumpur Towers & Genting Highlands",
+      href: "kuala-lumpur-towers-and-genting-highlands",
       location: "Malaysia",
       description: "Combine urban adventure with cool mountain fun in KL and Genting",
       duration: "5 Days",
@@ -193,6 +205,7 @@ export const holidays2025 = [
     },
     {
       title: "Phuket Beach & Island Hopping Bliss",
+      href: "phuket-beach-and-island-hopping-bliss",
       location: "Thailand",
       description: "Sun-soaked Thai island escape with longtail boat rides and crystal waters",
       duration: "6 Days",
@@ -209,6 +222,7 @@ export const holidays2025 = [
     },
     {
       title: "Dubai Winter Sun & Shopping Festival",
+      href: "dubai-winter-sun-and-shopping-festival",
       location: "Dubai",
       description: "Luxury escape with beach vibes and retail therapy during Dubai Shopping Festival",
       duration: "4 Days",

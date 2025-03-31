@@ -1,6 +1,7 @@
 export const visaFreePackages = [
     {
       title: "Hello Family Adventure",
+      href: "hello-family-adventure",
       location: "Maldives",
       description: "Perfect family getaway with water activities, kids club, and relaxation for parents",
       duration: "5 Days",

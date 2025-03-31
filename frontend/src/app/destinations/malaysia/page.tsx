@@ -14,6 +14,7 @@ import {
 
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import { malaysiaHotels } from '@/data/hotels/Malaysia/malayasiaHotels';
 
 export const metadata: Metadata = {
   title: 'Best Malaysia Holidays & All-Inclusive Packages 2025 | Explore Nature & Culture',
@@ -90,6 +91,8 @@ const packageSchema = {
 };
 
 export default function MalaysiaDestination() {
+
+ 
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -205,183 +208,59 @@ export default function MalaysiaDestination() {
       </section>
 
       {/* Luxury Hotels Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-gray-100 to-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Premier <span className="text-pink-600">Malaysian Hotels</span>
+              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              From urban luxury to beachfront resorts, discover Malaysia's finest accommodations
+              Discover our handpicked collection of Dubai's finest hotels and resorts
             </p>
           </div>
 
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* Kuala Lumpur Hotel */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/malaysia/kl-hotel.jpg"
-                  alt="Luxury Hotel in Kuala Lumpur"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Kuala Lumpur</p>
-                  <h3 className="text-2xl font-bold">Mandarin Oriental KL</h3>
+            {malaysiaHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £299/night
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(2,150 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Twin Towers view', 'Infinity pool', 'Michelin dining', 'Luxury spa'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <Link href="/hotels/mandarin-oriental-kl" className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors block text-center">
-                  View Details
-                </Link>
-              </div>
-            </div>
-
-            {/* Langkawi Resort */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/malaysia/langkawi-resort.jpg"
-                  alt="Luxury Resort in Langkawi"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Langkawi</p>
-                  <h3 className="text-2xl font-bold">The Datai Langkawi</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £399/night
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(1,850 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Private beach', 'Rainforest setting', 'Villa options', 'Nature activities'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <Link href="/hotels/datai-langkawi" className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors block text-center">
-                  View Details
-                </Link>
-              </div>
-            </div>
-
-            {/* Borneo Resort */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/malaysia/borneo-resort.jpg"
-                  alt="Luxury Resort in Borneo"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Borneo</p>
-                  <h3 className="text-2xl font-bold">Gaya Island Resort</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £349/night
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.7</span>
-                  <span className="text-gray-500 text-sm">(1,550 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Marine reserve', 'Jungle spa', 'Wildlife tours', 'Eco-luxury'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <Link href="/hotels/gaya-island-resort" className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors block text-center">
-                  View Details
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Destination Guide */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">
-              Your Guide to <span className="text-pink-600">Malaysian Destinations</span>
-            </h3>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "City Experience",
-                  location: "Kuala Lumpur",
-                  features: ["Shopping paradise", "Cultural sites", "Food heaven"],
-                  color: "bg-gray-50"
-                },
-                {
-                  title: "Beach Getaway",
-                  location: "Langkawi",
-                  features: ["Island hopping", "Pristine beaches", "Duty-free shopping"],
-                  color: "bg-gray-100"
-                },
-                {
-                  title: "Nature Adventure",
-                  location: "Borneo",
-                  features: ["Wildlife tours", "Rainforest treks", "Marine life"],
-                  color: "bg-gray-50"
-                }
-              ].map((destination, index) => (
-                <div key={index} className={`${destination.color} rounded-xl p-6 hover:shadow-md transition-shadow`}>
-                  <h4 className="font-semibold text-lg mb-2">{destination.title}</h4>
-                  <p className="text-sm text-gray-600 mb-4">{destination.location}</p>
-                  <ul className="space-y-2">
-                    {destination.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-pink-600" />
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
                         {feature}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -623,3 +502,6 @@ export default function MalaysiaDestination() {
     </main>
   );
 }
+
+   // Add this export to your page
+   export const dynamic = 'force-static';

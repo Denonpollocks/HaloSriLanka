@@ -18,7 +18,7 @@ import {
   HomeModernIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
-
+import { maldivesHotels } from '@/data/hotels/Maldives/maldivesHotels';
 
 
 export const metadata: Metadata = {
@@ -100,6 +100,8 @@ const packageSchema = {
 // Schema data remains same as original
 
 export default function MaldivesDestination() {
+
+  
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -219,195 +221,59 @@ export default function MaldivesDestination() {
       </section>
 
       {/* Luxury Resorts Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-gray-100 to-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Premier <span className="text-pink-600">Luxury Resorts</span>
+              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of the finest Maldivian resorts, each offering unique experiences and unparalleled luxury
+              Discover our handpicked collection of Dubai's finest hotels and resorts
             </p>
           </div>
 
-          {/* Featured Packages Grid */}
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/maldives/hotel-1.jpg"
-                  alt="Overwater Paradise Suite"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">North Malé Atoll</p>
-                  <h3 className="text-2xl font-bold">Overwater Paradise Suite</h3>
+            {maldivesHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £4,299
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(1,250 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Private infinity pool', 'Glass floor panels', 'Butler service', 'Free seaplane transfers'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <svg className="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/maldives/hotel-2.jpg"
-                  alt="Overwater Paradise Suite"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">North Malé Atoll</p>
-                  <h3 className="text-2xl font-bold">Overwater Paradise Suite</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £4,299
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(1,250 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Private infinity pool', 'Glass floor panels', 'Butler service', 'Free seaplane transfers'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <svg className="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/hotels/maldives/hotel-3.jpg"
-                  alt="Overwater Paradise Suite"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">North Malé Atoll</p>
-                  <h3 className="text-2xl font-bold">Overwater Paradise Suite</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From £4,299
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(1,250 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Private infinity pool', 'Glass floor panels', 'Butler service', 'Free seaplane transfers'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <svg className="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-            
-
-
-
-            {/* Repeat similar structure for Family Beach Villa and Honeymoon Retreat */}
-          </div>
-
-          {/* Atoll Guide Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">
-              Your Guide to <span className="text-pink-600">Maldives Atolls</span>
-            </h3>
-            
-            <p className="text-gray-700 mb-8 text-center">
-              Each Maldivian atoll offers a unique experience. Let us help you find your perfect paradise.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Best for Families",
-                  location: "Kaafu Atoll",
-                  features: ["Shallow lagoons", "Kids' clubs", "Easy access"],
-                  color: "bg-gray-50"
-                },
-                {
-                  title: "Top Diving Spot",
-                  location: "Raa Atoll",
-                  features: ["Protected reefs", "Marine life", "Clear waters"],
-                  color: "bg-gray-100"
-                },
-                {
-                  title: "Luxury Seekers",
-                  location: "Baa Atoll",
-                  features: ["Private islands", "Premium resorts", "UNESCO reserve"],
-                  color: "bg-gray-50"
-                }
-              ].map((atoll, index) => (
-                <div key={index} className={`${atoll.color} rounded-xl p-6 hover:shadow-md transition-shadow`}>
-                  <h4 className="font-semibold text-lg mb-2">{atoll.title}</h4>
-                  <p className="text-sm text-gray-600 mb-4">{atoll.location}</p>
-                  <ul className="space-y-2">
-                    {atoll.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-pink-600" />
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
                         {feature}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -859,3 +725,6 @@ export default function MaldivesDestination() {
     </main>
   );
 }
+
+   // Add this export to your page
+   export const dynamic = 'force-static';

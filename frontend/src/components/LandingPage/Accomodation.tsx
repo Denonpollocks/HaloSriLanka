@@ -23,7 +23,7 @@ export default function Accommodation({ hotels }: AccommodationProps) {
   return (
     <div className="max-w-4xl mx-auto  mt-12">
       <h2 className="text-3xl font-bold mb-4">
-        Luxury <span className="text-pink-600">Accommodations</span>
+        Accomodations
       </h2>
       <p className="text-gray-600 mb-8 max-w-2xl">
         Experience comfort and elegance at our carefully selected hotels. Final confirmation will be provided 21 days before your journey.

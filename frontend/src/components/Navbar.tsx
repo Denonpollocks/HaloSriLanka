@@ -8,8 +8,6 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import UserMenu from './UserMenu';
-import MobileNavbar from './header/MobileNavbar';
-import MenuIcon from '../../public/menu.svg';
 
 const packageLinks = [
   { title: 'Family Packages', href: '/family-packages' },
@@ -60,7 +58,7 @@ const visaCountries = [
 ];
 
 const Navbar = () => {
-  // const router = useRouter();
+  const router = useRouter();
   const { isLoggedIn, setIsLoggedIn } = useAuth();
 
   // const handleSignOut = () => {

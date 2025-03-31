@@ -24,6 +24,7 @@ import {
   HomeModernIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import { italyHotels } from '@/data/hotels/Italy/italyHotels';
 
 export const metadata: Metadata = {
   title: 'Luxury Italy Holidays 2024 | Cultural & Culinary Experiences',
@@ -88,6 +89,8 @@ const packageSchema = {
 };
 
 export default function ItalyContent() {
+
+ 
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -205,131 +208,52 @@ export default function ItalyContent() {
               2024's Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of Italy's finest hotels and historic palaces
+              Discover our handpicked collection of Dubai's finest hotels and resorts
             </p>
           </div>
 
-          {/* Featured Packages Grid */}
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* Belmond Hotel Cipriani */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/italy/cipriani-venice.jpg"
-                  alt="Belmond Hotel Cipriani"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Venice</p>
-                  <h3 className="text-2xl font-bold">Belmond Hotel Cipriani</h3>
+            {italyHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €1,200
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(1,350 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Private Island', 'Michelin Dining', 'Spa', 'Pool'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Hotel de Russie */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/italy/russie-rome.jpg"
-                  alt="Hotel de Russie"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Rome</p>
-                  <h3 className="text-2xl font-bold">Hotel de Russie</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €900
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(980 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Secret Garden', 'Central Location', 'Luxury Spa', 'Fine Dining'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Borgo Egnazia */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/italy/borgo-puglia.jpg"
-                  alt="Borgo Egnazia"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Puglia</p>
-                  <h3 className="text-2xl font-bold">Borgo Egnazia</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €800
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(1,150 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Beach Club', 'Golf Course', 'Vair Spa', 'Cooking School'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -589,3 +513,6 @@ export default function ItalyContent() {
     </main>
   );
 }
+
+   // Add this export to your page
+   export const dynamic = 'force-static';

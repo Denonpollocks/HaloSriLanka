@@ -22,6 +22,7 @@ import {
   MapIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import { dubaiHotels } from '@/data/hotels/Dubai/dubaiHotels';
 
 export const metadata: Metadata = {
   title: 'Luxury Dubai Holidays 2024 | Premium Travel Experiences',
@@ -86,6 +87,9 @@ const packageSchema = {
 };
 
 export default function DubaiDestination() {
+  // Filter hotels for Dubai only
+  
+  
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -213,127 +217,48 @@ export default function DubaiDestination() {
             </p>
           </div>
 
-          {/* Featured Packages Grid */}
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* Burj Al Arab */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/dubai/burj-al-arab.jpg"
-                  alt="Burj Al Arab"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Jumeirah</p>
-                  <h3 className="text-2xl font-bold">Burj Al Arab</h3>
+            {dubaiHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From AED 5,000
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(1,500 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['7-Star Luxury', 'Private Beach', 'Skyview Restaurant', 'Butler Service'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Atlantis The Royal */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/dubai/atlantis-royal.jpg"
-                  alt="Atlantis The Royal"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Palm Jumeirah</p>
-                  <h3 className="text-2xl font-bold">Atlantis The Royal</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From AED 4,500
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(980 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Celebrity Restaurants', 'Infinity Pools', 'Private Beach', 'Royal Spa'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* One&Only The Palm */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/dubai/oneandonly-palm.jpg"
-                  alt="One&Only The Palm"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Palm Jumeirah</p>
-                  <h3 className="text-2xl font-bold">One&Only The Palm</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From AED 3,800
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(850 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Beachfront Location', 'Michelin Restaurant', 'Guerlain Spa', 'Marina Views'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -589,3 +514,5 @@ export default function DubaiDestination() {
     </main>
   );
 }
+
+export const dynamic = 'force-static';

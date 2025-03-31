@@ -17,6 +17,7 @@ import {
   HomeModernIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import { franceHotels } from '@/data/hotels/France/franceHotels';
 
 export const metadata: Metadata = {
   title: 'Luxury France Holidays 2024 | Cultural & Gastronomic Experiences',
@@ -81,6 +82,8 @@ const packageSchema = {
 };
 
 export default function FranceDestination() {
+
+  
   return (
     <main className="min-h-screen">
       <header className="relative h-[80vh] flex items-center">
@@ -200,135 +203,55 @@ export default function FranceDestination() {
               2024's Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of France's finest hotels and palaces
+              Discover our handpicked collection of Dubai's finest hotels and resorts
             </p>
           </div>
 
-          {/* Featured Packages Grid */}
+          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* Ritz Paris */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/france/ritz-paris.jpg"
-                  alt="Ritz Paris"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Paris</p>
-                  <h3 className="text-2xl font-bold">Ritz Paris</h3>
+            {franceHotels.slice(0, 3).map((hotel, index) => (
+              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={hotel.images[0]}
+                    alt={hotel.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-medium">{hotel.location.split(',')[0]}</p>
+                    <h3 className="text-2xl font-bold">{hotel.name}</h3>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
+                    From AED {hotel.price.toLocaleString()}
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €1,500
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(1,200 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Michelin Restaurant', 'Luxury Spa', 'Historic Prestige', 'Bar Hemingway'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Four Seasons George V */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/france/four-seasons-paris.jpg"
-                  alt="Four Seasons George V"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Paris</p>
-                  <h3 className="text-2xl font-bold">Four Seasons George V</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €1,300
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-yellow-400">★</span>
+                    <span className="font-medium">{hotel.ratings.overall}</span>
+                    <span className="text-gray-500 text-sm">({hotel.ratings.totalReviews} reviews)</span>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {hotel.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-700">
+                        <CheckIcon className="w-5 h-5 text-pink-600" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    View Package
+                  </button>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.8</span>
-                  <span className="text-gray-500 text-sm">(980 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['3 Michelin Restaurants', 'Luxury Spa', 'Art Deco Design', 'Wine Cellar'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
-
-            {/* Hotel du Cap-Eden-Roc */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[300px] overflow-hidden">
-                <Image
-                  src="/images/destinations/france/cap-eden-roc.jpg"
-                  alt="Hotel du Cap-Eden-Roc"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Antibes</p>
-                  <h3 className="text-2xl font-bold">Hotel du Cap-Eden-Roc</h3>
-                </div>
-                <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                  From €1,800
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-yellow-400">★</span>
-                  <span className="font-medium">4.9</span>
-                  <span className="text-gray-500 text-sm">(750 reviews)</span>
-                </div>
-                
-                <div className="space-y-3">
-                  {['Seaside Location', 'Private Beach', 'Gourmet Restaurant', 'Historic Palace'].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <CheckIcon className="w-5 h-5 text-pink-600" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
-                  View Package
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-
       {/* Experiences Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -584,3 +507,6 @@ export default function FranceDestination() {
     </main>
   );
 }
+
+   // Add this export to your page
+   export const dynamic = 'force-static';
