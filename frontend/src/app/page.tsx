@@ -55,21 +55,21 @@ const testimonials = [
     name: 'Sarah Thompson',
     location: 'United Kingdom',
     comment: 'An unforgettable experience with exceptional service',
-    avatar: '/images/testimonials/avatar1.jpg'
+    // avatar: '/images/testimonials/avatar1.jpg'
   },
 
   {
     name: 'Sarah Thompson',
     location: 'United Kingdom',
     comment: 'An unforgettable experience with exceptional service',
-    avatar: '/images/testimonials/avatar1.jpg'
+    // avatar: '/images/testimonials/avatar1.jpg'
   },
 
   {
     name: 'Sarah Thompson',
     location: 'United Kingdom',
     comment: 'An unforgettable experience with exceptional service',
-    avatar: '/images/testimonials/avatar1.jpg'
+    // avatar: '/images/testimonials/avatar1.jpg'
   },
   // Add more testimonials
 ];
@@ -214,13 +214,13 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <blockquote key={index} className="p-6 bg-white rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
-                  <Image
+                  {/* <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     width={48}
                     height={48}
                     className="rounded-full"
-                  />
+                  /> */}
                   <div className="ml-4">
                     <cite className="font-bold block">{testimonial.name}</cite>
                     <span className="text-gray-600 text-sm">{testimonial.location}</span>

@@ -214,7 +214,7 @@ export default function JapanDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"

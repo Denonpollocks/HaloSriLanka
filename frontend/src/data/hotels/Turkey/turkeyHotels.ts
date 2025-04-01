@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,6 +103,7 @@ export const turkeyHotels: Hotel[] = [
           "lat": 36.7136,
           "lng": 30.5655
         },
+        "cardImage": "/images/hotels/turkey/Crystal-Flora-Beach-Resort.jpg",
         "images": [
           "/images/hotels/beldibi/Crystal-Flora-Beach-Resort-1.jpg",
           "/images/hotels/beldibi/Crystal-Flora-Beach-Resort-2.jpg",
@@ -324,6 +326,7 @@ export const turkeyHotels: Hotel[] = [
               "lat": 37.8410,
               "lng": 27.2550
             },
+            "cardImage": "/images/hotels/turkey/The-Grand-Blue-Sky-International.jpg",
             "images": [
               "/images/hotels/kusadasi/Grand-Blue-Sky-International-1.jpg",
               "/images/hotels/kusadasi/Grand-Blue-Sky-International-2.jpg",
@@ -547,6 +550,7 @@ export const turkeyHotels: Hotel[] = [
                   "lat": 36.5743,
                   "lng": 29.1356
                 },
+                "cardImage": "/images/hotels/turkey/Green-Forest-Holiday-Village.jpg",
                 "images": [
                   "/images/hotels/hisaronu/Green-Forest-Holiday-Village-1.jpg",
                   "/images/hotels/hisaronu/Green-Forest-Holiday-Village-2.jpg",

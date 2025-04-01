@@ -216,7 +216,7 @@ export default function EgyptDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -320,22 +320,22 @@ export default function EgyptDestination() {
               {
                 title: "Fine Dining",
                 desc: "Modern Egyptian cuisine",
-                image: "fine-dining.jpg"
+                image: "egypt-fine-dining.jpg"
               },
               {
                 title: "Street Food",
                 desc: "Authentic local flavors",
-                image: "street-food.jpg"
+                image: "egypt-street-food.jpg"
               },
               {
                 title: "Cooking Classes",
                 desc: "Master Egyptian recipes",
-                image: "cooking-class.jpg"
+                image: "egypt-cooking-classes.jpg"
               }
             ].map((experience, index) => (
               <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
                 <Image
-                  src={`/images/destinations/egypt/${experience.image}`}
+                  src={`/images/hotels/egypt/food/${experience.image}`}
                   alt={experience.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform"

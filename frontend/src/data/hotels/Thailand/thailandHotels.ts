@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,7 +103,9 @@ export const thailandHotels: Hotel[] = [
           "lat": 13.7544,
           "lng": 100.5403
         },
+        "cardImage": "/images/hotels/thailand/Baiyoke-Sky-Hotel.jpg",
         "images": [
+
           "/images/hotels/bangkok/Baiyoke-Sky-Hotel-1.jpg",
           "/images/hotels/bangkok/Baiyoke-Sky-Hotel-2.jpg",
           "/images/hotels/bangkok/Baiyoke-Sky-Hotel-3.jpg",
@@ -325,6 +328,7 @@ export const thailandHotels: Hotel[] = [
               "lat": 13.7500,
               "lng": 100.5420
             },
+            "cardImage": "/images/hotels/thailand/Bangkok-Palace-Hotel.jpg",
             "images": [
               "/images/hotels/bangkok/Bangkok-Palace-Hotel-1.jpg",
               "/images/hotels/bangkok/Bangkok-Palace-Hotel-2.jpg",

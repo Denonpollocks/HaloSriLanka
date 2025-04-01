@@ -213,7 +213,7 @@ export default function FranceDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -316,22 +316,22 @@ export default function FranceDestination() {
               {
                 title: "Haute Cuisine",
                 desc: "Michelin-starred experiences",
-                image: "fine-dining.jpg"
+                image: "france-Haute-Cuisine.jpg"
               },
               {
                 title: "Wine Regions",
                 desc: "Premier cru tastings",
-                image: "wine-tasting.jpg"
+                image: "france-wine-regions.jpg"
               },
               {
                 title: "Culinary Arts",
                 desc: "Expert cooking classes",
-                image: "cooking-class.jpg"
+                image: "france-culinary-arts.jpg"
               }
             ].map((experience, index) => (
               <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
                 <Image
-                  src={`/images/destinations/france/${experience.image}`}
+                  src={`/images/hotels/france/food/${experience.image}`}
                   alt={experience.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform"

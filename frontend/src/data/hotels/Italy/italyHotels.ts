@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -101,6 +102,7 @@ export const italyHotels: Hotel[] = [
           "lat": 45.4827,
           "lng": 12.2346
         },
+        "cardImage": "/images/hotels/italy/Hotel-Plaza-Venice.jpg",
         "images": [
           "/images/hotels/mestre/hotel-plaza-venice-1.jpg",
           "/images/hotels/mestre/hotel-plaza-venice-2.jpg",
@@ -304,6 +306,7 @@ export const italyHotels: Hotel[] = [
           "lat": 41.8992,
           "lng": 12.4184
         },
+        "cardImage": "/images/hotels/italy/Raganelli-Hotel.jpg",
         "images": [
           "/images/hotels/rome/raganelli-hotel-1.jpg",
           "/images/hotels/rome/raganelli-hotel-2.jpg",

@@ -223,7 +223,7 @@ export default function DubaiDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -327,22 +327,22 @@ export default function DubaiDestination() {
               {
                 title: "Fine Dining",
                 desc: "Michelin-starred experiences",
-                image: "fine-dining.jpg"
+                image: "Dubai-Fine-Dining.jpg"
               },
               {
                 title: "Arabic Cuisine",
                 desc: "Traditional flavors",
-                image: "arabic-cuisine.jpg"
+                image: "Arab-Cuisine.jpg"
               },
               {
                 title: "Celebrity Chefs",
                 desc: "World-renowned restaurants",
-                image: "celebrity-chef.jpg"
+                image: "Dubai-chefs.jpg"
               }
             ].map((experience, index) => (
               <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
                 <Image
-                  src={`/images/destinations/dubai/${experience.image}`}
+                  src={`/images/hotels/dubai/food/${experience.image}`}
                   alt={experience.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform"

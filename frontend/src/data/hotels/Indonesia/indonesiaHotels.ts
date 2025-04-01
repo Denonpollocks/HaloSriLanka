@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,6 +103,7 @@ export const indonesiaHotels: Hotel[] = [
       "lat": -8.7904,
       "lng": 115.1550
     },
+    "cardImage": "/images/hotels/indonesia/AYANA-Resort-Bali.jpg",
     "images": [
       "/images/hotels/bali/ayana-resort-1.jpg",
       "/images/hotels/bali/ayana-resort-2.jpg",
@@ -335,6 +337,7 @@ export const indonesiaHotels: Hotel[] = [
       "lat": -8.5466,
       "lng": 115.2603
     },
+    "cardImage": "/images/hotels/indonesia/The-Sankara-Resort-by-Pramana.jpg",
     "images": [
       "/images/hotels/ubud/sankara-resort-1.jpg",
       "/images/hotels/ubud/sankara-resort-2.jpg",
@@ -548,6 +551,7 @@ export const indonesiaHotels: Hotel[] = [
       "lat": -8.6985,
       "lng": 115.1670
     },
+    "cardImage": "/images/hotels/indonesia/Villa-Coco.jpg",
     "images": [
       "/images/hotels/seminyak/villa-coco-1.jpg",
       "/images/hotels/seminyak/villa-coco-2.jpg",

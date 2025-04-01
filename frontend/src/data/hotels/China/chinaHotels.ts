@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,6 +103,7 @@ export const chinaHotels: Hotel[] = [
       "lat": 23.1346,
       "lng": 113.2760
     },
+    "cardImage": "/images/hotels/guangzhou/Crowne-Plaza-Guangzhou-City-Centre.jpg",
     "images": [
       "/images/hotels/guangzhou/crowne-plaza-1.jpg",
       "/images/hotels/guangzhou/crowne-plaza-2.jpg",
@@ -316,6 +318,7 @@ export const chinaHotels: Hotel[] = [
     "lat": 23.1168,
     "lng": 113.2536
   },
+  "cardImage": "/images/hotels/guangzhou/Crowne-Plaza-Guangzhou-City-Centre.jpg",
   "images": [
     "/images/hotels/guangzhou/guangzhou-hotel-1.jpg",
     "/images/hotels/guangzhou/guangzhou-hotel-2.jpg",
@@ -529,6 +532,7 @@ export const chinaHotels: Hotel[] = [
     "lat": 23.1255,
     "lng": 113.2655
   },
+  "cardImage": "/images/hotels/guangzhou/hotel-canton-1.jpg",
   "images": [
     "/images/hotels/guangzhou/hotel-canton-1.jpg",
     "/images/hotels/guangzhou/hotel-canton-2.jpg",

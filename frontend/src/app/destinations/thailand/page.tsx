@@ -226,7 +226,7 @@ export default function ThailandDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -374,22 +374,22 @@ export default function ThailandDestination() {
               {
                 title: "Street Food Tours",
                 desc: "Guided tours through Bangkok's best food markets",
-                image: "street-food.jpg"
+                image: "thailand-street-food.jpg"
               },
               {
                 title: "Fine Dining",
                 desc: "Michelin-starred Thai restaurants",
-                image: "fine-dining.jpg"
+                image: "thailand-fine-dining.jpg"
               },
               {
                 title: "Cooking Classes",
                 desc: "Learn from master Thai chefs",
-                image: "cooking-class.jpg"
+                image: "thailand-cooking-classes.jpg"
               }
             ].map((experience, index) => (
               <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
                 <Image
-                  src={`/images/destinations/thailand/${experience.image}`}
+                  src={`/images/hotels/thailand/food/${experience.image}`}
                   alt={experience.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform"

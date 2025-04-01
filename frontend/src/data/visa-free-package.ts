@@ -5,6 +5,7 @@ export const visaFreePackages = [
       location: "Maldives",
       description: "Perfect family getaway with water activities, kids club, and relaxation for parents",
       duration: "5 Days",
+      cardImage: "/images/packages/maldives-family.jpg",
       price: 1299,
       image: "/images/packages/maldives-family.jpg",
       features: [

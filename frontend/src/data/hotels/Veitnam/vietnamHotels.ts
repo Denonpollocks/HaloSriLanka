@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,6 +103,7 @@ export const vietnamHotels: Hotel[] = [
           "lat": 29.9884,
           "lng": 31.1285
         },
+        "cardImage": "/images/hotels/giza/Barcelo-Cairo-Pyramids.jpg",
         "images": [
           "/images/hotels/giza/Barcelo-Cairo-Pyramids.jpg",
           "/images/hotels/giza/Barcelo-Cairo-Pyramids-2.jpg",

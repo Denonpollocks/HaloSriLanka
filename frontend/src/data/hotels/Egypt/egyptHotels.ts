@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -92,7 +93,7 @@ export const egyptHotels: Hotel[] = [
         "city": "Egypt",
         "country": "Egypt",
         "price": 82,
-        "rating": 4,
+        "rating": 4,  
         "ratings": {
           "overall": 4.0,
           "totalReviews": 1547,
@@ -102,6 +103,7 @@ export const egyptHotels: Hotel[] = [
           "lat": 29.9884,
           "lng": 31.1285
         },
+        "cardImage": "/images/hotels/egypt/Barcelo-Cairo-Pyramids.jpg",
         "images": [
           "/images/hotels/giza/Barcelo-Cairo-Pyramids.jpg",
           "/images/hotels/giza/Barcelo-Cairo-Pyramids-2.jpg",
@@ -309,6 +311,7 @@ export const egyptHotels: Hotel[] = [
           "lat": 30.0425,
           "lng": 31.2241
         },
+        "cardImage": "/images/hotels/egypt/Pharaohs-Hotel.jpg",
         "images": [
           "/images/hotels/cairo/Pharaohs-Hotel-1.jpg",
           "/images/hotels/cairo/Pharaohs-Hotel-2.jpg",
@@ -509,6 +512,7 @@ export const egyptHotels: Hotel[] = [
         "name": "Kempinski Nile Hotel",
         "slug": "kempinski-nile-hotel-cairo",
         "location": "Garden City, Cairo, Egypt",
+        "cardImage": "/images/hotels/egypt/Kempinski-Nile-Hotel.jpg",
         "city": "Cairo",
         "country": "Egypt",
         "price": 160,

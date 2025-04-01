@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -101,6 +102,7 @@ export const maldivesHotels: Hotel[] = [
           "lat": 2.8516,
           "lng": 73.5431
         },
+        "cardImage": "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives.jpg",
         "images": [
           "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-1.jpg",
           "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-2.jpg",
@@ -323,6 +325,7 @@ export const maldivesHotels: Hotel[] = [
           "lat": 3.4707,
           "lng": 73.5417
         },
+        "cardImage": "/images/hotels/maldives/Cinnamon-Velifushi-Maldives.jpg",
         "images": [
           "/images/hotels/maldives/Cinnamon-Velifushi-1.jpg",
           "/images/hotels/maldives/Cinnamon-Velifushi-2.jpg",
@@ -566,6 +569,7 @@ export const maldivesHotels: Hotel[] = [
     "lat": 4.0045,
     "lng": 72.9460
   },
+  "cardImage": "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon.jpg",
   "images": [
     "/images/hotels/maldives/Ellaidhoo-1.jpg",
     "/images/hotels/maldives/Ellaidhoo-2.jpg",

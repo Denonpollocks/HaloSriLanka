@@ -227,7 +227,7 @@ export default function TurkeyDestination() {
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-[300px] overflow-hidden">
                   <Image
-                    src={hotel.images[0]}
+                    src={hotel.cardImage}
                     alt={hotel.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -331,22 +331,22 @@ export default function TurkeyDestination() {
               {
                 title: "Street Food Tours",
                 desc: "Explore vibrant bazaars and local markets",
-                image: "street-food.jpg"
+                image: "turkey-street-food.jpg"
               },
               {
                 title: "Fine Dining",
                 desc: "Modern Turkish gastronomy",
-                image: "fine-dining.jpg"
+                image: "turkey-fine-dining.jpg"
               },
               {
                 title: "Cooking Classes",
                 desc: "Learn authentic Turkish recipes",
-                image: "cooking-class.jpg"
+                image: "turkey-cooking-classes.jpg"
               }
             ].map((experience, index) => (
               <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
                 <Image
-                  src={`/images/destinations/turkey/${experience.image}`}
+                  src={`/images/hotels/turkey/food/${experience.image}`}
                   alt={experience.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform"

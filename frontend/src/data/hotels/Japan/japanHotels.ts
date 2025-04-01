@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -102,6 +103,7 @@ export const japanHotels: Hotel[] = [
           "lat": 35.6738,
           "lng": 139.8174
         },
+        "cardImage": "/images/hotels/japan/Tokyo-East-21.jpg",
         "images": [
           "/images/hotels/tokyo/Hotel-East-21-Tokyo-1.jpg",
           "/images/hotels/tokyo/Hotel-East-21-Tokyo-2.jpg",
@@ -375,6 +377,7 @@ export const japanHotels: Hotel[] = [
               "lat": 35.7776,
               "lng": 140.3118
             },
+            "cardImage": "/images/hotels/japan/International-Garden-Hotel-Narita.jpg",
             "images": [
               "/images/hotels/narita/International-Garden-Hotel-Narita-1.jpg",
               "/images/hotels/narita/International-Garden-Hotel-Narita-2.jpg",
@@ -569,6 +572,7 @@ export const japanHotels: Hotel[] = [
               "lat": 35.6566,
               "lng": 139.6984
             },
+            "cardImage": "/images/hotels/japan/Shibuya-Granbell-Hotel.jpg",
             "images": [
               "/images/hotels/tokyo/Shibuya-Granbell-Hotel-1.jpg",
               "/images/hotels/tokyo/Shibuya-Granbell-Hotel-2.jpg",

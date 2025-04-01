@@ -30,6 +30,7 @@ export interface Hotel {
   city: string;
   country: string;
   price: number;
+  cardImage: string;
   images: string[];
   description: {
     short: string;
@@ -101,6 +102,7 @@ export const franceHotels: Hotel[] = [
           "lat": 48.8761,
           "lng": 2.8023
         },
+        "cardImage": "/images/hotels/france/Campanile-Val-De-France.jpg",
         "images": [
           "/images/hotels/magny-le-hongre/Campanile-Val-de-France-1.jpg",
           "/images/hotels/magny-le-hongre/Campanile-Val-de-France-2.jpg",
@@ -296,6 +298,7 @@ export const franceHotels: Hotel[] = [
           "lat": 48.8686,
           "lng": 2.3285
         },
+        "cardImage": "/images/hotels/france/Ritz-Paris.jpg",
         "images": [
           "/images/hotels/paris/ritz-paris-1.jpg",
           "/images/hotels/paris/ritz-paris-2.jpg",
@@ -520,6 +523,7 @@ export const franceHotels: Hotel[] = [
       "lat": 48.8686,
       "lng": 2.3005
     },
+    "cardImage": "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris.jpg",
     "images": [
       "/images/hotels/paris/four-seasons-george-v-1.jpg",
       "/images/hotels/paris/four-seasons-george-v-2.jpg",
