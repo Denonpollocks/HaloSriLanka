@@ -83,8 +83,8 @@ export default function Home() {
             <Image
               src='/hero/Home/h1.png'
               alt="Holidays 2025"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
               priority
             />
           </div>
@@ -205,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50" aria-label="Client Testimonials">
+      <section className="py-20 bg-gray-50 rounded-2xl" aria-label="Client Testimonials">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-9">
             What Our <span className="text-pink-600">Travelers Say</span>

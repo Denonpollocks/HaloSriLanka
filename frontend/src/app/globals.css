@@ -46,3 +46,7 @@ body {
   animation: gradientMove 6s infinite linear;
 }
 
+* {
+  scrollbar-color: #58002b #f1f1f1;
+  scrollbar-width: auto;
+}

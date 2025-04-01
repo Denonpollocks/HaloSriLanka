@@ -1,6 +1,6 @@
 'use client';
 
-import {  Fragment } from 'react';
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -14,7 +14,7 @@ const packageLinks = [
   { title: '2025 Holidays', href: '/holidays-2025' },
   { title: 'Corporate Packages', href: '/corporate' },
   { title: 'Visa Free Holidays', href: '/visa-free-holidays' },
-  
+
 ];
 
 const destinationLinks = [
@@ -69,27 +69,27 @@ const Navbar = () => {
 
   return (
     <nav className="w-full fixed border-b border-gray-200 top-0 bg-white py-4 px-6 flex items-center justify-between z-50 h-16">
-      <div className='flex justify-between w-full items-center'> 
-        <div className='flex items-center'>
+      <div className='flex justify-between w-full items-center'>
+        <div className='flex items-center mt-2'>
           <Link href="/" className="flex items-center">
             <Image
               src="/images/new-halo-logo-2.svg"
               alt="Halo Holidays"
-              width={210}
+              width={190}
               height={70}
               priority
             />
           </Link>
         </div>
-    
-        <div className="hidden md:flex items-center gap-8 ">
-          <Link href="/" className="text-black font-semibold font-mono hover:text-pink-600">
+
+        <div className="hidden md:flex items-center gap-8 mr-20">
+          <Link href="/" className="text-sm font-medium font-mono hover:text-pink-600">
             Home
           </Link>
           <div className="relative group">
-            <button className="text-black font-semibold font-mono hover:text-pink-600 flex items-center">
+            <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
               Packages
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -107,11 +107,11 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="relative group">
-            <button className="text-black font-semibold font-mono hover:text-pink-600 flex items-center">
+            <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
               Destinations
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -129,16 +129,16 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link href="/news" className="text-black font-semibold font-mono hover:text-pink-600">
+          <Link href="/news" className="text-sm font-medium font-mono hover:text-pink-600">
             News
           </Link>
-          <Link href="/reviews" className="text-black font-semibold font-mono hover:text-pink-600">
+          <Link href="/reviews" className="text-sm font-medium font-mono hover:text-pink-600">
             Reviews
           </Link>
           <div className="relative group">
-            <button className="text-black font-semibold font-mono hover:text-pink-600 flex items-center">
+            <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
               More
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -156,7 +156,31 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Popover className="relative">
+          <div className="relative group">
+            <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
+              Visas
+              <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute left-0 mt-2 w-50 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                {visaCountries.map((country) => (
+                  <Link
+                    key={country.name}
+                    href={country.href}
+                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className='font-semibold min-w-5'>{country.icon}</span>
+                      {country.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* <Popover className="relative">
             {() => (
               <>
                 <Popover.Button className="inline-flex hover:text-pink-600 items-center gap-x-1 text-md font-semibold leading-6 text-gray-900">
@@ -192,13 +216,15 @@ const Navbar = () => {
                 </Transition>
               </>
             )}
-          </Popover>
+          </Popover> */}
           {isLoggedIn ? (
-            <UserMenu />
+            <div className='ml-20'>
+              <UserMenu />
+            </div>
           ) : (
-            <Link 
-              href="/sign-in" 
-              className="text-pink-600 font-semibold font-mono hover:text-pink-700"
+            <Link
+              href="/sign-in"
+              className="text-pink-600 font-semibold font-mono hover:text-pink-700 ml-20"
             >
               Sign In
             </Link>
