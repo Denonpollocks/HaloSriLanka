@@ -84,10 +84,10 @@ const PackageList = ({ packages }: PackageListProps) => {
                   <button
                     key={i + 1}
                     onClick={() => handlePageChange(i + 1)}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-4 py-2 rounded-md transition-all duration-200 ${
                       validCurrentPage === i + 1
-                        ? 'bg-pink-600 text-white'
-                        : 'bg-white border border-pink-600 rounded-md hover:bg-gray-300'
+                        ? 'bg-pink-600 text-white shadow-md scale-105'
+                        : 'bg-white border border-pink-600 text-pink-600 hover:bg-pink-100 cursor-pointer'
                     }`}
                   >
                     {i + 1}

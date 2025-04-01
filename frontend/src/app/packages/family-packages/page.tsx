@@ -103,7 +103,7 @@ export default function FamilyPackages() {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Our travel experts are here to help you create the perfect family holiday experience.
           </p>
-          <button className="bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition-colors">
+          <button className="bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition-colors cursor-pointer">
             Contact Us Now
           </button>
         </div>
