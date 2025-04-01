@@ -3,25 +3,25 @@ import Link from 'next/link';
 import HotelList from '../components/HotelList';
 import Features from '../components/Features';
 import HomeHero from '../components/hero/HomeHero';
+import CardVacations from "../components/CardVacations";
 
 const popularDestinations = [
   {
-    
     name: 'Maldives',
     description: 'Luxury overwater villas and pristine beaches',
-    image: '/images/destinations/maldives/maldives-watervilla.png',
+    image: '/images/destinations/maldives/home.png',
     href: '/maldives'
   },
   {
     name: 'Paris, France',
     description: 'Iconic Eiffel Tower and romantic walks by the Seine',
-    image: '/images/destinations/france/france.jpg',
+    image: '/images/destinations/france/home.png',
     href: '/paris'
   },
   {
     name: 'Tokyo, Japan',
     description: 'Traditional gardens and modern skyscrapers',
-    image: '/images/destinations/japan/japan.jpg',
+    image: '/images/destinations/japan/home.png',
     href: '/tokyo'
 
   },
@@ -82,7 +82,7 @@ export default function Home() {
         <HomeHero />
       </section>
 
-      <section className="py-16 bg-gray-50" aria-label="Popular Destinations">
+      {/* <section className="py-16 bg-gray-50" aria-label="Popular Destinations">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-10 text-center">
             Popular <span className="text-pink-600">Destinations</span>
@@ -118,38 +118,50 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
-      <section className="py-16" aria-label="Our Services">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            Tailored Travel <span className="text-pink-600">Services</span>
+      <section className="py-16 bg-gray-50 rounded-2xl" aria-label="Popular Destinations">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-10 text-center">
+            Popular <span className="text-pink-600">Destinations</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {travelServices.map((service, index) => (
-              <div key={index} className="group h-[300px] [perspective:1000px]">
-                <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front of card */}
-                  <div className="absolute inset-0 p-6 border border-gray-100 shadow-lg rounded-lg bg-white">
-                    <div className="w-12 h-12 mb-4 text-pink-600">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
-                  </div>
-
-                  {/* Back of card */}
-                  <div className="absolute inset-0 h-full w-full p-6  rounded-lg bg-[#dc0069] [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <div className="flex flex-col h-full justify-center items-center text-center">
-                      <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-                      <p className="text-white">{service.backContent}</p>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+            {popularDestinations.map((destination, index) => (
+              <article
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg transition-transform transform hover:scale-[1.02] bg-white"
+              >
+                <div className="relative h-[300px] md:h-[350px] lg:h-[400px] w-full">
+                  <Image
+                    src={destination.image}
+                    alt={destination.name}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-100"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-1">{destination.name}</h3>
+                    <p className="text-sm opacity-90 line-clamp-2">{destination.description}</p>
                   </div>
                 </div>
-              </div>
+                <div className="p-4 flex justify-center">
+                  <Link href={destination.href} passHref>
+                    <button className="bg-pink-500 text-white py-2 px-6 rounded-md font-medium transition-all duration-300 hover:bg-pink-600 shadow-md cursor-pointer">
+                      Read More
+                    </button>
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+          <h2 className="text-4xl font-bold mb-10 text-center">
+            Tailored Travel <span className="text-pink-600">Services</span>
+          </h2>
+          <CardVacations />
         </div>
       </section>
 
