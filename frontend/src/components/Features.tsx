@@ -27,8 +27,8 @@ const featuresdata = [
 
 const Features = ({ title = "More reasons to choose us",  }: FeaturesProps) => {
   return (
-    <section className="py-16 sm:justify-center  sm:items-center  sm:flex px-4">
-      <div className="md:container  justify-center items-center lg:container mx-auto">
+    <section className="sm:justify-center sm:items-center sm:flex px-4">
+      <div className="md:container justify-center items-center lg:container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">{title}</h2>
         <div className="grid  grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuresdata.map((feature, index) => (

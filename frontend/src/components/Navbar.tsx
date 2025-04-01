@@ -68,7 +68,7 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className="w-full sticky border-b border-gray-200 top-0 bg-white py-4 px-6 flex items-center  justify-between z-50">
+    <nav className="w-full fixed border-b border-gray-200 top-0 bg-white py-4 px-6 flex items-center justify-between z-50 h-16">
       <div className='flex justify-between w-full items-center'> 
         <div className='flex items-center'>
           <Link href="/" className="flex items-center">

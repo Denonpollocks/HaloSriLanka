@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HotelList from '../components/HotelList';
 import Features from '../components/Features';
-import HomeHero from '../components/hero/HomeHero';
 import CardVacations from "../components/CardVacations";
 
 const popularDestinations = [
@@ -78,8 +77,40 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="container mx-auto px-4">
-      <section className="py-20">
-        <HomeHero />
+      <section className="mt-20 mb-20" aria-label="Hero Section">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 items-center justify-center">
+          <div className="relative h-[400px] w-full overflow-hidden hidden md:block">
+            <Image
+              src='/hero/Home/h1.png'
+              alt="Holidays 2025"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </div>
+
+          {/* Text Overlay */}
+          <div className="relative">
+            <div className="border-b-1 md:ml-3 pb-3 border-gray-300">
+              <div className="flex flex-col">
+                <h1 className="text-6xl md:text-7xl lg:text-9xl 2xl:text-9xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-black to-[#dc0069] w-full text-center md:text-left">
+                  Holidays
+                </h1>
+                <span className="mt-6 md:mt-0 text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-black to-[#dc0069] text-center md:text-right w-full">
+                  2025
+                </span>
+              </div>
+            </div>
+            <div className="ml-4">
+              <p className="mt-6 text-gray-500 max-w-xl text-sm hidden md:block">
+                Why stay in one place when there’s a whole world to explore? From breathtaking landscapes to rich cultural experiences, we connect you to destinations across the globe. Start your next adventure today and let’s make memories that last a lifetime!
+              </p>
+              <p className="mt-6 text-gray-500 max-w-xl text-sm md:hidden">
+                Why stay in one place when the world awaits? Explore breathtaking landscapes and rich cultures—your adventure starts now!
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* <section className="py-16 bg-gray-50" aria-label="Popular Destinations">
@@ -121,7 +152,7 @@ export default function Home() {
       </section> */}
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50 rounded-2xl" aria-label="Popular Destinations">
+      <section className="py-20 bg-gray-50 rounded-2xl mb-20" aria-label="Popular Destinations">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-10 text-center">
             Popular <span className="text-pink-600">Destinations</span>
@@ -165,18 +196,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='py-16'>
+      <section className='mb-20'>
         <HotelList />
       </section>
 
-      <section className='py-16'>
+      <section className='mb-20'>
         <Features features={[]} />
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50" aria-label="Client Testimonials">
+      <section className="py-20 bg-gray-50" aria-label="Client Testimonials">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
+          <h2 className="text-4xl font-bold text-center mb-9">
             What Our <span className="text-pink-600">Travelers Say</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
