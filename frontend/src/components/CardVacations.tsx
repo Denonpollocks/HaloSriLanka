@@ -7,19 +7,19 @@ const promotions = [
       name: "Honeymoon",
       description: "Love, Laughter & Lifetime Memories",
       image: "/images/types/honeymoon.png",
-      background: "/images/watermark1.png",
+
     },
     {
       name: "Family",
       description: "Cherish Every Moment Together",
       image: "/images/types/family.png",
-      background: "/images/watermark2.png",
+      
     },
     {
       name: "Corporate",
       description: "Smooth & Stress-Free Business Travel",
       image: "/images/types/corporate.png",
-      background: "/images/watermark3.png",
+     
     },
   
     // Add more services
@@ -56,7 +56,7 @@ const Promotions = ({ }) => {
                 <div
                   className="relative bg-white p-6 rounded-lg shadow-lg z-10"
                   style={{
-                    backgroundImage: `url(${promo.background})`,
+                   
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

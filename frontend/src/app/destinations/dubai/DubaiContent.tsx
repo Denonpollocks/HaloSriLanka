@@ -56,19 +56,19 @@ export default function DubaiContent() {
                 title: "Burj Al Arab",
                 location: "Jumeirah",
                 image: "/images/destinations/dubai/burj-al-arab.jpg",
-                price: "From AED 5,000 per night"
+                price: "From LKR 5,000 per night"
               },
               {
                 title: "Atlantis The Royal",
                 location: "Palm Jumeirah",
                 image: "/images/destinations/dubai/atlantis-royal.jpg",
-                price: "From AED 4,500 per night"
+                price: "From LKR 4,500 per night"
               },
               {
                 title: "One&Only The Palm",
                 location: "Palm Jumeirah",
                 image: "/images/destinations/dubai/oneandonly-palm.jpg",
-                price: "From AED 3,800 per night"
+                price: "From LKR 3,800 per night"
               }
             ].map((hotel, index) => (
               <div key={index} className="group cursor-pointer">

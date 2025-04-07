@@ -104,11 +104,11 @@ export const franceHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/france/Campanile-Val-De-France.jpg",
         "images": [
-          "/images/hotels/magny-le-hongre/Campanile-Val-de-France-1.jpg",
-          "/images/hotels/magny-le-hongre/Campanile-Val-de-France-2.jpg",
-          "/images/hotels/magny-le-hongre/Campanile-Val-de-France-3.jpg",
-          "/images/hotels/magny-le-hongre/Campanile-Val-de-France-4.jpg",
-          "/images/hotels/magny-le-hongre/Campanile-Val-de-France-5.jpg"
+          "/images/hotels/france/Campanile-Val-de-France/Campanile-Val-de-France-3.jpg",
+          "/images/hotels/france/Campanile-Val-de-France/Campanile-Val-de-France-2.jpg",
+          "/images/hotels/france/Campanile-Val-de-France/Campanile-Val-de-France-1.jpg",
+          "/images/hotels/france/Campanile-Val-de-France/Campanile-Val-de-France-4.jpg",
+          "/images/hotels/france/Campanile-Val-de-France/Campanile-Val-de-France-5.jpg"
         ],
         "highlights": [
           {
@@ -300,11 +300,11 @@ export const franceHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/france/Ritz-Paris.jpg",
         "images": [
-          "/images/hotels/paris/ritz-paris-1.jpg",
-          "/images/hotels/paris/ritz-paris-2.jpg",
-          "/images/hotels/paris/ritz-paris-3.jpg",
-          "/images/hotels/paris/ritz-paris-4.jpg",
-          "/images/hotels/paris/ritz-paris-5.jpg"
+          "/images/hotels/france/Ritz-Paris/Ritz-Paris-3.jpg",
+          "/images/hotels/france/Ritz-Paris/Ritz-Paris-2.jpg",
+          "/images/hotels/france/Ritz-Paris/Ritz-Paris-1.jpg",
+          "/images/hotels/france/Ritz-Paris/Ritz-Paris-4.jpg",
+          "/images/hotels/france/Ritz-Paris/Ritz-Paris-5.jpg"
         ],
         "highlights": [
           {
@@ -525,11 +525,10 @@ export const franceHotels: Hotel[] = [
     },
     "cardImage": "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris.jpg",
     "images": [
-      "/images/hotels/paris/four-seasons-george-v-1.jpg",
-      "/images/hotels/paris/four-seasons-george-v-2.jpg",
-      "/images/hotels/paris/four-seasons-george-v-3.jpg",
-      "/images/hotels/paris/four-seasons-george-v-4.jpg",
-      "/images/hotels/paris/four-seasons-george-v-5.jpg"
+      "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris/Four-Seasons-Hotel-George-V-Paris-1.jpg",
+      "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris/Four-Seasons-Hotel-George-V-Paris-2.jpg",
+      "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris/Four-Seasons-Hotel-George-V-Paris-3.jpg",
+      "/images/hotels/france/Four-Seasons-Hotel-George-V-Paris/Four-Seasons-Hotel-George-V-Paris-4.jpg",
     ],
     "highlights": [
       {

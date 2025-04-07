@@ -104,11 +104,13 @@ export const maldivesHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives.jpg",
         "images": [
-          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-1.jpg",
-          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-2.jpg",
-          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-3.jpg",
-          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-4.jpg",
-          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-5.jpg"
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-1.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-2.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-3.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-4.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-5.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-6.jpg",
+          "/images/hotels/maldives/Cinnamon-Hakuraa-Huraa-Maldives/Cinnamon-Hakuraa-Huraa-Maldives-7.jpg",
         ],
         "highlights": [
           {
@@ -327,11 +329,13 @@ export const maldivesHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/maldives/Cinnamon-Velifushi-Maldives.jpg",
         "images": [
-          "/images/hotels/maldives/Cinnamon-Velifushi-1.jpg",
-          "/images/hotels/maldives/Cinnamon-Velifushi-2.jpg",
-          "/images/hotels/maldives/Cinnamon-Velifushi-3.jpg",
-          "/images/hotels/maldives/Cinnamon-Velifushi-4.jpg",
-          "/images/hotels/maldives/Cinnamon-Velifushi-5.jpg"
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-1.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-2.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-3.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-4.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-5.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-6.jpg",
+          "/images/hotels/maldives/Cinnamon-Velifushi-Maldives/Cinnamon-Velifushi-Maldives-7.jpg",
         ],
         "highlights": [
           {
@@ -571,11 +575,13 @@ export const maldivesHotels: Hotel[] = [
   },
   "cardImage": "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon.jpg",
   "images": [
-    "/images/hotels/maldives/Ellaidhoo-1.jpg",
-    "/images/hotels/maldives/Ellaidhoo-2.jpg",
-    "/images/hotels/maldives/Ellaidhoo-3.jpg",
-    "/images/hotels/maldives/Ellaidhoo-4.jpg",
-    "/images/hotels/maldives/Ellaidhoo-5.jpg"
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-1.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-2.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-3.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-4.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-5.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-6.jpg",
+    "/images/hotels/maldives/Ellaidhoo-Maldives-By-Cinnamon/Ellaidhoo-Maldives-By-Cinnamon-7.jpg",
   ],
   "highlights": [
     {

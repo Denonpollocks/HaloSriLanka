@@ -106,11 +106,13 @@ export const thailandHotels: Hotel[] = [
         "cardImage": "/images/hotels/thailand/Baiyoke-Sky-Hotel.jpg",
         "images": [
 
-          "/images/hotels/bangkok/Baiyoke-Sky-Hotel-1.jpg",
-          "/images/hotels/bangkok/Baiyoke-Sky-Hotel-2.jpg",
-          "/images/hotels/bangkok/Baiyoke-Sky-Hotel-3.jpg",
-          "/images/hotels/bangkok/Baiyoke-Sky-Hotel-4.jpg",
-          "/images/hotels/bangkok/Baiyoke-Sky-Hotel-5.jpg"
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-3.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-2.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-1.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-4.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-5.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-6.jpg",
+          "/images/hotels/thailand/Baiyoke-Sky/Baiyoke-Sky-7.jpg",
         ],
         "highlights": [
           {
@@ -330,11 +332,13 @@ export const thailandHotels: Hotel[] = [
             },
             "cardImage": "/images/hotels/thailand/Bangkok-Palace-Hotel.jpg",
             "images": [
-              "/images/hotels/bangkok/Bangkok-Palace-Hotel-1.jpg",
-              "/images/hotels/bangkok/Bangkok-Palace-Hotel-2.jpg",
-              "/images/hotels/bangkok/Bangkok-Palace-Hotel-3.jpg",
-              "/images/hotels/bangkok/Bangkok-Palace-Hotel-4.jpg",
-              "/images/hotels/bangkok/Bangkok-Palace-Hotel-5.jpg"
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-1.jpg",
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-2.jpg",
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-3.jpg",
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-4.jpg",
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-5.jpg",  
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palacel-Hotel-6.jpg",
+              "/images/hotels/thailand/Bangkok-Palace/Bangkok-Palace-Hotel-7.jpg",
             ],
             "highlights": [
               {

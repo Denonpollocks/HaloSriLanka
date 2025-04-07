@@ -105,11 +105,13 @@ export const japanHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/japan/Tokyo-East-21.jpg",
         "images": [
-          "/images/hotels/tokyo/Hotel-East-21-Tokyo-1.jpg",
-          "/images/hotels/tokyo/Hotel-East-21-Tokyo-2.jpg",
-          "/images/hotels/tokyo/Hotel-East-21-Tokyo-3.jpg",
-          "/images/hotels/tokyo/Hotel-East-21-Tokyo-4.jpg",
-          "/images/hotels/tokyo/Hotel-East-21-Tokyo-5.jpg"
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-1.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-2.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-3.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-4.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-5.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-6.jpg",
+          "/images/hotels/japan/Hotel-East-21-Tokyo/Hotel-East-21-Tokyo-7.jpg",
         ],
         "highlights": [
           {
@@ -379,11 +381,13 @@ export const japanHotels: Hotel[] = [
             },
             "cardImage": "/images/hotels/japan/International-Garden-Hotel-Narita.jpg",
             "images": [
-              "/images/hotels/narita/International-Garden-Hotel-Narita-1.jpg",
-              "/images/hotels/narita/International-Garden-Hotel-Narita-2.jpg",
-              "/images/hotels/narita/International-Garden-Hotel-Narita-3.jpg",
-              "/images/hotels/narita/International-Garden-Hotel-Narita-4.jpg",
-              "/images/hotels/narita/International-Garden-Hotel-Narita-5.jpg"
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-1.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-2.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-3.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-4.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-5.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-6.jpg",
+              "/images/hotels/japan/International-Garden-Hotel-Narita/International-Garden-Hotel-Narita-7.jpg",
             ],
             "highlights": [
               {
@@ -574,11 +578,12 @@ export const japanHotels: Hotel[] = [
             },
             "cardImage": "/images/hotels/japan/Shibuya-Granbell-Hotel.jpg",
             "images": [
-              "/images/hotels/tokyo/Shibuya-Granbell-Hotel-1.jpg",
-              "/images/hotels/tokyo/Shibuya-Granbell-Hotel-2.jpg",
-              "/images/hotels/tokyo/Shibuya-Granbell-Hotel-3.jpg",
-              "/images/hotels/tokyo/Shibuya-Granbell-Hotel-4.jpg",
-              "/images/hotels/tokyo/Shibuya-Granbell-Hotel-5.jpg"
+              "/images/hotels/japan/Shibuya-Granbell-Hotel/Shibuya-Granbell-Hotel-1.jpg",
+              "/images/hotels/japan/Shibuya-Granbell-Hotel/Shibuya-Granbell-Hotel-2.jpg",
+              "/images/hotels/japan/Shibuya-Granbell-Hotel/Shibuya-Granbell-Hotel-3.jpg",
+              "/images/hotels/japan/Shibuya-Granbell-Hotel/Shibuya-Granbell-Hotel-4.jpg",
+              "/images/hotels/japan/Shibuya-Granbell-Hotel/Shibuya-Granbell-Hotel-5.jpg",
+           
             ],
             "highlights": [
               {

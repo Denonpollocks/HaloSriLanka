@@ -26,13 +26,7 @@ export default function Attractions({ attractions, airportDistance }: Attraction
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {attractions.map((attraction, index) => (
           <div key={index} className="flex gap-4 bg-white rounded-lg p-4 shadow-sm">
-            <div className="w-32 h-32 relative flex-shrink-0">
-              <img
-                src={attraction.image}
-                alt={attraction.name}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
+         
             <div className="flex-grow">
               <h3 className="font-semibold text-gray-900 mb-1">{attraction.name}</h3>
               <p className="text-sm text-pink-600 mb-1">{attraction.type}</p>

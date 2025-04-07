@@ -13,19 +13,19 @@ const corporateServices = [
   {
     title: 'MICE Events',
     description: 'Meetings, Incentives, Conferences, and Exhibitions tailored to your business needs',
-    icon: '/icons/mice.svg',
+    // icon: '/icons/mice.svg',
     link: '/corporate/mice-events'
   },
   {
     title: 'Business Travel',
     description: 'Streamlined booking process with 24/7 travel support for your team',
-    icon: '/icons/business.svg',
+    // icon: '/icons/business.svg',
     link: '/corporate/business-travel'
   },
   {
     title: 'Corporate Retreats',
     description: 'Team building and corporate wellness programs in premium locations',
-    icon: '/icons/retreat.svg',
+    // icon: '/icons/retreat.svg',
     link: '/corporate/corporate-retreats'
   }
 ];
@@ -41,7 +41,7 @@ const corporatePackages = [
       "Business Lounge Access",
       "Meeting Room Facilities"
     ],
-    image: "/images/corporate/executive-package.jpg"
+    image: "/images/corporate-services/executive-package.jpg"
   },
   {
     title: "Team Retreat Package",
@@ -53,7 +53,7 @@ const corporatePackages = [
       "Group Dining Experiences",
       "Adventure Excursions"
     ],
-    image: "/images/corporate/team-retreat.jpg"
+    image: "/images/corporate-services/team-retreat.jpg"
   },
   {
     title: "Conference Package",
@@ -65,7 +65,7 @@ const corporatePackages = [
       "Group Accommodation",
       "Event Management"
     ],
-    image: "/images/corporate/conference.jpg"
+    image: "/images/corporate-services/conference-packages.jpg"
   }
 ];
 
@@ -75,13 +75,13 @@ export default function Corporate() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center">
         <Image
-          src="/images/corporate-services/corporate.jpg"
+          src="/images/corporate-services/Corporate-Travel.jpg"
           alt="Corporate Travel Solutions"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
             Corporate Travel <span className="text-pink-600">Solutions</span>
@@ -111,13 +111,13 @@ export default function Corporate() {
             {corporateServices.map((service, index) => (
               <a key={index} href={service.link}>
                 <div className="p-6 border rounded-lg hover:shadow-xl transition-shadow">
-                  <Image
-                    src={service.icon}
+                  {/* <Image
+                    src={service.image}
                     alt={service.title}
                     width={48}
                     height={48}
                     className="mb-4"
-                  />
+                  /> */}
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>

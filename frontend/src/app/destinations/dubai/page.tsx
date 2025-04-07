@@ -61,7 +61,7 @@ const schemaData = {
   },
   "offers": {
     "@type": "AggregateOffer",
-    "priceCurrency": "AED",
+    "priceCurrency": "LKR",
     "lowPrice": "2999",
     "highPrice": "15999",
     "offerCount": "35"
@@ -79,7 +79,7 @@ const packageSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "priceCurrency": "AED",
+    "priceCurrency": "LKR",
     "price": "2999",
     "availability": "https://schema.org/InStock",
     "validFrom": "2024-01-01"
@@ -234,7 +234,7 @@ export default function DubaiDestination() {
                     <h3 className="text-2xl font-bold">{hotel.name}</h3>
                   </div>
                   <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                    From AED {hotel.price.toLocaleString()}
+                    From LKR {hotel.price.toLocaleString()}
                   </div>
                 </div>
                 <div className="p-6">
@@ -253,9 +253,15 @@ export default function DubaiDestination() {
                     ))}
                   </div>
                   
-                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                
+                  <Link 
+            href={`/destinations/dubai/hotel/${hotel.slug.toLowerCase().replace(/\s+/g, '-')}`}
+          
+          >
+            <button className="w-full cursor-pointer mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
                     View Package
                   </button>
+          </Link>
                 </div>
               </div>
             ))}
@@ -443,7 +449,7 @@ export default function DubaiDestination() {
                 {[
                   { title: "Dress Code", desc: "Smart casual, modest in malls" },
                   { title: "Transport", desc: "Metro and luxury taxis" },
-                  { title: "Currency", desc: "UAE Dirham (AED)" },
+                  { title: "Currency", desc: "UAE Dirham (LKR)" },
                   { title: "Language", desc: "Arabic & English widely used" }
                 ].map((tip, index) => (
                   <div key={index} className="p-4 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">

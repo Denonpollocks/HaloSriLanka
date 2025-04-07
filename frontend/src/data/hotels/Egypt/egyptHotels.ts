@@ -105,13 +105,13 @@ export const egyptHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/egypt/Barcelo-Cairo-Pyramids.jpg",
         "images": [
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-2.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-3.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-4.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-5.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-6.jpg",
-          "/images/hotels/giza/Barcelo-Cairo-Pyramids-7.jpg"
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-1.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-2.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-3.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-4.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-5.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-6.jpg",
+          "/images/hotels/egypt/Barcelo-Cairo-Pyramids/Barcelo-Cairo-Pyramids-7.jpg"
         ],
         "highlights": [
           {
@@ -313,11 +313,14 @@ export const egyptHotels: Hotel[] = [
         },
         "cardImage": "/images/hotels/egypt/Pharaohs-Hotel.jpg",
         "images": [
-          "/images/hotels/cairo/Pharaohs-Hotel-1.jpg",
-          "/images/hotels/cairo/Pharaohs-Hotel-2.jpg",
-          "/images/hotels/cairo/Pharaohs-Hotel-3.jpg",
-          "/images/hotels/cairo/Pharaohs-Hotel-4.jpg",
-          "/images/hotels/cairo/Pharaohs-Hotel-5.jpg"
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-1.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-2.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-3.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-4.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-5.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-6.jpg",
+          "/images/hotels/egypt/Pharaohs-Hotel/Pharaohs-Hotel-7.jpg",
+
         ],
         "highlights": [
           {
@@ -527,11 +530,11 @@ export const egyptHotels: Hotel[] = [
           "lng": 31.2289
         },
         "images": [
-          "/images/hotels/cairo/Kempinski-Nile-Hotel-1.jpg",
-          "/images/hotels/cairo/Kempinski-Nile-Hotel-2.jpg",
-          "/images/hotels/cairo/Kempinski-Nile-Hotel-3.jpg",
-          "/images/hotels/cairo/Kempinski-Nile-Hotel-4.jpg",
-          "/images/hotels/cairo/Kempinski-Nile-Hotel-5.jpg"
+          "/images/hotels/egypt/Kempinski-Nile-Hotel/Kempinski-Nile-Hotel-1.jpg",
+          "/images/hotels/egypt/Kempinski-Nile-Hotel/Kempinski-Nile-Hotel-2.jpg",
+          "/images/hotels/egypt/Kempinski-Nile-Hotel/Kempinski-Nile-Hotel-3.jpg",
+          "/images/hotels/egypt/Kempinski-Nile-Hotel/Kempinski-Nile-Hotel-4.jpg",
+          "/images/hotels/egypt/Kempinski-Nile-Hotel/Kempinski-Nile-Hotel-5.jpg"
         ],
         "highlights": [
           {

@@ -237,7 +237,7 @@ export default function ThailandDestination() {
                     <h3 className="text-2xl font-bold">{hotel.name}</h3>
                   </div>
                   <div className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm">
-                    From AED {hotel.price.toLocaleString()}
+                    From LKR {hotel.price.toLocaleString()}
                   </div>
                 </div>
                 <div className="p-6">
@@ -256,9 +256,14 @@ export default function ThailandDestination() {
                     ))}
                   </div>
                   
-                  <button className="w-full mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                    <Link 
+            href={`/destinations/thailand/hotel/${hotel.slug.toLowerCase().replace(/\s+/g, '-')}`}
+          
+          >
+            <button className="w-full cursor-pointer mt-6 bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors">
                     View Package
                   </button>
+          </Link>
                 </div>
               </div>
             ))}

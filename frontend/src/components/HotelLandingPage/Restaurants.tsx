@@ -26,13 +26,7 @@ export default function Restaurants({ restaurants }: RestaurantProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {restaurants.map((restaurant, index) => (
           <div key={index} className="flex gap-4 bg-white rounded-lg p-4 shadow-sm">
-            <div className="w-32 h-32 relative flex-shrink-0">
-              <img
-                src={restaurant.image}
-                alt={restaurant.name}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
+           
             <div className="flex-grow">
               <div className="flex justify-between items-start">
                 <h3 className="font-semibold text-gray-900">{restaurant.name}</h3>
