@@ -11,10 +11,10 @@ import {
   PlusIcon,
   MinusIcon,
   CheckIcon,
-  TrophyIcon,
-  UserGroupIcon,
-  BeakerIcon,
-  HomeModernIcon
+  // TrophyIcon,
+  // UserGroupIcon,
+  // BeakerIcon,
+  // HomeModernIcon
 } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
 import { singaporeHotels } from '@/data/hotels/Singapore/singaporeHotels';
@@ -116,7 +116,7 @@ export default function SingaporeDestination() {
           </h1>
 
           <p className="text-white text-xl max-w-2xl mt-4">
-            Where tradition meets tomorrow in Asia's garden city
+            Where tradition meets tomorrow in Asia&apos;s garden city
           </p>
         </div>
       </header>
@@ -196,7 +196,7 @@ export default function SingaporeDestination() {
               </div>
 
               {/* UNESCO Badge */}
-              <div className="border rounded border-pink-500 text-gray-700 p-6 rounded-2xl mt-8">
+              <div className="border border-pink-500 text-gray-700 p-6 rounded-2xl mt-8">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-xl font-semibold mb-2">UNESCO World Heritage Site</h3>
@@ -210,10 +210,10 @@ export default function SingaporeDestination() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
+              2024&apos;s Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of Dubai's finest hotels and resorts
+              Discover our handpicked collection of Dubai&apos;s finest hotels and resorts
             </p>
           </div>
 

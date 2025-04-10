@@ -15,41 +15,41 @@ export const metadata = {
   keywords: 'Schengen visa, EU visa, European visa, tourist visa Europe, business visa Schengen',
 };
 
-const visaTypes = [
-  {
-    title: 'Short-Stay Tourist Visa',
-    price: '£189',
-    processingTime: '15-20 business days',
-    features: [
-      'Valid for up to 90 days',
-      'Single/Multiple entry options',
-      'Access to 27 Schengen countries',
-      'Travel insurance included'
-    ]
-  },
-  {
-    title: 'Business Visa',
-    price: '£249',
-    processingTime: '15-20 business days',
-    features: [
-      'Multiple entry visa',
-      'Valid for 1-5 years',
-      'Business documentation support',
-      'Priority processing available'
-    ]
-  },
-  {
-    title: 'Student Visa',
-    price: '£199',
-    processingTime: '20-25 business days',
-    features: [
-      'Long-stay visa option',
-      'University acceptance support',
-      'Accommodation assistance',
-      'Health insurance guidance'
-    ]
-  }
-];
+// const visaTypes = [
+//   {
+//     title: 'Short-Stay Tourist Visa',
+//     price: '£189',
+//     processingTime: '15-20 business days',
+//     features: [
+//       'Valid for up to 90 days',
+//       'Single/Multiple entry options',
+//       'Access to 27 Schengen countries',
+//       'Travel insurance included'
+//     ]
+//   },
+//   {
+//     title: 'Business Visa',
+//     price: '£249',
+//     processingTime: '15-20 business days',
+//     features: [
+//       'Multiple entry visa',
+//       'Valid for 1-5 years',
+//       'Business documentation support',
+//       'Priority processing available'
+//     ]
+//   },
+//   {
+//     title: 'Student Visa',
+//     price: '£199',
+//     processingTime: '20-25 business days',
+//     features: [
+//       'Long-stay visa option',
+//       'University acceptance support',
+//       'Accommodation assistance',
+//       'Health insurance guidance'
+//     ]
+//   }
+// ];
 
 export default function SchengenVisa() {
   return (
@@ -57,7 +57,7 @@ export default function SchengenVisa() {
       {/* Hero Section */}
       <header className="relative h-[70vh] flex items-center">
         <Image
-          src="/images/visa-services/schengen/hero.jpg"
+          src="/images/visa-hero/Schengen.png"
           alt="European Landmarks"
           fill
           className="object-cover"

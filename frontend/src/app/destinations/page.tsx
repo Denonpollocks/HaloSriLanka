@@ -2,16 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Script from 'next/script';
-import { 
-  GlobeAsiaAustraliaIcon, 
-  CalendarIcon, 
-  UserGroupIcon, 
+import {
+  GlobeAsiaAustraliaIcon,
+  CalendarIcon,
+  // UserGroupIcon,
   ShieldCheckIcon,
   MapIcon,
   SunIcon,
   CurrencyDollarIcon,
   LanguageIcon,
-  ArrowRightIcon,
+  // ArrowRightIcon,
   PaperAirplaneIcon
 } from '@heroicons/react/24/outline';
 
@@ -26,7 +26,8 @@ const destinations = [
   {
     name: 'Maldives',
     description: 'Luxury overwater villas and pristine beaches',
-    image: '/images/destinations/maldives/home.png',
+    image: '/images/destinations/Maldives.png',
+    featuredImage: '/images/destination-featured/Maldives.png',
     href: '/destinations/maldives',
     featured: true,
     continent: 'Asia',
@@ -38,7 +39,8 @@ const destinations = [
   {
     name: 'Paris, France',
     description: 'Iconic Eiffel Tower and romantic walks by the Seine',
-    image: '/images/destinations/france/home.png',
+    image: '/images/destinations/France.png',
+    featuredImage: '/images/destination-featured/France.png',
     href: '/destinations/france',
     featured: true,
     continent: 'Europe',
@@ -50,7 +52,8 @@ const destinations = [
   {
     name: 'Tokyo, Japan',
     description: 'Traditional gardens and modern skyscrapers',
-    image: '/images/destinations/japan/home.png',
+    image: '/images/destinations/Japan.png',
+    featuredImage: '/images/destination-featured/Japan.png',
     href: '/destinations/japan',
     featured: true,
     continent: 'Asia',
@@ -62,7 +65,7 @@ const destinations = [
   {
     name: 'Dubai, UAE',
     description: 'Futuristic architecture and luxury shopping',
-    image: '/images/destinations/dubai/home.png',
+    image: '/images/destinations/Dubai.png',
     href: '/destinations/dubai',
     featured: false,
     continent: 'Asia',
@@ -74,7 +77,7 @@ const destinations = [
   {
     name: 'Bali, Indonesia',
     description: 'Tropical paradise with rich cultural heritage',
-    image: '/images/destinations/indonesia/home.png',
+    image: '/images/destinations/Bali.png',
     href: '/destinations/indonesia',
     featured: false,
     continent: 'Asia',
@@ -86,7 +89,7 @@ const destinations = [
   {
     name: 'Santorini, Greece',
     description: 'Stunning white buildings with blue domes overlooking the sea',
-    image: '/images/destinations/greece/home.png',
+    image: '/images/destinations/Greece.png',
     href: '/destinations/greece',
     featured: false,
     continent: 'Europe',
@@ -98,7 +101,7 @@ const destinations = [
   {
     name: 'Istanbul, Turkey',
     description: 'Where East meets West with rich historical sites',
-    image: '/images/destinations/turkey/home.png',
+    image: '/images/destinations/Turkey.png',
     href: '/destinations/turkey',
     featured: false,
     continent: 'Europe/Asia',
@@ -110,7 +113,7 @@ const destinations = [
   {
     name: 'Singapore',
     description: 'Modern city-state with stunning architecture and gardens',
-    image: '/images/destinations/singapore/home.png',
+    image: '/images/destinations/Singapore.png',
     href: '/destinations/singapore',
     featured: false,
     continent: 'Asia',
@@ -122,7 +125,7 @@ const destinations = [
   {
     name: 'Cairo, Egypt',
     description: 'Ancient pyramids and rich historical heritage',
-    image: '/images/destinations/egypt/home.png',
+    image: '/images/destinations/Cairo.png',
     href: '/destinations/egypt',
     featured: false,
     continent: 'Africa',
@@ -134,7 +137,7 @@ const destinations = [
   {
     name: 'Beijing, China',
     description: 'Imperial palaces and the Great Wall',
-    image: '/images/destinations/china/home.png',
+    image: '/images/destinations/China.png',
     href: '/destinations/china',
     featured: false,
     continent: 'Asia',
@@ -146,7 +149,7 @@ const destinations = [
   {
     name: 'Bangkok, Thailand',
     description: 'Vibrant street life and ornate shrines',
-    image: '/images/destinations/thailand/home.png',
+    image: '/images/destinations/Thailand.png',
     href: '/destinations/thailand',
     featured: false,
     continent: 'Asia',
@@ -158,7 +161,7 @@ const destinations = [
   {
     name: 'Kuala Lumpur, Malaysia',
     description: 'Modern skyline dominated by the Petronas Twin Towers',
-    image: '/images/destinations/malaysia/home.png',
+    image: '/images/destinations/Malaysia.png',
     href: '/destinations/malaysia',
     featured: false,
     continent: 'Asia',
@@ -198,26 +201,26 @@ const travelGuides = [
 ];
 
 // Define testimonials data
-const testimonials = [
-  {
-    name: 'Sarah Thompson',
-    location: 'United Kingdom',
-    comment: 'Our trip to the Maldives was absolutely perfect. The attention to detail from Halo Holidays made all the difference - from the seamless transfers to the personalized experiences.',
-    destination: 'Maldives'
-  },
-  {
-    name: 'James Wilson',
-    location: 'Australia',
-    comment: 'The Thailand itinerary Halo Holidays created for us struck the perfect balance between cultural experiences and relaxation. We\'ll definitely book with them again!',
-    destination: 'Thailand'
-  },
-  {
-    name: 'Elena Rodriguez',
-    location: 'Spain',
-    comment: 'Our family trip to Dubai exceeded all expectations. The hotel recommendations were spot-on and the activities were perfect for all ages. Highly recommend!',
-    destination: 'Dubai'
-  }
-];
+// const testimonials = [
+//   {
+//     name: 'Sarah Thompson',
+//     location: 'United Kingdom',
+//     comment: 'Our trip to the Maldives was absolutely perfect. The attention to detail from Halo Holidays made all the difference - from the seamless transfers to the personalized experiences.',
+//     destination: 'Maldives'
+//   },
+//   {
+//     name: 'James Wilson',
+//     location: 'Australia',
+//     comment: 'The Thailand itinerary Halo Holidays created for us struck the perfect balance between cultural experiences and relaxation. We\'ll definitely book with them again!',
+//     destination: 'Thailand'
+//   },
+//   {
+//     name: 'Elena Rodriguez',
+//     location: 'Spain',
+//     comment: 'Our family trip to Dubai exceeded all expectations. The hotel recommendations were spot-on and the activities were perfect for all ages. Highly recommend!',
+//     destination: 'Dubai'
+//   }
+// ];
 
 // Define travel experts data
 const travelExperts = [
@@ -226,21 +229,21 @@ const travelExperts = [
     title: 'Asia Specialist',
     experience: '15+ years',
     expertise: ['Luxury Travel', 'Cultural Experiences', 'Adventure Tours'],
-    image: '/images/experts/david-chen.jpg'
+    image: '/images/1.png'
   },
   {
     name: 'Sophia Martinez',
     title: 'Europe Specialist',
     experience: '12+ years',
     expertise: ['City Breaks', 'Historical Tours', 'Culinary Experiences'],
-    image: '/images/experts/sophia-martinez.jpg'
+    image: '/images/2.png'
   },
   {
     name: 'Ahmed Hassan',
     title: 'Middle East Specialist',
     experience: '10+ years',
     expertise: ['Desert Adventures', 'Luxury Resorts', 'Cultural Immersion'],
-    image: '/images/experts/ahmed-hassan.jpg'
+    image: '/images/3.png'
   }
 ];
 
@@ -276,7 +279,7 @@ export default function DestinationsPage() {
         <section className="relative h-[60vh] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/destinations/hero-bg.jpg"
+              src="/images/destinations/hero.png"
               alt="World destinations collage"
               fill
               priority
@@ -285,24 +288,24 @@ export default function DestinationsPage() {
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          
+
           <div className="relative z-10 text-center text-white px-4 max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Explore <span className="text-pink-500">Dream Destinations</span>
+              Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-300 to-white animate-gradientMove">Dream Destinations</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
               Discover handpicked destinations curated by our travel experts. From tropical paradises to historic cities, find your perfect getaway.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="#featured-destinations" 
+              <Link
+                href="#featured-destinations"
                 className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-md transition-colors duration-300"
                 aria-label="Explore featured destinations"
               >
                 Explore Destinations
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md transition-colors duration-300"
                 aria-label="Contact our travel experts"
               >
@@ -321,17 +324,17 @@ export default function DestinationsPage() {
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
               Our most popular destinations, handpicked for unforgettable experiences
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {destinations.filter(d => d.featured).map((destination, index) => (
-                <article key={index} className="group relative overflow-hidden rounded-xl shadow-lg transition-transform transform hover:scale-[1.02] bg-white">
+                <article key={index} className="group relative overflow-hidden rounded-xl shadow-lg transition-transform transform hover:scale-[1.00] bg-white">
                   <div className="relative h-[300px] w-full">
                     <Image
-                      src={destination.image}
+                      src={destination.featuredImage || destination.image}
                       alt={`${destination.name} - ${destination.description}`}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-100"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-0 p-6 text-white">
@@ -340,8 +343,8 @@ export default function DestinationsPage() {
                     </div>
                   </div>
                   <div className="p-4 flex justify-center">
-                    <Link 
-                      href={destination.href} 
+                    <Link
+                      href={destination.href}
                       className="bg-pink-500 text-white py-2 px-6 rounded-md font-medium transition-all duration-300 hover:bg-pink-600 shadow-md"
                       aria-label={`Explore ${destination.name} holidays`}
                     >
@@ -405,7 +408,7 @@ export default function DestinationsPage() {
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
               Explore our complete collection of handpicked destinations
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {destinations.map((destination, index) => (
                 <article key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
@@ -421,7 +424,7 @@ export default function DestinationsPage() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{destination.name}</h3>
                     <p className="text-gray-600 mb-4">{destination.description}</p>
-                    
+
                     <div className="grid grid-cols-2 gap-2 text-sm mb-4">
                       <div className="flex items-center text-gray-600">
                         <MapIcon className="h-4 w-4 mr-1" />
@@ -440,8 +443,8 @@ export default function DestinationsPage() {
                         <span>{destination.languages[0]}</span>
                       </div>
                     </div>
-                    
-                    <Link 
+
+                    <Link
                       href={destination.href}
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
                       aria-label={`Learn more about ${destination.name}`}
@@ -467,7 +470,7 @@ export default function DestinationsPage() {
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
               Comprehensive resources to help you plan the perfect trip to your chosen destination
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {travelGuides.map((guide, index) => (
                 <article key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm">
@@ -483,7 +486,7 @@ export default function DestinationsPage() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{guide.title}</h3>
                     <p className="text-gray-600 mb-4">{guide.description}</p>
-                    <Link 
+                    <Link
                       href={guide.href}
                       className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded text-sm transition-colors duration-300"
                       aria-label={`Read ${guide.title}`}
@@ -494,10 +497,10 @@ export default function DestinationsPage() {
                 </article>
               ))}
             </div>
-            
+
             <div className="text-center mt-10">
-              <Link 
-                href="/travel-guide" 
+              <Link
+                href="/travel-guide"
                 className="inline-block border-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white px-6 py-3 rounded-md transition-colors duration-300"
                 aria-label="View all travel guides"
               >
@@ -516,7 +519,7 @@ export default function DestinationsPage() {
             <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
               Our specialists have extensive first-hand knowledge of their regions
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {travelExperts.map((expert, index) => (
                 <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm p-6 text-center">
@@ -524,9 +527,11 @@ export default function DestinationsPage() {
                     <Image
                       src={expert.image}
                       alt={expert.name}
-                      fill
-                      className="object-cover"
+                      width={128}
+                      height={128}
+                      className="object-cover rounded-full"
                       sizes="128px"
+                      quality={100}
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-1">{expert.name}</h3>
@@ -539,8 +544,8 @@ export default function DestinationsPage() {
                       </span>
                     ))}
                   </div>
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="text-pink-600 hover:text-pink-800 text-sm font-medium"
                     aria-label={`Contact ${expert.name}`}
                   >
@@ -636,15 +641,15 @@ export default function DestinationsPage() {
                 Our travel experts are ready to create a personalized itinerary based on your preferences and budget.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-md transition-colors duration-300"
                   aria-label="Contact our travel experts"
                 >
                   Speak to an Expert
                 </Link>
-                <Link 
-                  href="/custom-package" 
+                <Link
+                  href="/custom-package"
                   className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md transition-colors duration-300"
                   aria-label="Create a custom travel package"
                 >
@@ -661,7 +666,7 @@ export default function DestinationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               What Our <span className="text-pink-600">Travelers Say</span>
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
@@ -671,7 +676,7 @@ export default function DestinationsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Our Maldives honeymoon was absolute perfection. The overwater villa exceeded our expectations, and every detail was taken care of. Truly the trip of a lifetime!"
+                  &quot;Our Maldives honeymoon was absolute perfection. The overwater villa exceeded our expectations, and every detail was taken care of. Truly the trip of a lifetime!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -679,7 +684,7 @@ export default function DestinationsPage() {
                   ))}
                 </div>
               </blockquote>
-              
+
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
                   <div className="ml-4">
@@ -688,7 +693,7 @@ export default function DestinationsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "From the bustling streets of Bangkok to the serene beaches of Phuket, our family trip to Thailand was perfectly balanced. The kids still talk about the elephant sanctuary!"
+                  &quot;From the bustling streets of Bangkok to the serene beaches of Phuket, our family trip to Thailand was perfectly balanced. The kids still talk about the elephant sanctuary!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -696,7 +701,7 @@ export default function DestinationsPage() {
                   ))}
                 </div>
               </blockquote>
-              
+
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
                   <div className="ml-4">
@@ -705,7 +710,7 @@ export default function DestinationsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Island hopping in Greece was a dream come true. The local recommendations for restaurants were spot on, and the boutique hotels had incredible views. Can't wait to book my next trip!"
+                  &quot;Island hopping in Greece was a dream come true. The local recommendations for restaurants were spot on, and the boutique hotels had incredible views. Can&apos;t wait to book my next trip!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -714,10 +719,10 @@ export default function DestinationsPage() {
                 </div>
               </blockquote>
             </div>
-            
+
             <div className="text-center mt-10">
-              <Link 
-                href="/testimonials" 
+              <Link
+                href="/testimonials"
                 className="inline-block border-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white px-6 py-3 rounded-md transition-colors duration-300"
               >
                 Read More Testimonials
@@ -732,7 +737,7 @@ export default function DestinationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Frequently Asked <span className="text-pink-600">Questions</span>
             </h2>
-            
+
             <div className="space-y-6">
               {[
                 {
@@ -762,10 +767,10 @@ export default function DestinationsPage() {
                 </div>
               ))}
             </div>
-            
+
             <div className="text-center mt-10">
-              <Link 
-                href="/faq" 
+              <Link
+                href="/faq"
                 className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-md transition-colors duration-300"
               >
                 View All FAQs

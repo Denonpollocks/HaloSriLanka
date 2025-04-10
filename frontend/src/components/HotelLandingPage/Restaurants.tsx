@@ -1,6 +1,11 @@
 "use client";
 
-import { FaMapMarkerAlt, FaClock, FaUtensils, FaDollarSign } from 'react-icons/fa';
+import {
+  FaMapMarkerAlt,
+  FaClock,
+  // FaUtensils,
+  // FaDollarSign
+} from 'react-icons/fa';
 
 interface RestaurantProps {
   restaurants: {
@@ -26,7 +31,7 @@ export default function Restaurants({ restaurants }: RestaurantProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {restaurants.map((restaurant, index) => (
           <div key={index} className="flex gap-4 bg-white rounded-lg p-4 shadow-sm">
-           
+
             <div className="flex-grow">
               <div className="flex justify-between items-start">
                 <h3 className="font-semibold text-gray-900">{restaurant.name}</h3>

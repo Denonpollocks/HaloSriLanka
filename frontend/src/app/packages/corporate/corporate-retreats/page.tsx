@@ -4,9 +4,9 @@ import { Metadata } from 'next';
 import { 
   UserGroupIcon,
   HeartIcon,
-  SparklesIcon,
-  GlobeAltIcon,
-  SunIcon,
+  // SparklesIcon,
+  // GlobeAltIcon,
+  // SunIcon,
   AcademicCapIcon 
 } from '@heroicons/react/24/outline';
 

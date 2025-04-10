@@ -2,17 +2,17 @@
 
 import LazySection from '@/components/LazySection';
 import Image from 'next/image';
-import Link from 'next/link';
-import { 
-  BuildingOfficeIcon,
-  GlobeAltIcon,
-  SparklesIcon,
-  UserGroupIcon,
-  HeartIcon,
-//   GlassWaterIcon,
-  CakeIcon,
-  MapIcon
-} from '@heroicons/react/24/outline';
+// import Link from 'next/link';
+// import { 
+//   BuildingOfficeIcon,
+//   GlobeAltIcon,
+//   SparklesIcon,
+//   UserGroupIcon,
+//   HeartIcon,
+// //   GlassWaterIcon,
+//   CakeIcon,
+//   MapIcon
+// } from '@heroicons/react/24/outline';
 
 export default function FranceContent() {
   return (

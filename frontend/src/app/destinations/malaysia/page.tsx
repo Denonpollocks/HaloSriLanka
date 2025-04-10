@@ -194,7 +194,7 @@ export default function MalaysiaDestination() {
               </div>
 
               {/* UNESCO Badge */}
-              <div className="border rounded border-blue-500 text-gray-700 p-6 rounded-2xl mt-8">
+              <div className="border border-blue-500 text-gray-700 p-6 rounded-2xl mt-8">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-xl font-semibold mb-2">UNESCO World Heritage Sites</h3>
@@ -212,10 +212,10 @@ export default function MalaysiaDestination() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
+              2024&apos;s Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of Dubai's finest hotels and resorts
+              Discover our handpicked collection of Dubai&apos;s finest hotels and resorts
             </p>
           </div>
 
@@ -299,7 +299,7 @@ export default function MalaysiaDestination() {
               
               <div className="space-y-6">
                 <p className="text-gray-700 text-lg">
-                  Experience Malaysia's rich multicultural heritage through its traditions, festivals, and cuisine.
+                  Experience Malaysia&apos;s rich multicultural heritage through its traditions, festivals, and cuisine.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

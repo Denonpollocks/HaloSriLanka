@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { 
-  GlobeAltIcon, 
+  // GlobeAltIcon, 
   ClockIcon, 
-  ShieldCheckIcon, 
-  UserGroupIcon,
+  // ShieldCheckIcon, 
+  // UserGroupIcon,
   CreditCardIcon,
   DevicePhoneMobileIcon 
 } from '@heroicons/react/24/outline';

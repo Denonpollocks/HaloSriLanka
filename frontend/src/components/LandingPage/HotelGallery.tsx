@@ -2,30 +2,34 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { FaChevronLeft, FaChevronRight, FaMapMarkerAlt } from 'react-icons/fa';
-import Link from 'next/link';
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  // FaMapMarkerAlt
+} from 'react-icons/fa';
+// import Link from 'next/link';
 
-interface Rating {
-  label: string;
-  score: number;
-}
+// interface Rating {
+//   label: string;
+//   score: number;
+// }
 
 interface HotelGalleryProps {
-  name: string;
-  location: string;
+  // name: string;
+  // location: string;
   images: {
     src: string;
     alt: string;
   }[];
-  ratings: {
-    overall: number;
-    totalReviews: number;
-    categories: Rating[];
-  };
- 
+  // ratings: {
+  //   overall: number;
+  //   totalReviews: number;
+  //   categories: Rating[];
+  // };
+
 }
 
-export default function HotelGallery({ name, location, images, ratings,  }: HotelGalleryProps) {
+export default function HotelGallery({ images }: HotelGalleryProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -41,8 +45,8 @@ export default function HotelGallery({ name, location, images, ratings,  }: Hote
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left side - Gallery */}
         <div className="w-full">
-          
-        
+
+
 
           {/* Main Image */}
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden mb-4">
@@ -73,9 +77,8 @@ export default function HotelGallery({ name, location, images, ratings,  }: Hote
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden ${
-                  index === currentImageIndex ? 'ring-2 ring-pink-500' : ''
-                }`}
+                className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden ${index === currentImageIndex ? 'ring-2 ring-pink-500' : ''
+                  }`}
               >
                 <Image
                   src={image.src}
@@ -89,7 +92,7 @@ export default function HotelGallery({ name, location, images, ratings,  }: Hote
         </div>
 
         {/* Right side - Ratings */}
-     
+
       </div>
     </div>
   );

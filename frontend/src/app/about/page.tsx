@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Script from 'next/script';
-import { 
-  UserGroupIcon, 
-  GlobeAltIcon, 
-  HeartIcon, 
+import {
+  UserGroupIcon,
+  GlobeAltIcon,
+  HeartIcon,
   ShieldCheckIcon,
   TrophyIcon,
   HandRaisedIcon
@@ -32,7 +32,7 @@ const values = [
   {
     icon: HeartIcon,
     title: 'Passion for Travel',
-    description: 'Were travelers ourselves, driven by a genuine love for exploring and sharing the worlds wonders.'
+    description: 'We&rsquo;re travelers ourselves, driven by a genuine love for exploring and sharing the world&rsquo;s wonders.'
   },
   {
     icon: ShieldCheckIcon,
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 About <span className="text-pink-600">Halo Holidays</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8">
-                We're a team of passionate travel specialists dedicated to creating unforgettable journeys tailored to your unique preferences and dreams.
+                We&apos;re a team of passionate travel specialists dedicated to creating unforgettable journeys tailored to your unique preferences and dreams.
               </p>
             </div>
           </div>
@@ -164,10 +164,10 @@ export default function AboutPage() {
                   Halo Holidays was born from a simple belief: that travel should be transformative, personal, and seamless. Founded in 2010 by a group of travel enthusiasts who were frustrated by the one-size-fits-all approach of mainstream tourism, we set out to create a different kind of travel company.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  Our founders had spent years exploring the hidden corners of Southeast Asia, discovering experiences that rarely made it into guidebooks. They began by sharing these authentic experiences with friends and family, carefully tailoring each journey to the individual's interests and preferences.
+                  Our founders had spent years exploring the hidden corners of Southeast Asia, discovering experiences that rarely made it into guidebooks. They began by sharing these authentic experiences with friends and family, carefully tailoring each journey to the individual&apos;s interests and preferences.
                 </p>
                 <p className="text-gray-700">
-                  What started as a passion project quickly grew as word spread about our personalized approach and insider knowledge. Today, we've expanded our expertise across the globe, but our core philosophy remains unchanged: we create journeys as unique as you are.
+                  What started as a passion project quickly grew as word spread about our personalized approach and insider knowledge. Today, we&apos;ve expanded our expertise across the globe, but our core philosophy remains unchanged: we create journeys as unique as you are.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 These core principles guide everything we do, from how we design our journeys to how we interact with our clients and partners.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 Our specialists bring firsthand knowledge and passion to creating your perfect journey.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <article key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
@@ -248,11 +248,11 @@ export default function AboutPage() {
                 From our humble beginnings to becoming a trusted name in luxury travel.
               </p>
             </div>
-            
+
             <div className="relative max-w-4xl mx-auto">
               {/* Timeline line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-pink-200"></div>
-              
+
               {/* Timeline items */}
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
@@ -277,7 +277,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Our Commitment to Responsible Tourism</h2>
                 <p className="text-gray-700 mb-4">
-                  At Halo Holidays, we believe that travel should enrich both the traveler and the destinations we visit. We're committed to sustainable practices that minimize environmental impact and maximize positive contributions to local communities.
+                  At Halo Holidays, we believe that travel should enrich both the traveler and the destinations we visit. We&apos;re committed to sustainable practices that minimize environmental impact and maximize positive contributions to local communities.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -294,8 +294,8 @@ export default function AboutPage() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <Link 
-                    href="/responsible-tourism" 
+                  <Link
+                    href="/responsible-tourism"
                     className="text-pink-600 font-medium hover:text-pink-700 flex items-center gap-2"
                   >
                     Learn more about our responsible tourism initiatives
@@ -329,14 +329,14 @@ export default function AboutPage() {
                 Our travel experts are ready to create a personalized itinerary just for you.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-md transition-colors duration-300"
                 >
                   Contact Us
                 </Link>
-                <Link 
-                  href="/destinations" 
+                <Link
+                  href="/destinations"
                   className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md transition-colors duration-300"
                 >
                   Explore Destinations

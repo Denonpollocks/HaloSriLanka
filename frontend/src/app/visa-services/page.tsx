@@ -142,7 +142,7 @@ export default function VisaServices() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-7xl font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-300 to-white animate-gradientMove">
             Visa Services
@@ -183,7 +183,7 @@ export default function VisaServices() {
           <h2 className="text-4xl font-bold text-center mb-16">
             Our <span className="text-pink-600">Process</span>
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               {[
@@ -224,53 +224,53 @@ export default function VisaServices() {
       </section>
 
       <section className="py-20 bg-gray-50">
-  <div className="container mx-auto px-4">
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-4xl font-bold mb-4">
-        Types of <span className="text-pink-600">Visas</span> We Assist With
-      </h2>
-      <p className="text-lg text-gray-700">
-        We provide professional visa consultation and application support for various visa types.
-      </p>
-    </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Types of <span className="text-pink-600">Visas</span> We Assist With
+            </h2>
+            <p className="text-lg text-gray-700">
+              We provide professional visa consultation and application support for various visa types.
+            </p>
+          </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          title: "Tourist Visas",
-          description: "For those traveling for leisure, vacations, or visiting family and friends.",
-          icon: "🛂",
-        },
-        {
-          title: "Business Visas",
-          description: "For attending business meetings, conferences, and official engagements.",
-          icon: "💼",
-        },
-        {
-          title: "Student Visas",
-          description: "For students pursuing higher education at universities abroad.",
-          icon: "🎓",
-        },
-        {
-          title: "Work & Residence Visas",
-          description: "For professionals relocating for work or obtaining a long-term residence permit.",
-          icon: "🏡",
-        },
-        {
-          title: "Family & Spouse Visas",
-          description: "For those joining family members or spouses residing in another country.",
-          icon: "👨‍👩‍👧‍👦",
-        },
-      ].map((visa, index) => (
-        <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all flex flex-col items-center text-center">
-          <div className="text-5xl mb-4">{visa.icon}</div>
-          <h3 className="text-xl font-semibold mb-2">{visa.title}</h3>
-          <p className="text-gray-600">{visa.description}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Tourist Visas",
+                description: "For those traveling for leisure, vacations, or visiting family and friends.",
+                icon: "🛂",
+              },
+              {
+                title: "Business Visas",
+                description: "For attending business meetings, conferences, and official engagements.",
+                icon: "💼",
+              },
+              {
+                title: "Student Visas",
+                description: "For students pursuing higher education at universities abroad.",
+                icon: "🎓",
+              },
+              {
+                title: "Work & Residence Visas",
+                description: "For professionals relocating for work or obtaining a long-term residence permit.",
+                icon: "🏡",
+              },
+              {
+                title: "Family & Spouse Visas",
+                description: "For those joining family members or spouses residing in another country.",
+                icon: "👨‍👩‍👧‍👦",
+              },
+            ].map((visa, index) => (
+              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all flex flex-col items-center text-center">
+                <div className="text-5xl mb-4">{visa.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{visa.title}</h3>
+                <p className="text-gray-600">{visa.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Success Stories Section */}
       <section className="py-20 bg-white">
@@ -318,7 +318,7 @@ export default function VisaServices() {
 
                 {/* Testimonial */}
                 <blockquote className="text-gray-700 mb-4">
-                  "{testimonial.comment}"
+                  &quot;{testimonial.comment}&quot;
                 </blockquote>
 
                 {/* Rating */}
@@ -346,7 +346,7 @@ export default function VisaServices() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
               <h3 className="text-white text-2xl font-bold mb-2">Watch Our Client Stories</h3>
-              <p className="text-white/90">See how we've helped others achieve their immigration goals</p>
+              <p className="text-white/90">See how we&apos;ve helped others achieve their immigration goals</p>
             </div>
           </div>
         </div>
@@ -377,7 +377,7 @@ export default function VisaServices() {
                   <span>{country.processingTime}</span>
                 </div>
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <Link 
+                  <Link
                     href={`/visa-services/${country.name.toLowerCase()}`}
                     className="text-pink-600 hover:text-pink-700 font-medium flex items-center gap-1"
                   >
@@ -396,7 +396,7 @@ export default function VisaServices() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl text-pink-600 font-bold mb-6">Start Your Visa Application</h2>
           <p className="text-xl text-gray-700 mb-8">Contact our visa specialists for a free consultation</p>
-          <Link 
+          <Link
             href="/contact"
             className="inline-block bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors"
           >

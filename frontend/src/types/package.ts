@@ -5,7 +5,6 @@ export interface Package {
     description: string;
     duration: string;
     price: number;
-    cardImage: string;
     image: string;
     features: string[];
     rating: number;

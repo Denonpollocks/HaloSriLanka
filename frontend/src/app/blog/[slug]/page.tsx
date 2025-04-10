@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeftIcon, CalendarIcon, UserIcon, ClockIcon } from '@heroicons/react/24/outline';
@@ -7,13 +7,14 @@ import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/BreadCrumbs';
 
 interface BlogPostProps {
-  params: {
+  params: Promise<{
     slug: string;
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: BlogPostProps) {
-  const post = blogs.find(blog => blog.slug === params.slug);
+  const resolvedParams = await params;
+  const post = blogs.find(blog => blog.slug === resolvedParams.slug);
   
   if (!post) return {};
 
@@ -28,8 +29,9 @@ export async function generateMetadata({ params }: BlogPostProps) {
   };
 }
 
-export default function BlogPost({ params }: BlogPostProps) {
-  const post = blogs.find(blog => blog.slug === params.slug);
+export default async function BlogPost({ params }: BlogPostProps) {
+  const resolvedParams = await params;
+  const post = blogs.find(blog => blog.slug === resolvedParams.slug);
   
   if (!post) notFound();
 

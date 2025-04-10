@@ -8,37 +8,43 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 const countries = [
   {
     name: 'Malaysia',
-    image: '/images/visa-services/malaysia/thumbnail.jpg',
+    image: '/images/visa-featured/Malaysia.png',
     processingTime: '4-7 business days',
     startingPrice: '£79'
   },
   {
+    name: 'Dubai',
+    image: '/images/visa-featured/Dubai.png',
+    processingTime: '4-7 business days',
+    startingPrice: '£89'
+  },
+  {
     name: 'Schengen',
-    image: '/images/visa-services/schengen/thumbnail.jpg',
+    image: '/images/visa-featured/Schengen.png',
     processingTime: '15-20 business days',
     startingPrice: '£189'
   },
   {
     name: 'Bali',
-    image: '/images/visa-services/bali/thumbnail.jpg',
+    image: '/images/visa-featured/Bali.png',
     processingTime: '3-5 business days',
     startingPrice: '£69'
   },
   {
     name: 'Vietnam',
-    image: '/images/visa-services/vietnam/thumbnail.jpg',
+    image: '/images/visa-featured/Vietnam.png',
     processingTime: '2-4 business days',
     startingPrice: '£49'
   },
   {
     name: 'UK',
-    image: '/images/visa-services/uk/thumbnail.jpg',
+    image: '/images/visa-featured/UK.png',
     processingTime: '15-30 business days',
     startingPrice: '£249'
   },
   {
     name: 'Australia',
-    image: '/images/visa-services/australia/thumbnail.jpg',
+    image: '/images/visa-featured/Australia.png',
     processingTime: '20-40 business days',
     startingPrice: '£199'
   }

@@ -141,7 +141,7 @@ export default function MaldivesDestination() {
               Why Choose the <span className="text-pink-600">Maldives</span> in 2024?
             </h2>
             <p className="text-lg text-gray-700">
-              The Maldives remains the world's premier tropical destination, offering an unparalleled combination of luxury and natural beauty.
+              The Maldives remains the world&apos;s premier tropical destination, offering an unparalleled combination of luxury and natural beauty.
             </p>
           </div>
 
@@ -206,7 +206,7 @@ export default function MaldivesDestination() {
               </div>
 
               {/* UNESCO Badge */}
-              <div className="border rounded border-blue-500  text-gray-700 p-6 rounded-2xl mt-8">
+              <div className="border border-blue-500  text-gray-700 p-6 rounded-2xl mt-8">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-xl font-semibold mb-2">UNESCO Biosphere Reserve</h3>
@@ -225,10 +225,10 @@ export default function MaldivesDestination() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Premier <span className="text-pink-600">Luxury Hotels</span>
+              2024&apos;s Premier <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our handpicked collection of Dubai's finest hotels and resorts
+              Discover our handpicked collection of Dubai&apos;s finest hotels and resorts
             </p>
           </div>
 
@@ -312,7 +312,7 @@ export default function MaldivesDestination() {
               
               <div className="space-y-6">
                 <p className="text-gray-700 text-lg">
-                  Home to 5% of the world's reef area, the Maldives offers exceptional diving opportunities.
+                  Home to 5% of the world&apos;s reef area, the Maldives offers exceptional diving opportunities.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -489,7 +489,7 @@ export default function MaldivesDestination() {
         Family Holidays in the <span className="text-pink-600">Maldives</span>
       </h2>
       <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-        Discover child-friendly resorts with dedicated kids' clubs, family water villas, and safe swimming lagoons
+        Discover child-friendly resorts with dedicated kids&apos; clubs, family water villas, and safe swimming lagoons
       </p>
     </div>
 
@@ -559,7 +559,7 @@ export default function MaldivesDestination() {
         <span className="text-pink-600">Honeymoon</span> & Romance Packages
       </h2>
       <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-        2024 honeymoon specials featuring private villas, couples' spa treatments, and unforgettable romantic experiences
+        2024 honeymoon specials featuring private villas, couples&apos; spa treatments, and unforgettable romantic experiences
       </p>
     </div>
 
@@ -574,7 +574,7 @@ export default function MaldivesDestination() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-8 left-8 text-white">
           <h3 className="text-3xl font-bold mb-2">Ultimate Romance Package</h3>
-          <p className="text-lg">Includes sunset cruise, private dinner, and couple's massage</p>
+          <p className="text-lg">Includes sunset cruise, private dinner, and couple&apos;s massage</p>
         </div>
       </div>
 

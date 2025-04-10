@@ -135,7 +135,7 @@ export default function VisaFreeCountries() {
               
               <div className="prose prose-lg max-w-none">
                 <p className="lead text-xl text-gray-600 mb-8">
-                  Sri Lankan passport holders can travel to numerous destinations without the hassle of obtaining a visa beforehand. Here's your comprehensive guide to visa-free travel and countries offering visa on arrival facilities.
+                  Sri Lankan passport holders can travel to numerous destinations without the hassle of obtaining a visa beforehand. Here&apos;s your comprehensive guide to visa-free travel and countries offering visa on arrival facilities.
                 </p>
 
                 <h3 className="text-2xl font-bold mt-12 mb-6">

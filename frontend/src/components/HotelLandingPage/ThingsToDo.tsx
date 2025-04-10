@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { FaMapMarkerAlt, FaClock, FaWalking } from 'react-icons/fa';
 
 interface ThingsToDoProps {
@@ -20,11 +21,13 @@ export default function ThingsToDo({ activities }: ThingsToDoProps) {
       <div className="grid grid-cols-1 gap-6">
         {activities.map((activity, index) => (
           <div key={index} className="flex gap-4 bg-white rounded-lg p-4 shadow-sm">
-            <div className="w-24 h-24 relative flex-shrink-0">
-              <img
+            <div className="w-24 h-24 relative flex-shrink-0">              
+              <Image
                 src={activity.image}
                 alt={activity.title}
                 className="w-full h-full object-cover rounded-lg"
+                width={96}
+                height={96}
               />
             </div>
             <div className="flex-grow">

@@ -34,8 +34,12 @@ export default function SignUp() {
       await signup(formData.name, formData.email, formData.password);
       setIsLoggedIn(true);
       router.push('/');
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'An error occurred');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'An error occurred');
+      } else {
+        setError('An unexpected error occurred');
+      }
     } finally {
       setLoading(false);
     }

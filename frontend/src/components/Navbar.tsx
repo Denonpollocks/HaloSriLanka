@@ -1,12 +1,12 @@
 'use client';
 
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { Popover, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+// import { Popover, Transition } from '@headlessui/react';
+// import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import UserMenu from './UserMenu';
 
 const packageLinks = [
@@ -58,8 +58,8 @@ const visaCountries = [
 ];
 
 const Navbar = () => {
-  const router = useRouter();
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  // const router = useRouter();
+  const { isLoggedIn } = useAuth();
 
   // const handleSignOut = () => {
   //   signout();
@@ -99,7 +99,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     href={`/packages/${link.href}`}
-                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                    className={`text-sm block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
                   >
                     {link.title}
                   </Link>
@@ -110,7 +110,9 @@ const Navbar = () => {
 
           <div className="relative group">
             <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
-              Destinations
+              <Link href="/destinations" className="text-sm font-medium font-mono hover:text-pink-600">
+                Destinations
+              </Link>
               <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -121,7 +123,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     href={`/destinations/${link.href}`}
-                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                    className={`text-sm block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
                   >
                     {link.title}
                   </Link>
@@ -148,7 +150,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                    className={`text-sm block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
                   >
                     {link.title}
                   </Link>
@@ -158,7 +160,9 @@ const Navbar = () => {
           </div>
           <div className="relative group">
             <button className="text-sm font-medium font-mono hover:text-pink-600 flex items-center">
+            <Link href="/visa-services" className="text-sm font-medium font-mono hover:text-pink-600">
               Visas
+            </Link>
               <svg className="w-3.5 h-3.5 ml-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -169,7 +173,7 @@ const Navbar = () => {
                   <Link
                     key={country.name}
                     href={country.href}
-                    className={`text-md block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
+                    className={`text-sm block px-4 py-2 mx-2 hover:bg-pink-50 hover:text-pink-600`}
                   >
                     <span className="flex items-center gap-2">
                       <span className='font-semibold min-w-5'>{country.icon}</span>

@@ -2,29 +2,37 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { sriLankaToursData } from '@/data/tours/srilanka';
 import { notFound } from 'next/navigation';
-import { 
-  StarIcon, PhoneIcon, ShieldCheckIcon, MapPinIcon, 
-  CalendarIcon, UserGroupIcon, CameraIcon, GlobeAltIcon 
+import {
+  StarIcon,
+  PhoneIcon,
+  ShieldCheckIcon,
+  // MapPinIcon,
+  // CalendarIcon,
+  // UserGroupIcon,
+  // CameraIcon,
+  // GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     country: string;
-  }
+  }>;
 }
 
 // Generate metadata
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  if (params.country !== 'srilanka') return notFound();
-  
+  const resolvedParams = await params;
+  if (resolvedParams.country !== 'srilanka') return notFound();
+
   return {
     title: sriLankaToursData.metadata.title,
     description: sriLankaToursData.metadata.description,
   };
 }
 
-export default function TourCountryPage({ params }: PageProps) {
-  if (params.country !== 'srilanka') return notFound();
+export default async function TourCountryPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  if (resolvedParams.country !== 'srilanka') return notFound();
   const data = sriLankaToursData;
 
   return (
@@ -35,11 +43,10 @@ export default function TourCountryPage({ params }: PageProps) {
           <div className="flex justify-between items-center">
             <div className="flex space-x-8">
               {data.navigation.items.map((item, index) => (
-                <button 
+                <button
                   key={index}
-                  className={`flex items-center space-x-2 ${
-                    item.active ? 'text-pink-600' : 'text-gray-600 hover:text-pink-600'
-                  }`}
+                  className={`flex items-center space-x-2 ${item.active ? 'text-pink-600' : 'text-gray-600 hover:text-pink-600'
+                    }`}
                 >
                   {/* Dynamic icon rendering based on item.icon */}
                   <span>{item.label}</span>
@@ -197,7 +204,7 @@ export default function TourCountryPage({ params }: PageProps) {
       {/* What's Included */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">What's Included</h2>
+          <h2 className="text-3xl font-bold mb-8">What&apos;s Included</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {data.included.map((item, index) => (
               <div key={index} className="flex items-start gap-4">
@@ -214,7 +221,7 @@ export default function TourCountryPage({ params }: PageProps) {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
           <p className="mb-8">Speak to our travel experts today</p>
-          <a 
+          <a
             href={`tel:${data.contactInfo.phone}`}
             className="inline-flex items-center gap-2 bg-white text-pink-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
           >

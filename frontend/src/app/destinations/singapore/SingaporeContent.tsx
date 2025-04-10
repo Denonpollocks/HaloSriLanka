@@ -2,17 +2,17 @@
 
 import LazySection from '@/components/LazySection';
 import Image from 'next/image';
-import Link from 'next/link';
-import { 
-  BuildingOfficeIcon,
-  GlobeAltIcon,
-  SparklesIcon,
-  UserGroupIcon,
-  StarIcon,
-  ShoppingBagIcon,
-  CakeIcon,
-  MapIcon
-} from '@heroicons/react/24/outline';
+// import Link from 'next/link';
+// import { 
+//   BuildingOfficeIcon,
+//   GlobeAltIcon,
+//   SparklesIcon,
+//   UserGroupIcon,
+//   StarIcon,
+//   ShoppingBagIcon,
+//   CakeIcon,
+//   MapIcon
+// } from '@heroicons/react/24/outline';
 
 export default function SingaporeContent() {
   return (
@@ -43,10 +43,10 @@ export default function SingaporeContent() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Finest <span className="text-pink-600">Luxury Hotels</span>
+              2024&apos;s Finest <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our curated collection of Singapore's most prestigious hotels
+              Discover our curated collection of Singapore&apos;s most prestigious hotels
             </p>
           </div>
 

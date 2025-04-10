@@ -16,14 +16,22 @@ const HotelGallery = dynamic(() => import("@/components/LandingPage/HotelGallery
   ssr: false
 });
 
-interface DynamicHotelGalleryProps {
-  name: string;
-  location: string;
-  images: { src: string; alt: string; }[];
-  ratings: any; // Add proper type based on your data structure
- 
+interface Rating {
+  label: string;
+  score: number;
 }
 
-export default function DynamicHotelGallery(props: DynamicHotelGalleryProps) {
+interface HotelGalleryProps {
+  name: string;
+  location: string;
+  images: { src: string; alt: string }[];
+  ratings: {
+    overall: number;
+    totalReviews: number;
+    categories: Rating[];
+  };
+}
+
+export default function DynamicHotelGallery(props: HotelGalleryProps) {
   return <HotelGallery {...props} />;
-} 
+}

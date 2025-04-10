@@ -2,17 +2,17 @@
 
 import LazySection from '@/components/LazySection';
 import Image from 'next/image';
-import Link from 'next/link';
-import { 
-  BuildingLibraryIcon,
-  GlobeAltIcon,
-  SparklesIcon,
-  UserGroupIcon,
-  SunIcon,
-  HeartIcon,
-  CakeIcon,
-  MapIcon
-} from '@heroicons/react/24/outline';
+// import Link from 'next/link';
+// import { 
+//   BuildingLibraryIcon,
+//   GlobeAltIcon,
+//   SparklesIcon,
+//   UserGroupIcon,
+//   SunIcon,
+//   HeartIcon,
+//   CakeIcon,
+//   MapIcon
+// } from '@heroicons/react/24/outline';
 
 export default function EgyptContent() {
   return (

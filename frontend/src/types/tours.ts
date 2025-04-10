@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons';
+// import { IconType } from 'react-icons';
 import { TravelMode } from '@/data/toursData';
 
 export interface InfoItem {

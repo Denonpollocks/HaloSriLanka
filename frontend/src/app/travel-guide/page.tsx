@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { MapIcon, CalendarIcon, GlobeAltIcon, ShieldCheckIcon, CheckIcon, PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
+import {
+  MapIcon,
+  CalendarIcon,
+  // GlobeAltIcon,
+  ShieldCheckIcon,
+  CheckIcon,
+  PlusIcon,
+  MinusIcon
+} from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
   title: 'Expert Travel Guides & Tips 2024 | Comprehensive Travel Resources',
@@ -90,8 +98,8 @@ export default function TravelGuide() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {destinationGuides.map((guide, index) => (
-              <Link 
-                href={`/travel-guide/${guide.slug}`} 
+              <Link
+                href={`/travel-guide/${guide.slug}`}
                 key={index}
                 className="group"
               >
@@ -254,7 +262,7 @@ export default function TravelGuide() {
         <div className="container border-b border-gray-200 py-10 mx-auto px-4 text-center">
           <h2 className="text-3xl text-pink-600 font-bold mb-6">Start Your Journey</h2>
           <p className="text-xl text-gray-700 mb-8">Connect with our travel specialists to plan your perfect trip</p>
-          <Link 
+          <Link
             href="/contact"
             className="inline-block bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors"
           >

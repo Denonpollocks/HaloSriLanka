@@ -5,7 +5,7 @@ import {
   BuildingOffice2Icon, 
   UserGroupIcon, 
   PresentationChartBarIcon, 
-  GlobeAltIcon 
+  // GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {

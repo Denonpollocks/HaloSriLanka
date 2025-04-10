@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { TourData } from "@/types/tours";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { FaCamera, FaMapMarkerAlt, FaUtensils, FaBinoculars, FaChartLine, FaChevronDown } from "react-icons/fa";
 import PriceCard from "@/components/LandingPage/PriceCard";
 import HighlightsSection from "@/components/LandingPage/Highlights";
@@ -50,6 +50,12 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isSticky) {
+      console.log("Price card is sticky", isSticky);
+    }
+  }, [isSticky]);
 
   return (
     <div className="w-full">
@@ -152,7 +158,7 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
             </section>
 
             <section id="itinerary">
-              <ItinerarySection itinerary={tourData.itinerary as any[]} />
+              <ItinerarySection itinerary={tourData.itinerary} />
             </section>
 
             <section id="whats-included">

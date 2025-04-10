@@ -57,7 +57,7 @@ export default function DubaiVisa() {
       {/* Hero Section */}
       <header className="relative h-[70vh] flex items-center">
         <Image
-          src="/images/visa-services/dubai/hero.jpg"
+          src="/images/visa-hero/Dubai.png"
           alt="Dubai Skyline"
           fill
           className="object-cover"

@@ -1,29 +1,30 @@
 'use client';
 
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const promotions = [
-    {
-      name: "Honeymoon",
-      description: "Love, Laughter & Lifetime Memories",
-      image: "/images/types/honeymoon.png",
+  {
+    name: "Honeymoon",
+    description: "Love, Laughter & Lifetime Memories",
+    image: "/images/types/honeymoon.png",
 
-    },
-    {
-      name: "Family",
-      description: "Cherish Every Moment Together",
-      image: "/images/types/family.png",
-      
-    },
-    {
-      name: "Corporate",
-      description: "Smooth & Stress-Free Business Travel",
-      image: "/images/types/corporate.png",
-     
-    },
-  
-    // Add more services
-  ];
+  },
+  {
+    name: "Family",
+    description: "Cherish Every Moment Together",
+    image: "/images/types/family.png",
+
+  },
+  {
+    name: "Corporate",
+    description: "Smooth & Stress-Free Business Travel",
+    image: "/images/types/corporate.png",
+
+  },
+
+  // Add more services
+];
 
 const Promotions = ({ }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -56,15 +57,17 @@ const Promotions = ({ }) => {
                 <div
                   className="relative bg-white p-6 rounded-lg shadow-lg z-10"
                   style={{
-                   
+
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 >
-                  <img
+                  <Image
                     src={promo.image}
                     alt={promo.name}
-                    className="w-full h-40 object-cover rounded-md"
+                    width={448}
+                    height={272}
+                    className='w-full h-40 object-cover rounded-md'
                   />
                   <h3 className="mt-4 text-lg font-semibold">{promo.name}</h3>
                   <p className="text-sm text-gray-500">{promo.description}</p>
@@ -89,11 +92,13 @@ const Promotions = ({ }) => {
           <div className="flex gap-4 mt-10 mb-12">
             {promotions.map((promo, index) => (
               <div key={index} className="relative bg-white p-6 rounded-lg shadow-lg flex-shrink-0 w-80">
-                <img
-                  src={promo.image}
-                  alt={promo.name}
-                  className="w-full h-40 object-cover rounded-md"
-                />
+                <Image
+                    src={promo.image}
+                    alt={promo.name}
+                    width={448}
+                    height={272}
+                    className='w-full h-40 object-cover rounded-md'
+                  />
                 <h3 className="mt-4 text-lg font-semibold">{promo.name}</h3>
                 <p className="text-sm text-gray-500">{promo.description}</p>
               </div>

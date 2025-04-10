@@ -13,19 +13,19 @@ const corporateServices = [
   {
     title: 'MICE Events',
     description: 'Meetings, Incentives, Conferences, and Exhibitions tailored to your business needs',
-    // icon: '/icons/mice.svg',
+    icon: '/icons/mice.svg',
     link: '/corporate/mice-events'
   },
   {
     title: 'Business Travel',
     description: 'Streamlined booking process with 24/7 travel support for your team',
-    // icon: '/icons/business.svg',
+    icon: '/icons/business.svg',
     link: '/corporate/business-travel'
   },
   {
     title: 'Corporate Retreats',
     description: 'Team building and corporate wellness programs in premium locations',
-    // icon: '/icons/retreat.svg',
+    icon: '/icons/retreat.svg',
     link: '/corporate/corporate-retreats'
   }
 ];
@@ -218,7 +218,7 @@ export default function Corporate() {
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-pink-600 text-4xl mb-4">"</div>
+                <div className="text-pink-600 text-4xl mb-4">&quot;</div>
                 <p className="text-gray-600 mb-4">{testimonial.text}</p>
                 <div className="font-bold">{testimonial.author}</div>
                 <div className="text-sm text-gray-500">{testimonial.position}</div>

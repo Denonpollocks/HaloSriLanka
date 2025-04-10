@@ -2,7 +2,7 @@ export type TourData = {
   title: string;
   subtitle: string;
   location: string;
-  quickFacts: Array<{ icon: any; text: string }>;
+  quickFacts: Array<{ icon: React.ReactNode; text: string }>;
   description: string;
   galleryPhotos: Array<{ src: string; alt: string; caption: string }>;
   sections: Array<{ id: string; label: string }>;

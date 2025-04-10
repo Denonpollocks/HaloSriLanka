@@ -1,26 +1,26 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import Script from 'next/script';
-import { 
-  PaperAirplaneIcon, 
-  CalendarIcon, 
-  GlobeAsiaAustraliaIcon,
-  TicketIcon,
-  IdentificationIcon,
-  PlusIcon,
-  MinusIcon,
-  CheckIcon,
-  TrophyIcon,
-  UserGroupIcon,
-  BeakerIcon,
-  HomeModernIcon,
-  BuildingOfficeIcon,
-  ShoppingBagIcon,
-  SparklesIcon,
-  CakeIcon,
-  MapIcon
-} from '@heroicons/react/24/outline';
+// import { 
+//   PaperAirplaneIcon, 
+//   CalendarIcon, 
+//   GlobeAsiaAustraliaIcon,
+//   TicketIcon,
+//   IdentificationIcon,
+//   PlusIcon,
+//   MinusIcon,
+//   CheckIcon,
+//   TrophyIcon,
+//   UserGroupIcon,
+//   BeakerIcon,
+//   HomeModernIcon,
+//   BuildingOfficeIcon,
+//   ShoppingBagIcon,
+//   SparklesIcon,
+//   CakeIcon,
+//   MapIcon
+// } from '@heroicons/react/24/outline';
 import Breadcrumbs from '@/components/BreadCrumbs';
 
 export const metadata: Metadata = {
@@ -97,7 +97,7 @@ export default function ChinaDestination() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <h1 className={`text-4xl md:text-7xl lg:text-9xl font-medium uppercase text-transparent 
                         bg-clip-text bg-gradient-to-r from-white via-pink-300 to-white animate-gradientMove`}>
@@ -109,7 +109,7 @@ export default function ChinaDestination() {
         </div>
       </header>
 
-      <Breadcrumbs />   
+      <Breadcrumbs />
 
       <Script id="schema-data" type="application/ld+json">
         {JSON.stringify([schemaData, packageSchema])}
@@ -196,10 +196,10 @@ export default function ChinaDestination() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Finest <span className="text-pink-600">Luxury Hotels</span>
+              2024&apos;s Finest <span className="text-pink-600">Luxury Hotels</span>
             </h2>
             <p className="text-gray-600">
-              Discover our curated collection of China's most prestigious hotels and resorts
+              Discover our curated collection of China&apos;s most prestigious hotels and resorts
             </p>
           </div>
 

@@ -26,8 +26,12 @@ export default function SignIn() {
       await signin(formData.email, formData.password);
       setIsLoggedIn(true);
       router.push('/');
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'An error occurred');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'An error occurred');
+      } else {
+        setError('An unexpected error occurred');
+      }
     } finally {
       setLoading(false);
     }
@@ -71,7 +75,7 @@ export default function SignIn() {
           </form>
 
           <p className="text-center mt-6 text-gray-600">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/sign-up" className="text-pink-600 hover:text-pink-700">
               Sign Up
             </Link>

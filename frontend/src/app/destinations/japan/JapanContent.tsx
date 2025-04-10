@@ -2,18 +2,18 @@
 
 import LazySection from '@/components/LazySection';
 import Image from 'next/image';
-import Link from 'next/link';
-import { 
-  BuildingLibraryIcon,
-  GlobeAltIcon,
-  CalendarIcon,
-  SparklesIcon,
-  UserGroupIcon,
-  HeartIcon,
-  CakeIcon,
-  MapIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
+// import Link from 'next/link';
+// import { 
+//   BuildingLibraryIcon,
+//   GlobeAltIcon,
+//   CalendarIcon,
+//   SparklesIcon,
+//   UserGroupIcon,
+//   HeartIcon,
+//   CakeIcon,
+//   MapIcon,
+//   StarIcon
+// } from '@heroicons/react/24/outline';
 
 export default function JapanContent() {
   return (
@@ -44,10 +44,10 @@ export default function JapanContent() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
-              2024's Finest <span className="text-pink-600">Luxury Stays</span>
+              2024&apos;s Finest <span className="text-pink-600">Luxury Stays</span>
             </h2>
             <p className="text-gray-600">
-              From traditional ryokans to modern luxury hotels, discover Japan's most exclusive accommodations
+              From traditional ryokans to modern luxury hotels, discover Japan&apos;s most exclusive accommodations
             </p>
           </div>
 

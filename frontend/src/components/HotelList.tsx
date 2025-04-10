@@ -44,7 +44,7 @@ const HotelList = () => {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h2 className="text-sm text-blue-600 mb-2">Limited time offers</h2>
-            <h1 className="text-3xl font-bold">Today's Best Deals</h1>
+            <h1 className="text-3xl font-bold">Today&apos;s Best Deals</h1>
           </div>
           <Link 
             href="/hotels"

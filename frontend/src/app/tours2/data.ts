@@ -1,10 +1,16 @@
-import { FaCamera, FaMapMarkerAlt, FaUtensils, FaBinoculars, FaChartLine } from "react-icons/fa";
+import {
+  // FaCamera,
+  FaMapMarkerAlt,
+  FaUtensils,
+  FaBinoculars,
+  FaChartLine
+} from "react-icons/fa";
 
 export const tourData = {
   title: "Grand Tour of Sri Lanka",
   subtitle: "17 Day Escorted Tour",
   location: "Sri Lanka, Indian Ocean",
-  
+
   quickFacts: [
     { icon: FaMapMarkerAlt, text: "Sri Lanka, Indian Ocean" },
     { icon: FaUtensils, text: "44 Meals Included" },

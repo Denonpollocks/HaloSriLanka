@@ -1,21 +1,21 @@
 "use client";
 
-import LazySection from '@/components/LazySection';
+// import LazySection from '@/components/LazySection';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
   PaperAirplaneIcon, 
   CalendarIcon,
-  GlobeAsiaAustraliaIcon,
+  // GlobeAsiaAustraliaIcon,
   TicketIcon,
   IdentificationIcon,
-  PlusIcon,
-  MinusIcon,
+  // PlusIcon,
+  // MinusIcon,
   CheckIcon,
-  TrophyIcon,
-  UserGroupIcon,
-  BeakerIcon,
-  HomeModernIcon
+  // TrophyIcon,
+  // UserGroupIcon,
+  // BeakerIcon,
+  // HomeModernIcon
 } from '@heroicons/react/24/outline';
 
 export default function MalaysiaContent() {

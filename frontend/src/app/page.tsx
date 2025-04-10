@@ -60,26 +60,26 @@ const popularDestinations = [
   },
 ];
 
-const travelServices = [
-  {
-    title: 'Customized Itineraries',
-    description: 'We tailor your journey to your preferences and interests',
-    backContent: 'Get personalized travel plans crafted by our expert team, including accommodations, activities, and local experiences.',
-    icon: ''
-  },
-  {
-    title: 'Visa Assistance',
-    description: 'We assist you with visa applications for your dream destinations',
-    backContent: 'Complete visa support including document preparation, application filing, and status tracking.',
-    icon: ''
-  },
-  {
-    title: 'Travel Insurance',
-    description: 'We provide comprehensive travel insurance to protect your journey',
-    backContent: 'Coverage for medical emergencies, trip cancellations, lost baggage, and other travel-related incidents.',
-    icon: ''
-  },
-];
+// const travelServices = [
+//   {
+//     title: 'Customized Itineraries',
+//     description: 'We tailor your journey to your preferences and interests',
+//     backContent: 'Get personalized travel plans crafted by our expert team, including accommodations, activities, and local experiences.',
+//     icon: ''
+//   },
+//   {
+//     title: 'Visa Assistance',
+//     description: 'We assist you with visa applications for your dream destinations',
+//     backContent: 'Complete visa support including document preparation, application filing, and status tracking.',
+//     icon: ''
+//   },
+//   {
+//     title: 'Travel Insurance',
+//     description: 'We provide comprehensive travel insurance to protect your journey',
+//     backContent: 'Coverage for medical emergencies, trip cancellations, lost baggage, and other travel-related incidents.',
+//     icon: ''
+//   },
+// ];
 
 const testimonials = [
   {
@@ -179,7 +179,7 @@ export default function Home() {
 
       <section className="mt-20 mb-20" aria-label="Hero Section">
         <div className="relative grid grid-cols-1 md:grid-cols-2 items-center justify-center">
-          <div className="relative h-[400px] w-full overflow-hidden hidden md:block">
+          <div className="relative h-[400px] w-[624px] overflow-hidden hidden md:block 2xl:ml-20">
             <Image
               src='/hero/Home/h1.png'
               alt="Luxury holiday destinations for 2025"
@@ -203,7 +203,7 @@ export default function Home() {
             </div>
             <div className="ml-4">
               <p className="mt-6 text-gray-500 max-w-xl text-sm hidden md:block">
-                Why stay in one place when there's a whole world to explore? From breathtaking landscapes to rich cultural experiences, we connect you to destinations across the globe. Start your next adventure today and let's make memories that last a lifetime!
+                Why stay in one place when there&apos;s a whole world to explore? From breathtaking landscapes to rich cultural experiences, we connect you to destinations across the globe. Start your next adventure today and let&apos;s make memories that last a lifetime!
               </p>
               <p className="mt-6 text-gray-500 max-w-xl text-sm md:hidden">
                 Why stay in one place when the world awaits? Explore breathtaking landscapes and rich cultures—your adventure starts now!
@@ -264,7 +264,7 @@ export default function Home() {
           <div className="flex justify-between items-center mb-8">
             <div>
               <h2 className="text-sm text-blue-600 mb-2">Limited time offers</h2>
-              <h3 className="text-3xl font-bold">Today's Best Deals</h3>
+              <h3 className="text-3xl font-bold">Today&apos;s Best Deals</h3>
             </div>
             <Link 
               href="/hotels"

@@ -60,6 +60,12 @@ export default function TourPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isSticky) {
+      console.log("Price card is sticky", isSticky);
+    }
+  }, [isSticky]);
+
   return (
     <div className="w-full">
       {/* Hero Image Section */}
@@ -161,7 +167,7 @@ export default function TourPage() {
                 incredible variety of highlights from undiscovered pristine beaches
                 in the East, to ancient civilizations and sacred pilgrimage sites in
                 the Cultural Triangle. Journey high up into the tea plantations of
-                Sri Lanka's hill country...
+                Sri Lanka&apos;s hill country...
               </p>
               <button className="text-pink-600 font-medium hover:text-pink-700 mt-2 flex items-center gap-1">
                 Read more 

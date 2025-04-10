@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   // Await the params object before accessing its properties
   const resolvedParams = await params;
   const tour = await getTourBySlug(resolvedParams.slug);
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // Page component
-export default async function TourPage({ params }: { params: { slug: string } }) {
+export default async function TourPage({ params }: { params: Promise<{ slug: string }> }) {
   // Await the params object before accessing its properties
   const resolvedParams = await params;
   const tourData = await getTourBySlug(resolvedParams.slug);

@@ -15,44 +15,44 @@ export const metadata = {
   keywords: 'Malaysia visa, eVisa Malaysia, visa application, tourist visa Malaysia, business visa Malaysia',
 };
 
-const visaTypes = [
-  {
-    title: 'eVisa Tourist',
-    price: '£79',
-    processingTime: '4-7 business days',
-    features: [
-      'Single entry visa',
-      'Valid for 30 days',
-      'Online application',
-      'No embassy visit required',
-      'Express processing available'
-    ]
-  },
-  {
-    title: 'Multiple Entry Visa',
-    price: '£149',
-    processingTime: '7-10 business days',
-    features: [
-      'Multiple entries allowed',
-      'Valid for up to 1 year',
-      'Business & tourism',
-      'Extended stay options',
-      'Priority processing'
-    ]
-  },
-  {
-    title: 'Social Visit Pass',
-    price: '£129',
-    processingTime: '5-7 business days',
-    features: [
-      'Long-term stay option',
-      'Family visit purposes',
-      'Multiple entry included',
-      'Extension possible',
-      'Comprehensive support'
-    ]
-  }
-]; 
+// const visaTypes = [
+//   {
+//     title: 'eVisa Tourist',
+//     price: '£79',
+//     processingTime: '4-7 business days',
+//     features: [
+//       'Single entry visa',
+//       'Valid for 30 days',
+//       'Online application',
+//       'No embassy visit required',
+//       'Express processing available'
+//     ]
+//   },
+//   {
+//     title: 'Multiple Entry Visa',
+//     price: '£149',
+//     processingTime: '7-10 business days',
+//     features: [
+//       'Multiple entries allowed',
+//       'Valid for up to 1 year',
+//       'Business & tourism',
+//       'Extended stay options',
+//       'Priority processing'
+//     ]
+//   },
+//   {
+//     title: 'Social Visit Pass',
+//     price: '£129',
+//     processingTime: '5-7 business days',
+//     features: [
+//       'Long-term stay option',
+//       'Family visit purposes',
+//       'Multiple entry included',
+//       'Extension possible',
+//       'Comprehensive support'
+//     ]
+//   }
+// ]; 
 
 export default function MalaysiaVisa() {
     return (
@@ -60,7 +60,7 @@ export default function MalaysiaVisa() {
         {/* Hero Section */}
         <header className="relative h-[70vh] flex items-center">
           <Image
-            src="/images/visa-services/malaysia/hero.jpg"
+            src="/images/visa-hero/Malaysia.png"
             alt="Malaysian Cityscape"
             fill
             className="object-cover"
@@ -90,7 +90,7 @@ export default function MalaysiaVisa() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-6">Malaysia eVisa Processing Services</h2>
               <p className="text-gray-700 mb-4">
-                Malaysia's eVisa system offers a streamlined digital application process for tourists, business visitors, and long-term stays. Our expert visa services ensure a smooth and efficient application process, whether you&apos;re planning a tropical vacation, business meetings, or extended stay in Malaysia.
+                Malaysia&apos;s eVisa system offers a streamlined digital application process for tourists, business visitors, and long-term stays. Our expert visa services ensure a smooth and efficient application process, whether you&apos;re planning a tropical vacation, business meetings, or extended stay in Malaysia.
               </p>
             </div>
           </div>

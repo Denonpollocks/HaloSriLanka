@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface HighlightProps {
   highlights: {
     title: string;
@@ -16,10 +18,12 @@ export default function Highlights({ highlights }: HighlightProps) {
         {highlights.map((highlight, index) => (
           <div key={index} className="flex items-start gap-4">
             <div className="w-12 h-12 flex-shrink-0">
-              <img
+              <Image
                 src={`/icons/${highlight.icon}.svg`}
                 alt={highlight.title}
                 className="w-full h-full"
+                width={48}
+                height={48}
               />
             </div>
             <div>

@@ -19,13 +19,13 @@ import Script from 'next/script';
 import Breadcrumbs from "@/components/BreadCrumbs";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
-    return greeceHotels.map((hotel) => ({
+  return greeceHotels.map((hotel) => ({
     slug: hotel.slug,
   }));
 }
@@ -35,7 +35,8 @@ async function getHotel(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const hotel = greeceHotels.find((h) => h.slug === params.slug);
+  const resolvedParams = await params;
+  const hotel = greeceHotels.find((h) => h.slug === resolvedParams.slug);
 
   if (!hotel) {
     return {
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function HotelPage({ params }: { params: Promise<Props['params']> | Props['params'] }) {
+export default async function HotelPage({ params }: Props) {
   const resolvedParams = await params;
   const hotel = await getHotel(resolvedParams.slug);
 
@@ -69,7 +70,7 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
   }
 
   const primaryImage = hotel.images[0];
-  
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Hotel",
@@ -111,7 +112,12 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
             </time>
             <div className="flex items-center gap-2">
               <span>Verified by Halo Holidays</span>
-              <img src="/verified-badge.png" alt="Verification Badge" width={16} height={16} />
+              <Image
+                src="/verified-badge.png"
+                alt="Verification Badge"
+                width={16}
+                height={16}
+              />
             </div>
           </div>
         </section>
@@ -131,7 +137,7 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           </div>
         </header>
-        <Breadcrumbs/>
+        <Breadcrumbs />
 
         <main className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-8">
           <div className="flex mt-10 flex-col w-full">
@@ -188,9 +194,9 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl text-gray-900 font-bold mb-6">Need Help Planning Your Stay?</h2>
                 <p className="text-xl text-gray-700 mb-8">Connect with our travel specialists for personalized assistance</p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link 
+                  <Link
                     href="https://wa.me/YOUR_WHATSAPP_NUMBER"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -225,8 +231,8 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
 
         <footer>
           <Suspense fallback={<div className="h-40 bg-gray-50" />}>
-            <SimilarHotels 
-              currentHotelSlug={hotel.slug} 
+            <SimilarHotels
+              currentHotelSlug={hotel.slug}
               city={hotel.city}
               country={hotel.country}
             />

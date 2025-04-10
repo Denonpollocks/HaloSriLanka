@@ -32,6 +32,7 @@ const Footer = () => {
       });
       setFormData({ name: '', email: '' });
     } catch (error) {
+      console.error(error);
       setStatus({
         message: 'Subscription failed. Please try again.',
         type: 'error'

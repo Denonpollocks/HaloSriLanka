@@ -19,9 +19,9 @@ import Script from 'next/script';
 import Breadcrumbs from "@/components/BreadCrumbs";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -35,7 +35,8 @@ async function getHotel(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const hotel = japanHotels.find((h) => h.slug === params.slug);
+  const resolvedParams = await params;
+  const hotel = japanHotels.find((h) => h.slug === resolvedParams.slug);
 
   if (!hotel) {
     return {
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function HotelPage({ params }: { params: Promise<Props['params']> | Props['params'] }) {
+export default async function HotelPage({ params }: Props) {
   const resolvedParams = await params;
   const hotel = await getHotel(resolvedParams.slug);
 
@@ -111,7 +112,12 @@ export default async function HotelPage({ params }: { params: Promise<Props['par
             </time>
             <div className="flex items-center gap-2">
               <span>Verified by Halo Holidays</span>
-              <img src="/verified-badge.png" alt="Verification Badge" width={16} height={16} />
+              <Image
+                src="/verified-badge.png"
+                alt="Verification Badge"
+                width={16}
+                height={16}
+              />
             </div>
           </div>
         </section>
