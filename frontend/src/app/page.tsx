@@ -44,19 +44,19 @@ const popularDestinations = [
     name: 'Maldives',
     description: 'Luxury overwater villas and pristine beaches',
     image: '/images/destinations/maldives/home.png',
-    href: '/maldives'
+    href: '/destinations/maldives'
   },
   {
-    name: 'Paris, France',
+    name: 'France',
     description: 'Iconic Eiffel Tower and romantic walks by the Seine',
     image: '/images/destinations/france/home.png',
-    href: '/paris'
+    href: '/destinations/france'
   },
   {
-    name: 'Tokyo, Japan',
+    name: 'Japan',
     description: 'Traditional gardens and modern skyscrapers',
     image: '/images/destinations/japan/home.png',
-    href: '/tokyo'
+    href: '/destinations/japan'
   },
 ];
 

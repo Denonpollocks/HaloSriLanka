@@ -44,60 +44,84 @@ const values = [
 // Team members data
 const teamMembers = [
   {
-    name: 'David Chen',
-    title: 'Asia Specialist',
-    experience: '15+ years',
-    expertise: ['Luxury Travel', 'Cultural Experiences', 'Adventure Tours'],
-    image: '/images/experts/david-chen.jpg',
-    bio: 'David has traveled extensively throughout Asia, living in Thailand for 5 years. His insider knowledge helps clients discover authentic experiences beyond the typical tourist routes.'
+    name: 'Kasun Gatamanna',
+    title: 'All-in-One Specialist',
+    experience: '4+ years',
+    expertise: ['Luxury Travel', 'Cultural Experiences', 'Group Tours', 'Squad Trips'],
+    image: '/images/Kasun.png',
+    bio: 'Kasun is a travel enthusiast with a knack for creating unique itineraries. He specializes in group trips and has a deep understanding of Southeast Asian cultures.'
   },
   {
-    name: 'Sophia Martinez',
+    name: 'Mohamed Naveed',
+    title: 'MiddleEast & Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Desert Adventures', 'Luxury Resorts', 'Honeymoon Tours', 'Family Trips'],
+    image: '/images/Naveed.png',
+    bio: 'Mohamed is an expert in Middle Eastern travel, offering unique insights into desert adventures and luxury resorts. He is dedicated to creating unforgettable honeymoon experiences.'
+  },
+  {
+    name: 'Shihaar Gazzaly',
+    title: 'Europe & Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Couple Tours', 'Squad Trips', 'Family Travel', 'Culinary Experiences'],
+    image: '/images/Shihaar.png',
+    bio: 'Shihaar is a passionate traveler who loves to explore new cultures. He specializes in creating unforgettable experiences for couples and families.'
+  },
+  {
+    name: 'Mohamed Naflan',
     title: 'Europe Specialist',
-    experience: '12+ years',
-    expertise: ['City Breaks', 'Historical Tours', 'Culinary Experiences'],
-    image: '/images/experts/sophia-martinez.jpg',
-    bio: 'With a background in art history and a passion for European cuisine, Sophia creates journeys that blend cultural immersion with unforgettable dining experiences.'
+    experience: '1+ years',
+    expertise: ['City Breaks', 'Honeymoon Tours', 'Solo Experiences'],
+    image: '/images/Naflan.png',
+    bio: 'Mohamed is a travel expert with a focus on European destinations. He has a talent for crafting unique city breaks and solo travel experiences.'
   },
   {
-    name: 'Ahmed Hassan',
-    title: 'Middle East Specialist',
-    experience: '10+ years',
-    expertise: ['Desert Adventures', 'Luxury Resorts', 'Cultural Immersion'],
-    image: '/images/experts/ahmed-hassan.jpg',
-    bio: 'Born in Egypt and having worked in Dubais hospitality industry, Ahmed brings authentic insights and exclusive connections to create remarkable Middle Eastern experiences.'
+    name: 'Izam Ismath',
+    title: 'Travel Specialist',
+    experience: '1+ years',
+    expertise: ['Family Trips', 'Luxury Tours', 'Group Travel', 'Corporate Travel'],
+    image: '/images/Izam.png',
+    bio: 'Izam is a travel specialist with a focus on family and group travel. He has a knack for creating unforgettable experiences that cater to diverse interests. Corporate travel is also his forte.'
+  },
+  {
+    name: 'Mathura Manogaren',
+    title: 'Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Solo Travel', 'Historical Adventures', 'Couple Getaways'],
+    image: '/images/Izam.png',
+    bio: 'Mathura is an avid traveler with a passion for history. She specializes in creating unique itineraries that combine culture and adventure.'
   }
 ];
 
 // Company milestones
 const milestones = [
   {
-    year: '2010',
+    year: '2018',
     title: 'Halo Holidays Founded',
     description: 'Started with a focus on Southeast Asian destinations'
   },
   {
-    year: '2013',
+    year: '2019',
     title: 'Expanded to European Destinations',
     description: 'Added specialized team members with European expertise'
   },
   {
-    year: '2016',
+    year: '2022',
     title: 'Responsible Tourism Initiative',
     description: 'Launched our commitment to sustainable travel practices'
   },
   {
-    year: '2019',
+    year: '2023',
     title: 'Travel Excellence Award',
     description: 'Recognized for outstanding customer satisfaction'
   },
   {
-    year: '2022',
+    year: '2024',
     title: 'Digital Transformation',
     description: 'Enhanced online booking experience and virtual consultations'
   },
   {
-    year: '2024',
+    year: '2025',
     title: 'Global Expansion',
     description: 'Now offering expertly curated experiences in over 50 countries'
   }
@@ -211,13 +235,14 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <article key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                  <div className="relative h-64">
+                  <div className="relative h-32 w-32 ml-6 rounded-full overflow-hidden">
                     <Image
                       src={member.image}
                       alt={`${member.name}, ${member.title} at Halo Holidays`}
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover rounded-full"
+                      sizes="128px"
+                      quality={100}
                     />
                   </div>
                   <div className="p-6">

@@ -37,7 +37,7 @@ const destinations = [
     highlights: ['Overwater Bungalows', 'Coral Reefs', 'Water Sports']
   },
   {
-    name: 'Paris, France',
+    name: 'France',
     description: 'Iconic Eiffel Tower and romantic walks by the Seine',
     image: '/images/destinations/France.png',
     featuredImage: '/images/destination-featured/France.png',
@@ -50,7 +50,7 @@ const destinations = [
     highlights: ['Eiffel Tower', 'Louvre Museum', 'Notre-Dame Cathedral']
   },
   {
-    name: 'Tokyo, Japan',
+    name: 'Japan',
     description: 'Traditional gardens and modern skyscrapers',
     image: '/images/destinations/Japan.png',
     featuredImage: '/images/destination-featured/Japan.png',
@@ -75,7 +75,7 @@ const destinations = [
     highlights: ['Burj Khalifa', 'Palm Jumeirah', 'Dubai Mall']
   },
   {
-    name: 'Bali, Indonesia',
+    name: 'Indonesia',
     description: 'Tropical paradise with rich cultural heritage',
     image: '/images/destinations/Bali.png',
     href: '/destinations/indonesia',
@@ -87,7 +87,7 @@ const destinations = [
     highlights: ['Ubud', 'Rice Terraces', 'Temple Tours']
   },
   {
-    name: 'Santorini, Greece',
+    name: 'Greece',
     description: 'Stunning white buildings with blue domes overlooking the sea',
     image: '/images/destinations/Greece.png',
     href: '/destinations/greece',
@@ -99,7 +99,7 @@ const destinations = [
     highlights: ['Oia Sunset', 'Black Sand Beaches', 'Caldera Views']
   },
   {
-    name: 'Istanbul, Turkey',
+    name: 'Turkey',
     description: 'Where East meets West with rich historical sites',
     image: '/images/destinations/Turkey.png',
     href: '/destinations/turkey',
@@ -123,7 +123,7 @@ const destinations = [
     highlights: ['Gardens by the Bay', 'Marina Bay Sands', 'Sentosa Island']
   },
   {
-    name: 'Cairo, Egypt',
+    name: 'Egypt',
     description: 'Ancient pyramids and rich historical heritage',
     image: '/images/destinations/Cairo.png',
     href: '/destinations/egypt',
@@ -135,7 +135,7 @@ const destinations = [
     highlights: ['Pyramids of Giza', 'Egyptian Museum', 'Nile River']
   },
   {
-    name: 'Beijing, China',
+    name: 'China',
     description: 'Imperial palaces and the Great Wall',
     image: '/images/destinations/China.png',
     href: '/destinations/china',
@@ -225,25 +225,46 @@ const travelGuides = [
 // Define travel experts data
 const travelExperts = [
   {
-    name: 'David Chen',
-    title: 'Asia Specialist',
-    experience: '15+ years',
-    expertise: ['Luxury Travel', 'Cultural Experiences', 'Adventure Tours'],
-    image: '/images/1.png'
+    name: 'Kasun Gatamanna',
+    title: 'All-in-One Specialist',
+    experience: '4+ years',
+    expertise: ['Luxury Travel', 'Cultural Experiences', 'Group Tours', 'Squad Trips'],
+    image: '/images/Kasun.png'
   },
   {
-    name: 'Sophia Martinez',
+    name: 'Shihaar Gazzaly',
+    title: 'Europe & Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Couple Tours', 'Squad Trips', 'Family Travel', 'Culinary Experiences'],
+    image: '/images/Shihaar.png'
+  },
+  {
+    name: 'Mohamed Naveed',
+    title: 'MiddleEast & Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Desert Adventures', 'Luxury Resorts', 'Honeymoon Tours', 'Family Trips'],
+    image: '/images/Naveed.png'
+  },
+  {
+    name: 'Mohamed Naflan',
     title: 'Europe Specialist',
-    experience: '12+ years',
-    expertise: ['City Breaks', 'Historical Tours', 'Culinary Experiences'],
-    image: '/images/2.png'
+    experience: '1+ years',
+    expertise: ['City Breaks', 'Honeymoon Tours', 'Solo Experiences'],
+    image: '/images/Naflan.png'
   },
   {
-    name: 'Ahmed Hassan',
-    title: 'Middle East Specialist',
-    experience: '10+ years',
-    expertise: ['Desert Adventures', 'Luxury Resorts', 'Cultural Immersion'],
-    image: '/images/3.png'
+    name: 'Mathura Manogaren',
+    title: 'Asia Specialist',
+    experience: '1+ years',
+    expertise: ['Solo Travel', 'Historical Adventures', 'Couple Getaways'],
+    image: '/images/Izam.png'
+  },
+  {
+    name: 'Izam Ismath',
+    title: 'Travel Specialist',
+    experience: '1+ years',
+    expertise: ['Family Trips', 'Luxury Tours', 'Group Travel', 'Corporate Travel'],
+    image: '/images/Izam.png'
   }
 ];
 

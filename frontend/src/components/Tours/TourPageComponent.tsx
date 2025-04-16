@@ -140,7 +140,7 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
               <button 
                 onClick={() => setIsExpanded(!isExpanded)}
                 className={`text-pink-600 font-medium hover:text-pink-700 flex items-center gap-1 ${
-                  !isExpanded ? 'relative -mt-8' : 'mt-2'
+                  !isExpanded ? 'relative -mt-6' : 'mt-2'
                 }`}
               >
                 {isExpanded ? "Read less" : "Read more"}

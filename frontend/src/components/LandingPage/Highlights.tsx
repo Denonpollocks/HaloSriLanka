@@ -1,12 +1,10 @@
-import Image from "next/image";
-
 interface HighlightsProps {
     highlights: string[];
     mapImage: string;
     mapKey: { label: string; color: string }[];
   }
   
-  export default function Highlights({ highlights, mapImage, mapKey }: HighlightsProps) {
+  export default function Highlights({ highlights }: HighlightsProps) {
     return (
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Trip Highlights</h2>
@@ -21,7 +19,7 @@ interface HighlightsProps {
               ))}
             </ul>
           </div>
-          <div className="relative">
+          {/* <div className="relative">
             <Image src={mapImage} alt="Trip Map" width={500} height={300} className="rounded-lg" />
             <div className="mt-4 space-y-2">
               {mapKey.map((item, index) => (
@@ -31,7 +29,7 @@ interface HighlightsProps {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
