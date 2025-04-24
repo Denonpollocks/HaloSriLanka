@@ -1,6 +1,6 @@
 import Breadcrumbs from '@/components/BreadCrumbs';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 
 const featuredNews = [
@@ -47,25 +47,25 @@ const featuredNews = [
   // Add more news items
 ];
 
-const travelGuides = [
-  {
-    title: 'Ultimate Tokyo Travel Guide 2024',
-    excerpt: 'Everything you need to know about visiting Tokyo...',
-    image: '/images/news/tokyo-guide.jpg',
-    readTime: '8 min read',
-    slug: 'tokyo-travel-guide-2024'
-  },
-  {
-    title: 'Ultimate Tokyo Travel Guide 2024',
-    excerpt: 'Everything you need to know about visiting Tokyo...',
-    image: '/images/news/tokyo-guide.jpg',
-    readTime: '8 min read',
-    slug: 'tokyo-travel-guide-2024'
-  },
+// const travelGuides = [
+//   {
+//     title: 'Ultimate Tokyo Travel Guide 2024',
+//     excerpt: 'Everything you need to know about visiting Tokyo...',
+//     image: '/images/news/tokyo-guide.jpg',
+//     readTime: '8 min read',
+//     slug: 'tokyo-travel-guide-2024'
+//   },
+//   {
+//     title: 'Ultimate Tokyo Travel Guide 2024',
+//     excerpt: 'Everything you need to know about visiting Tokyo...',
+//     image: '/images/news/tokyo-guide.jpg',
+//     readTime: '8 min read',
+//     slug: 'tokyo-travel-guide-2024'
+//   },
  
 
-  // Add more guides
-];
+//   // Add more guides
+// ];
 
 export function generateMetadata() {
   const jsonLd = {
@@ -198,7 +198,7 @@ export default function News() {
       </section>
 
       {/* Travel Guides Section - Magazine Style */}
-      <section className="bg-gray-50 py-16">
+      {/* <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Latest Travel Guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -223,10 +223,10 @@ export default function News() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+      {/* <section className="py-16 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="mb-8 max-w-2xl mx-auto">
@@ -243,7 +243,7 @@ export default function News() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

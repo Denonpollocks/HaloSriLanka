@@ -208,23 +208,23 @@ export default function ChinaDestination() {
               {
                 title: "Aman Summer Palace",
                 location: "Beijing",
-                image: "/images/destinations/china/aman-palace.jpg",
+                image: "/images/destinations/china/1.png",
                 price: "From CNY 8,000 per night"
               },
               {
                 title: "Peninsula Shanghai",
                 location: "Shanghai",
-                image: "/images/destinations/china/peninsula-shanghai.jpg",
+                image: "/images/destinations/china/2.png",
                 price: "From CNY 6,500 per night"
               },
               {
                 title: "Mandarin Oriental Pudong",
                 location: "Shanghai",
-                image: "/images/destinations/china/mandarin-pudong.jpg",
+                image: "/images/destinations/china/3.png",
                 price: "From CNY 5,800 per night"
               }
             ].map((hotel, index) => (
-              <div key={index} className="group cursor-pointer">
+              <div key={index} className="group">
                 <div className="relative h-[300px] rounded-xl overflow-hidden mb-4">
                   <Image
                     src={hotel.image}
@@ -238,7 +238,7 @@ export default function ChinaDestination() {
                     <p className="text-sm opacity-90">{hotel.location}</p>
                   </div>
                 </div>
-                <p className="text-pink-600 font-semibold">{hotel.price}</p>
+                {/* <p className="text-pink-600 font-semibold">{hotel.price}</p> */}
               </div>
             ))}
           </div>

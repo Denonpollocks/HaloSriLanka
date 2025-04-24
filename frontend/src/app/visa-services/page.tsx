@@ -51,32 +51,32 @@ const visaServices = [
   }
 ];
 
-const visaTestimonials = [
-  {
-    name: 'James Wilson',
-    location: 'UK to Australia',
-    comment: 'Seamless visa process for my work permit. The team handled everything professionally and kept me informed throughout.',
-    avatar: '/images/testimonials/visa1.jpg',
-    visaType: 'Work Visa',
-    processingTime: '3 weeks'
-  },
-  {
-    name: 'Maria Rodriguez',
-    location: 'Spain to Canada',
-    comment: 'Got my student visa approved on first try! Their interview preparation service was incredibly helpful.',
-    avatar: '/images/testimonials/visa2.jpg',
-    visaType: 'Student Visa',
-    processingTime: '4 weeks'
-  },
-  {
-    name: 'Ahmed Hassan',
-    location: 'UAE to UK',
-    comment: 'Outstanding support for my family visa application. They made a complex process simple and straightforward.',
-    avatar: '/images/testimonials/visa3.jpg',
-    visaType: 'Family Visa',
-    processingTime: '6 weeks'
-  }
-];
+// const visaTestimonials = [
+//   {
+//     name: 'James Wilson',
+//     location: 'UK to Australia',
+//     comment: 'Seamless visa process for my work permit. The team handled everything professionally and kept me informed throughout.',
+//     avatar: '/images/testimonials/visa1.jpg',
+//     visaType: 'Work Visa',
+//     processingTime: '3 weeks'
+//   },
+//   {
+//     name: 'Maria Rodriguez',
+//     location: 'Spain to Canada',
+//     comment: 'Got my student visa approved on first try! Their interview preparation service was incredibly helpful.',
+//     avatar: '/images/testimonials/visa2.jpg',
+//     visaType: 'Student Visa',
+//     processingTime: '4 weeks'
+//   },
+//   {
+//     name: 'Ahmed Hassan',
+//     location: 'UAE to UK',
+//     comment: 'Outstanding support for my family visa application. They made a complex process simple and straightforward.',
+//     avatar: '/images/testimonials/visa3.jpg',
+//     visaType: 'Family Visa',
+//     processingTime: '6 weeks'
+//   }
+// ];
 
 const specializedCountries = [
   {
@@ -97,36 +97,36 @@ const specializedCountries = [
     description: 'Access to 27 European countries',
     processingTime: '15-20 business days'
   },
-  {
-    name: 'Bali',
-    icon: '🇮🇩',
-    description: 'Indonesian tourist & social visas',
-    processingTime: '3-5 business days'
-  },
-  {
-    name: 'Vietnam',
-    icon: '🇻🇳',
-    description: 'eVisa & visa on arrival',
-    processingTime: '2-4 business days'
-  },
-  {
-    name: 'UK',
-    icon: '🇬🇧',
-    description: 'All visa categories & permits',
-    processingTime: '15-30 business days'
-  },
-  {
-    name: 'Australia',
-    icon: '🇦🇺',
-    description: 'Tourist, student & work visas',
-    processingTime: '20-40 business days'
-  },
-  {
-    name: 'Japan',
-    icon: '🇯🇵',
-    description: 'Tourist & business visas',
-    processingTime: '5-7 business days'
-  }
+  // {
+  //   name: 'Bali',
+  //   icon: '🇮🇩',
+  //   description: 'Indonesian tourist & social visas',
+  //   processingTime: '3-5 business days'
+  // },
+  // {
+  //   name: 'Vietnam',
+  //   icon: '🇻🇳',
+  //   description: 'eVisa & visa on arrival',
+  //   processingTime: '2-4 business days'
+  // },
+  // {
+  //   name: 'UK',
+  //   icon: '🇬🇧',
+  //   description: 'All visa categories & permits',
+  //   processingTime: '15-30 business days'
+  // },
+  // {
+  //   name: 'Australia',
+  //   icon: '🇦🇺',
+  //   description: 'Tourist, student & work visas',
+  //   processingTime: '20-40 business days'
+  // },
+  // {
+  //   name: 'Japan',
+  //   icon: '🇯🇵',
+  //   description: 'Tourist & business visas',
+  //   processingTime: '5-7 business days'
+  // }
 ];
 
 export default function VisaServices() {
@@ -135,7 +135,7 @@ export default function VisaServices() {
       {/* Hero Section */}
       <header className="relative h-[60vh] flex items-center">
         <Image
-          src="/images/visa-services/hero.jpg"
+          src="/images/visa-hero/Hero.png"
           alt="Visa Services and Consultation"
           fill
           className="object-cover"
@@ -273,7 +273,7 @@ export default function VisaServices() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">
             Success <span className="text-pink-600">Stories</span>
@@ -284,14 +284,14 @@ export default function VisaServices() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {visaTestimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 relative">
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 relative"> */}
                 {/* Success Badge */}
-                <div className="absolute -top-4 right-6 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                {/* <div className="absolute -top-4 right-6 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                   Approved ✓
-                </div>
+                </div> */}
 
                 {/* Profile Section */}
-                <div className="flex items-center mb-6">
+                {/* <div className="flex items-center mb-6">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden">
                     <Image
                       src={testimonial.avatar}
@@ -304,33 +304,33 @@ export default function VisaServices() {
                     <h3 className="font-semibold text-lg">{testimonial.name}</h3>
                     <p className="text-gray-600 text-sm">{testimonial.location}</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Visa Details */}
-                <div className="flex gap-4 mb-4 text-sm">
+                {/* <div className="flex gap-4 mb-4 text-sm">
                   <span className="bg-pink-50 text-pink-600 px-3 py-1 rounded-full">
                     {testimonial.visaType}
                   </span>
                   <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
                     {testimonial.processingTime}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Testimonial */}
-                <blockquote className="text-gray-700 mb-4">
+                {/* <blockquote className="text-gray-700 mb-4">
                   &quot;{testimonial.comment}&quot;
-                </blockquote>
+                </blockquote> */}
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 text-yellow-400">
+                {/* <div className="flex items-center gap-1 text-yellow-400">
                   {"★".repeat(5)}
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Video Testimonial Preview */}
-          <div className="mt-16 relative rounded-2xl overflow-hidden">
+          {/* <div className="mt-16 relative rounded-2xl overflow-hidden">
             <div className="aspect-video relative">
               <Image
                 src="/images/visa-services/video-testimonial.jpg"
@@ -350,7 +350,7 @@ export default function VisaServices() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Countries We Specialize In Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -364,7 +364,7 @@ export default function VisaServices() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specializedCountries.map((country, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100">
                 <div className="flex items-center gap-4 mb-4">
@@ -397,7 +397,7 @@ export default function VisaServices() {
           <h2 className="text-3xl text-pink-600 font-bold mb-6">Start Your Visa Application</h2>
           <p className="text-xl text-gray-700 mb-8">Contact our visa specialists for a free consultation</p>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="inline-block bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors"
           >
             Get Started

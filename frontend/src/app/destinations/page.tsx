@@ -173,32 +173,32 @@ const destinations = [
 ];
 
 // Define travel guides data
-const travelGuides = [
-  {
-    title: 'Ultimate Maldives Guide',
-    description: 'Everything you need to know for a perfect Maldives getaway',
-    image: '/images/guides/maldives-guide.jpg',
-    href: '/travel-guide/maldives',
-    expertName: 'Sarah Williams',
-    experience: '10+ years'
-  },
-  {
-    title: 'Exploring Southeast Asia',
-    description: 'Navigate the diverse cultures and landscapes of Southeast Asia',
-    image: '/images/guides/southeast-asia.jpg',
-    href: '/travel-guide/southeast-asia',
-    expertName: 'Michael Chen',
-    experience: '12+ years'
-  },
-  {
-    title: 'European City Breaks',
-    description: 'Make the most of short trips to Europe\'s most captivating cities',
-    image: '/images/guides/europe-cities.jpg',
-    href: '/travel-guide/european-cities',
-    expertName: 'Emma Johnson',
-    experience: '8+ years'
-  }
-];
+// const travelGuides = [
+//   {
+//     title: 'Ultimate Maldives Guide',
+//     description: 'Everything you need to know for a perfect Maldives getaway',
+//     image: '/images/guides/maldives-guide.jpg',
+//     href: '/travel-guide/maldives',
+//     expertName: 'Sarah Williams',
+//     experience: '10+ years'
+//   },
+//   {
+//     title: 'Exploring Southeast Asia',
+//     description: 'Navigate the diverse cultures and landscapes of Southeast Asia',
+//     image: '/images/guides/southeast-asia.jpg',
+//     href: '/travel-guide/southeast-asia',
+//     expertName: 'Michael Chen',
+//     experience: '12+ years'
+//   },
+//   {
+//     title: 'European City Breaks',
+//     description: 'Make the most of short trips to Europe\'s most captivating cities',
+//     image: '/images/guides/europe-cities.jpg',
+//     href: '/travel-guide/european-cities',
+//     expertName: 'Emma Johnson',
+//     experience: '8+ years'
+//   }
+// ];
 
 // Define testimonials data
 // const testimonials = [
@@ -257,7 +257,7 @@ const travelExperts = [
     title: 'Asia Specialist',
     experience: '1+ years',
     expertise: ['Solo Travel', 'Historical Adventures', 'Couple Getaways'],
-    image: '/images/Izam.png'
+    image: '/images/Mathura.png'
   },
   {
     name: 'Izam Ismath',
@@ -483,7 +483,7 @@ export default function DestinationsPage() {
         </section>
 
         {/* Travel Guides Section */}
-        <section id="travel-guides" className="py-16 bg-white">
+        {/* <section id="travel-guides" className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Expert <span className="text-pink-600">Travel Guides</span>
@@ -529,7 +529,7 @@ export default function DestinationsPage() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Travel Experts Section */}
         <section className="py-16 bg-gray-50">
@@ -691,13 +691,13 @@ export default function DestinationsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
-                  <div className="ml-4">
-                    <cite className="font-semibold text-lg">Sarah & James</cite>
-                    <p className="text-gray-600">Maldives Honeymoon</p>
+                  <div className="ml-1">
+                    <cite className="font-semibold text-lg">Sajanee Charithma</cite>
+                    <p className="text-gray-600">Singapore Holiday</p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  &quot;Our Maldives honeymoon was absolute perfection. The overwater villa exceeded our expectations, and every detail was taken care of. Truly the trip of a lifetime!&quot;
+                  &quot;Our experience with Halo holidays was wonderful! Mr. Naveed was very helpful with planning our trip to Singapore from booking flights to finalizing our travel itinerary, giving us various options to choose. He handled our tour with much professionalism and we are looking forward to plan our next tour with Halo holidays!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -708,13 +708,13 @@ export default function DestinationsPage() {
 
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
-                  <div className="ml-4">
-                    <cite className="font-semibold text-lg">David & Family</cite>
-                    <p className="text-gray-600">Thailand Adventure</p>
+                  <div className="ml-1">
+                    <cite className="font-semibold text-lg">Anne Mendis</cite>
+                    <p className="text-gray-600">Nepal and Thailand</p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  &quot;From the bustling streets of Bangkok to the serene beaches of Phuket, our family trip to Thailand was perfectly balanced. The kids still talk about the elephant sanctuary!&quot;
+                  &quot;I recently booked trips to Nepal and Thailand with Halo Holidays, and the experience so far has been great! Shihaar has been incredibly helpful, responsive, and attentive to my requirements, ensuring everything is tailored to my needs. Though I haven’t traveled yet, their professionalism and support have made the planning process smooth and hassle-free. Looking forward to the trips—highly recommend their service!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
@@ -725,13 +725,13 @@ export default function DestinationsPage() {
 
               <blockquote className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
-                  <div className="ml-4">
-                    <cite className="font-semibold text-lg">Michelle</cite>
-                    <p className="text-gray-600">Greek Island Hopping</p>
+                  <div className="ml-1">
+                    <cite className="font-semibold text-lg">Nirmani Wickramasinghe</cite>
+                    <p className="text-gray-600">Malaysia Holiday</p>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  &quot;Island hopping in Greece was a dream come true. The local recommendations for restaurants were spot on, and the boutique hotels had incredible views. Can&apos;t wait to book my next trip!&quot;
+                  &quot;I had an excellent experience working with Shihaar throughout the entire ticketing process. From start to finish, he was incredibly attentive and responsive, addressing all my questions and inquiries with patience and professionalism. His prompt communication and thorough assistance made the entire process smooth and stress-free. I truly appreciated his dedication to ensuring I had all the information I needed. Highly recommend Shihaar for his outstanding customer service!&quot;
                 </p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (

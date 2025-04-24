@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ReviewsContent from '../../components/ReviewsContent';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews & Testimonials | Halo Holidays',
@@ -9,90 +10,76 @@ export const metadata: Metadata = {
 
 const textReviews = [
   {
-    name: 'Emma Wilson',
-    location: 'Australia',
+    name: 'Sanduni Nimeshika Gunawardana',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'The attention to detail in planning our family vacation was exceptional. Every aspect was perfectly coordinated.',
-    date: '2024-03-10'
+    review: 'We had an amazing time on our Dubai tour! Everything was smooth from start to finish – the Marina Dhow Cruise, City Tour, Burj Khalifa, Dubai Mall, and especially the thrilling Desert Safari were all unforgettable experiences. This trip was truly memorable, and we\'re so glad we got to experience the best of Dubai without any stress!',
+    date: '2025-04-14'
   },
   {
-    name: 'Emma Wilson',
-    location: 'Australia',
+    name: 'Sajjaad Ahamed',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'The attention to detail in planning our family vacation was exceptional. Every aspect was perfectly coordinated.',
-    date: '2024-03-10'
+    review: 'I had a fantastic experience with Halo Holidays. From start to finish, their customer service was outstanding. Naveed, in particular, was excellent—he went above and beyond to ensure my visa application was successfully submitted and kept me informed every step of the way. I truly appreciated the constant updates and personal attention.',
+    date: '2025-04-11'
   },
   {
-    name: 'Emma Wilson',
-    location: 'Australia',
+    name: 'Shashika Radalage',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'The attention to detail in planning our family vacation was exceptional. Every aspect was perfectly coordinated.',
-    date: '2024-03-10'
+    review: 'Thank you so much for arranging the Singapore tour it was wonderfully organized right from the very first call I made. Every detail was handled with such care and professionalism. I truly appreciated how promptly you responded to all my questions, always in a friendly and helpful manner.',
+    date: '2025-04-11'
   },
   // Add more text reviews
 ];
 
 const photoReviews = [
   {
-    name: 'David Chen',
-    location: 'Singapore',
+    name: 'Praba Devi',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'Our Maldives trip was a dream come true!',
-    image: '/images/reviews/maldives-review.jpg',
+    review: 'I enjoyed each and every aspect of the tour.  I would recommend Halo Holidays to anyone who looks out for an exciting tour.',
+    image: '/images/reviews/TM1.png',
     profilePic: '/images/reviews/david.jpg',
     date: '2024-03-15'
   },
   {
-    name: 'David Chen',
-    location: 'Singapore',
+    name: 'Sachira De Silva',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'Our Maldives trip was a dream come true!',
-    image: '/images/reviews/maldives-review.jpg',
+    review: 'Overall, we are very happy with their service and we will get more services from then in future.',
+    image: '/images/reviews/TM2.png',
     profilePic: '/images/reviews/david.jpg',
     date: '2024-03-15'
   },
   {
-    name: 'David Chen',
-    location: 'Singapore',
+    name: 'Sanjana De Zoysa',
+    location: 'Sri Lanka',
     rating: 5,
-    review: 'Our Maldives trip was a dream come true!',
-    image: '/images/reviews/maldives-review.jpg',
+    review: 'An unforgettable experience! We look forward to planning our next adventure with you.',
+    image: '/images/reviews/TM3.png',
     profilePic: '/images/reviews/david.jpg',
     date: '2024-03-15'
   },
   // Add more photo reviews
 ];
 
-const videoReviews = [
-  {
-    name: 'Sarah & James',
-    location: 'United Kingdom',
-    thumbnail: '/images/reviews/video-thumb1.jpg',
-    videoUrl: '/videos/testimonial1.mp4',
-    title: 'Our Amazing Sri Lankan Adventure'
-  },
-  {
-    name: 'Sarah & James',
-    location: 'United Kingdom',
-    thumbnail: '/images/reviews/video-thumb1.jpg',
-    videoUrl: '/videos/testimonial1.mp4',
-    title: 'Our Amazing Sri Lankan Adventure'
-  },
-  // Add more video reviews
-];
-
 export default function Reviews() {
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-pink-600 to-purple-600 py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            What Our Travelers Say
-          </h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Authentic experiences shared by our valued customers
-          </p>
+
+      <section className="relative py-10 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 mt-20">
+              What Our <span className="text-pink-600">Travelers</span> Say
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 mb-8">
+              Authentic experiences shared by our valued customers
+            </p>
+          </div>
         </div>
       </section>
 
@@ -139,17 +126,18 @@ export default function Reviews() {
                     alt={`Travel experience by ${review.name}`}
                     fill
                     className="object-cover"
+                    quality={100}
                   />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <Image
+                    {/* <Image
                       src={review.profilePic}
                       alt={review.name}
                       width={48}
                       height={48}
                       className="rounded-full"
-                    />
+                    /> */}
                     <div>
                       <h3 className="font-bold">{review.name}</h3>
                       <p className="text-gray-600 text-sm">{review.location}</p>
@@ -165,36 +153,7 @@ export default function Reviews() {
 
       {/* Video Reviews */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Video <span className="text-pink-600">Testimonials</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {videoReviews.map((review, index) => (
-              <div key={index} className="relative rounded-lg overflow-hidden shadow-lg">
-                <div className="relative h-80">
-                  <Image
-                    src={review.thumbnail}
-                    alt={review.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-pink-600 text-4xl">▶</span>
-                    </button>
-                  </div>
-                </div>
-                <div className="p-4 bg-white">
-                  <h3 className="font-bold text-lg">{review.title}</h3>
-                  <p className="text-gray-600">
-                    {review.name} from {review.location}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ReviewsContent />
       </section>
     </main>
   );

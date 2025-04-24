@@ -21,7 +21,7 @@ export const sendContactEmail = async (req: Request, res: Response) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: 'saad@haloflights.co.uk',
       subject: `Contact Form: ${subject}`,
       html: `
         <h3>New Contact Form Submission</h3>

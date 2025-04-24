@@ -5,6 +5,8 @@ import cors from 'cors';
 import authRoutes from './routes/auth.routes';
 import newsletterRoutes from './routes/newsletter.routes';
 import contactRoutes from './routes/contact.routes';
+import hotelEnquiryRoutes from './routes/hotel-enquiry.routes';
+import tripPlanRoutes from './routes/trip-plan.routes';
 
 dotenv.config();
 
@@ -33,4 +35,6 @@ mongoose.connect(process.env.MONGODB_URI!)
 
 app.use('/api/auth', authRoutes);
 app.use('/api/newsletter', newsletterRoutes);
-app.use('/api/contact', contactRoutes); 
+app.use('/api/contact', contactRoutes);
+app.use('/api/hotel-enquiry', hotelEnquiryRoutes);
+app.use('/api/trip-plan', tripPlanRoutes); 

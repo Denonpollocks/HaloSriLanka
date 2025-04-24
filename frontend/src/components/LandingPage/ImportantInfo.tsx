@@ -48,7 +48,7 @@ export default function ImportantInformation({ title, items }: ImportantInformat
               </span>
             </button>
             {openIndex === index && (
-              <div className="p-5 text-gray-600 leading-relaxed border-t border-pink-100">
+              <div className="p-5 text-gray-600 leading-relaxed">
                 {item.content}
               </div>
             )}

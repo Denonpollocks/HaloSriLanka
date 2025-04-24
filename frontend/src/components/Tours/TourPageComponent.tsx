@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { TourData } from "@/types/tours";
 import Image from "next/image";
 // import Link from "next/link";
-import { FaCamera, FaMapMarkerAlt, FaUtensils, FaBinoculars, FaChartLine, FaChevronDown } from "react-icons/fa";
+import { FaMapMarkerAlt, FaUtensils, FaBinoculars, FaChartLine, FaChevronDown, FaPlane, FaRoute } from "react-icons/fa";
 import PriceCard from "@/components/LandingPage/PriceCard";
 import HighlightsSection from "@/components/LandingPage/Highlights";
 import ItinerarySection from "@/components/LandingPage/Itinerary";
 import WhatsIncluded from "@/components/LandingPage/WhatsIncluded";
-import PricesTable from "@/components/LandingPage/DatesAndPrice";
+// import PricesTable from "@/components/LandingPage/DatesAndPrice";
 import Accommodation from "@/components/LandingPage/Accomodation";
 import TourTestimonials from "@/components/LandingPage/TourTestimonial";
 import ImportantInformation from "@/components/LandingPage/ImportantInfo";
@@ -20,17 +20,17 @@ import Breadcrumbs from "../BreadCrumbs";
 const sections = [
   { id: "highlights", label: "Highlights" },
   { id: "itinerary", label: "Itinerary" },
-  { id: "prices", label: "Dates & Prices" },
+  // { id: "prices", label: "Dates & Prices" },
   { id: "accommodation", label: "Accommodation" },
   { id: "testimonials", label: "Reviews" },
   { id: "important-information", label: "Important Info" }
 ];
 
 const iconMapping: Record<string, IconType> = {
-  location: FaMapMarkerAlt,
+  flights: FaPlane,
   meals: FaUtensils,
   excursions: FaBinoculars,
-  pace: FaChartLine
+  transfers: FaRoute
 };
 
 export default function TourPageComponent({ tourData }: { tourData: TourData }) {
@@ -69,13 +69,13 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <button 
+        {/* <button 
           onClick={() => setIsGalleryOpen(true)}
           className="absolute bottom-6 right-6 bg-white/90 px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-white transition-colors shadow-lg"
         >
           <FaCamera className="w-5 h-5" />
           View {tourData.gallery?.length || 0} Photos
-        </button>
+        </button> */}
       </div>
       <Breadcrumbs/>
       {/* Section Navigation Bar */}
@@ -165,9 +165,9 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
               <WhatsIncluded items={tourData.includedItems} />
             </section>
 
-            <section id="prices">
+            {/* <section id="prices">
               <PricesTable data={tourData.pricesData.years} />
-            </section>
+            </section> */}
 
             <section id="accommodation">
               <Accommodation hotels={tourData.accommodation.hotels} />
@@ -189,7 +189,7 @@ export default function TourPageComponent({ tourData }: { tourData: TourData }) 
         {/* Sticky Price Card */}
         <div className="w-full lg:w-[380px]">
           <div className="sticky pt-20 top-24">
-            <PriceCard price={tourData.price} pdfLink={tourData.pdfLink} nights={tourData.duration} />
+            <PriceCard price={tourData.price} pdfLink={tourData.pdfLink} nights={tourData.duration} destination={tourData.title} />
           </div>
         </div>
       </div>

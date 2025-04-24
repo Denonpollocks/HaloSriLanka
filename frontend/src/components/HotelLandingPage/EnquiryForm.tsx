@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
+import { sendHotelEnquiry } from '@/services/hotel-enquiry.service';
 
 interface EnquiryFormProps {
   hotelName: string;
@@ -18,12 +19,47 @@ export default function EnquiryForm({ hotelName, onClose }: EnquiryFormProps) {
     guests: '1',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{ message: string; type: 'success' | 'error' | '' }>({
+    message: '',
+    type: ''
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', { hotelName, ...formData });
-    onClose();
+    setLoading(true);
+    try {
+      await sendHotelEnquiry({
+        hotelName,
+        ...formData
+      });
+      setStatus({
+        message: 'Thank you for your enquiry. We will get back to you soon!',
+        type: 'success'
+      });
+      // Clear form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        checkIn: '',
+        checkOut: '',
+        guests: '1',
+        message: ''
+      });
+      // Close the form after 3 seconds
+      setTimeout(() => {
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error('Enquiry submission error:', error);
+      setStatus({
+        message: 'Failed to send enquiry. Please try again.',
+        type: 'error'
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -37,6 +73,14 @@ export default function EnquiryForm({ hotelName, onClose }: EnquiryFormProps) {
         </button>
         
         <h2 className="text-2xl font-bold mb-4">Enquiry for {hotelName}</h2>
+        
+        {status.message && (
+          <div className={`p-4 rounded-md mb-4 ${
+            status.type === 'success' ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'
+          }`}>
+            {status.message}
+          </div>
+        )}
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -120,9 +164,17 @@ export default function EnquiryForm({ hotelName, onClose }: EnquiryFormProps) {
 
           <button
             type="submit"
-            className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors"
+            disabled={loading}
+            className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors disabled:bg-pink-300"
           >
-            Submit Enquiry
+            {loading ? (
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                <span>Sending...</span>
+              </div>
+            ) : (
+              'Submit Enquiry'
+            )}
           </button>
         </form>
       </div>

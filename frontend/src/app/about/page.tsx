@@ -32,7 +32,7 @@ const values = [
   {
     icon: HeartIcon,
     title: 'Passion for Travel',
-    description: 'We&rsquo;re travelers ourselves, driven by a genuine love for exploring and sharing the world&rsquo;s wonders.'
+    description: "We're travelers ourselves, driven by a genuine love for exploring and sharing the world's wonders."
   },
   {
     icon: ShieldCheckIcon,
@@ -88,7 +88,7 @@ const teamMembers = [
     title: 'Asia Specialist',
     experience: '1+ years',
     expertise: ['Solo Travel', 'Historical Adventures', 'Couple Getaways'],
-    image: '/images/Izam.png',
+    image: '/images/Mathura.png',
     bio: 'Mathura is an avid traveler with a passion for history. She specializes in creating unique itineraries that combine culture and adventure.'
   }
 ];
@@ -156,10 +156,10 @@ export default function AboutPage() {
 
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gray-50">
+        <section className="relative py-10 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-5xl font-bold mb-6 mt-20">
                 About <span className="text-pink-600">Halo Holidays</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8">
@@ -175,7 +175,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-xl overflow-hidden">
                 <Image
-                  src="/images/about/our-story.jpg"
+                  src="/images/our-story.png"
                   alt="Halo Holidays team planning travel experiences"
                   fill
                   className="object-cover"
@@ -332,7 +332,7 @@ export default function AboutPage() {
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden">
                 <Image
-                  src="/images/about/responsible-tourism.jpg"
+                  src="/images/here3.png"
                   alt="Sustainable tourism practices at Halo Holidays"
                   fill
                   className="object-cover"

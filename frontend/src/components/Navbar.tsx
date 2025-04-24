@@ -13,7 +13,7 @@ const packageLinks = [
   { title: 'Family Packages', href: '/family-packages' },
   { title: '2025 Holidays', href: '/holidays-2025' },
   { title: 'Corporate Packages', href: '/corporate' },
-  { title: 'Visa Free Holidays', href: '/visa-free-holidays' },
+  // { title: 'Visa Free Holidays', href: '/visa-free-holidays' },
 
 ];
 
@@ -35,8 +35,8 @@ const destinationLinks = [
 const moreLinks = [
   { title: 'About Us', href: '/about' },
   { title: 'Contact Us', href: '/contact-us' },
-  { title: 'Blog', href: '/blog' },
-  { title: 'FAQs', href: '/faqs' },
+  // { title: 'Blog', href: '/blog' },
+  // { title: 'FAQs', href: '/faqs' },
 ];
 
 const visaCountries = [

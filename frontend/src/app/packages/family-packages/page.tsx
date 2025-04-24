@@ -5,6 +5,7 @@ import { homeFeatures } from '@/data/features';
 import type { Metadata } from 'next';
 import { familyPackages } from '@/data/familyPackages';
 import Breadcrumbs from '@/components/BreadCrumbs';
+import CouldntFindSection from '@/components/CouldntFindSection';
 
 export const metadata: Metadata = {
   title: 'Family Holiday Packages | Halo Holidays',
@@ -84,7 +85,6 @@ export default function FamilyPackages() {
             </div>
             
           </div>
-          {/* <p className="text-white italic text-center text-blue-400 font-serif text-3xl font-semibold">All you need,<span className="text-pink-300"> Here for you</span></p> */}
         </div>
       </section>
       <Breadcrumbs /> 
@@ -93,6 +93,9 @@ export default function FamilyPackages() {
 
       {/* Packages List */}
       <PackageList packages={familyPackages} />
+
+      {/* Couldn't Find Section */}
+      <CouldntFindSection />
 
       {/* Call to Action */}
       <section className="bg-gray-50 py-16">

@@ -330,7 +330,7 @@ export default function ThailandDestination() {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="relative h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/destinations/thailand/thai-spa.jpg"
+                src="/images/destinations/thailand/wellness.png"
                 alt="Luxury Thai Spa Experience"
                 fill
                 className="object-cover"

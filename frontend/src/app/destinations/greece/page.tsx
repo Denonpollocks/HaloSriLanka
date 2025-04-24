@@ -200,7 +200,7 @@ export default function GreeceDestination() {
       </section>
 
       {/* Luxury Hotels Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-4">
@@ -210,8 +210,6 @@ export default function GreeceDestination() {
               Discover our handpicked collection of Dubai&apos;s finest hotels and resorts
             </p>
           </div>
-
-          {/* Featured Packages Grid - Now using data from hotels.ts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {greeceHotels.slice(0, 3).map((hotel, index) => (
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
@@ -260,7 +258,7 @@ export default function GreeceDestination() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Experiences Section */}
       <section className="py-20 bg-gray-50">
@@ -326,20 +324,20 @@ export default function GreeceDestination() {
               {
                 title: "Fine Dining",
                 desc: "Modern Greek gastronomy",
-                image: "fine-dining.jpg"
+                image: "1.png"
               },
               {
                 title: "Traditional Tavernas",
                 desc: "Authentic local cuisine",
-                image: "taverna.jpg"
+                image: "2.png"
               },
               {
                 title: "Cooking Classes",
                 desc: "Master Greek recipes",
-                image: "cooking-class.jpg"
+                image: "3.png"
               }
             ].map((experience, index) => (
-              <div key={index} className="group relative h-[400px] overflow-hidden rounded-2xl">
+              <div key={index} className="group relative h-[300px] overflow-hidden rounded-2xl">
                 <Image
                   src={`/images/destinations/greece/${experience.image}`}
                   alt={experience.title}

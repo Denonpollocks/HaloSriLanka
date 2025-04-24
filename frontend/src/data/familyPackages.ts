@@ -31,7 +31,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Singapore-Malaysia.jpg",
-        duration: "5 Days",
+        duration: "6 Days",
     },
     {
         title: "Shimla & Manali Escape",
@@ -48,7 +48,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Shimla-Manali.jpg",
-        duration: "5 Days",
+        duration: "7 Days",
     },
     {
         title: "Abu Dhabi & Dubai Adventure",
@@ -65,7 +65,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Abu-Dhabi-Dubai.jpg",
-        duration: "5 Days",
+        duration: "6 Days",
     },
     {
         title: "Malaysia City & Adventure Break",
@@ -82,7 +82,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Malaysia-City.jpg",
-        duration: "5 Days",
+        duration: "4 Days",
     },
     {
         title: "Vietnam Discovery Tour",
@@ -116,7 +116,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Maldives–Triton.jpg",
-        duration: "5 Days",
+        duration: "4 Days",
     },
     {
         title: "Azerbaijan Cultural Explorer",
@@ -133,7 +133,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Azerbaijan.jpg",
-        duration: "5 Days",
+        duration: "6 Days",
     },
     {
         title: "Golden Triangle Tour",
@@ -201,7 +201,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Maldives-Makunudu.jpg",
-        duration: "5 Days",
+        duration: "4 Days",
     },
     {
         title: "Maldives – Medhufushi Island Retreat",
@@ -218,7 +218,7 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Maldives–Medhufushi.jpg",
-        duration: "5 Days",
+        duration: "4 Days",
     },
     {
         title: "Egypt – Ancient Wonders Tour",
@@ -235,6 +235,6 @@
         rating: 4.5,
         reviewCount: 148,
         image: "/images/packages/cards/family/Egypt–Ancient.jpg",
-        duration: "5 Days",
+        duration: "6 Days",
     }
 ]

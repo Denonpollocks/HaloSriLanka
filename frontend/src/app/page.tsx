@@ -4,6 +4,7 @@ import Features from '../components/Features';
 import CardVacations from "../components/CardVacations";
 import { Metadata } from 'next';
 import Script from 'next/script';
+import LogoSlider from '@/components/ui/LogoSlider';
 
 // Add the hotel data directly in the page file
 const hotels = [
@@ -13,7 +14,7 @@ const hotels = [
     description: "A luxurious 5-star resort offering overwater and beach villas in the pristine Vaavu Atoll.",
     rating: 9.2,
     price: 53099,
-    image: "/images/hotels/maldives/cinnamon-velifushi-maldives.jpg",
+    image: "/images/hotels/maldives/Cinnamon-Velifushi-Maldives.jpg",
     amenities: ["Spa", "Pool", "Restaurant", "Bar", "Room service"],
     reviewCount: 3051
   },
@@ -33,7 +34,7 @@ const hotels = [
     description: "Charming 3-star hotel near Disneyland® Paris with family-friendly amenities and a picturesque setting.",
     rating: 7.5,
     price: 22310,
-    image: "/images/hotels/france/campanile-val-de-france.jpg",
+    image: "/images/hotels/france/Campanile-Val-de-France.jpg",
     amenities: ["Spa", "Pool", "Restaurant", "Bar", "Room service"],
     reviewCount: 4600
   },
@@ -83,20 +84,28 @@ const popularDestinations = [
 
 const testimonials = [
   {
-    name: 'Sarah Thompson',
-    location: 'United Kingdom',
-    comment: 'An unforgettable experience with exceptional service',
+    name: 'Manel Weerasinghe',
+    location: 'Sri Lanka',
+    comment: 'I inquired about a Malaysian package, and Mr. Naveed responded promptly, customizing the package to meet my specific preferences. The customer service was exceptional, and I highly recommend their services.',
   },
   {
-    name: 'James Wilson',
-    location: 'Australia',
-    comment: 'The attention to detail and personalized recommendations made our trip perfect',
+    name: 'Lakmali Caldera',
+    location: 'Sri Lanka',
+    comment: 'We worked with Naveed for Dubai Visa and Ticketing. The process was smooth and very efficient. highly recommending them and thank you for your great service.',
   },
   {
-    name: 'Elena Rodriguez',
-    location: 'Spain',
-    comment: 'From booking to return, everything was seamless and stress-free',
+    name: 'Deshani Jayakody',
+    location: 'Sri Lanka',
+    comment: 'I highly recommend Halo Holidays to anyone looking for a smooth and hassle-free process when arranging their overseas tours. I recently contacted Shihaar at Halo Holidays, and I truly appreciated his friendly and prompt response.',
   },
+];
+
+const logos = [
+  { alt: "Standard Chartered", src: "/images/bank/stc.png" },
+  { alt: "NTB", src: "/images/bank/ntb.png" },
+  { alt: "HSBC", src: "/images/bank/hsbc.png" },
+  { alt: "Seylan", src: "/images/bank/seylan.png" },
+  { alt: "NDB", src: "/images/bank/ndb.png" },
 ];
 
 export const metadata: Metadata = {
@@ -215,7 +224,7 @@ export default function Home() {
 
       <section className="py-20" aria-label="Popular Destinations">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-10 text-center">
+          <h2 className="text-3xl font-bold mb-10 text-center">
             Popular <span className="text-pink-600">Destinations</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
@@ -231,7 +240,7 @@ export default function Home() {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-100"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                
+
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-0 p-6 text-white">
@@ -250,8 +259,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-          <h2 className="text-4xl font-bold mb-10 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 bg-gray-50 py-20 rounded-2xl">
+          <h2 className="text-3xl font-bold mb-10 text-center">
             Tailored Travel <span className="text-pink-600">Services</span>
           </h2>
           <CardVacations />
@@ -266,12 +275,12 @@ export default function Home() {
               <h2 className="text-sm text-blue-600 mb-2">Limited time offers</h2>
               <h3 className="text-3xl font-bold">Today&apos;s Best Deals</h3>
             </div>
-            <Link 
+            <Link
               href="/hotels"
               className="text-blue-600 hover:underline flex items-center"
               aria-label="View all hotel deals"
             >
-              View all deals 
+              View all deals
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -288,10 +297,10 @@ export default function Home() {
                       alt={`${hotel.name} - ${hotel.location}`}
                       fill
                       className="object-cover"
-                 
+
                     />
                   </div>
-                  <button 
+                  <button
                     className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white"
                     aria-label="Save to favorites"
                   >
@@ -333,7 +342,7 @@ export default function Home() {
                       <span className="text-gray-600 text-sm"> / night</span>
                       <p className="text-sm text-gray-500">{hotel.reviewCount.toLocaleString()} reviews</p>
                     </div>
-                    <Link 
+                    <Link
                       href={`/hotels/${hotel.name.toLowerCase().replace(/\s+/g, '-')}`}
                       className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
                       aria-label={`View deal for ${hotel.name}`}
@@ -355,14 +364,14 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50 rounded-2xl" aria-label="Client Testimonials">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-9">
+          <h2 className="text-3xl font-bold text-center mb-9">
             What Our <span className="text-pink-600">Travelers Say</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <blockquote key={index} className="p-6 bg-white rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
-                  <div className="ml-4">
+                  <div className="ml-1">
                     <cite className="font-bold block">{testimonial.name}</cite>
                     <span className="text-gray-600 text-sm">{testimonial.location}</span>
                   </div>
@@ -372,14 +381,50 @@ export default function Home() {
             ))}
           </div>
           <div className="flex justify-center mt-9">
-            <Link 
-              href='/reviews' 
+            <Link
+              href='/reviews'
               className='bg-pink-600 text-white p-2 rounded-md hover:bg-pink-700 transition-colors'
               aria-label="Read more customer reviews"
             >
               See More Reviews
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-20 bg-gray-50 rounded-2xl mt-20" aria-label="Payment Partners">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-9">
+            Our <span className="text-pink-600">Payment Partners</span>
+          </h2>
+          <LogoSlider logos={logos} speed={0.5} variant="large" />
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50 rounded-2xl mt-20" aria-label="Combine and Save">
+        <div className="container mx-auto px-4">
+
+          {/* Desktop Image */}
+          <div className="relative w-full h-70 hidden md:block">
+            <Image
+              src="/images/Combine.png"
+              alt="Combine & Save Desktop"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Mobile + Tablet Image */}
+          <div className="relative w-full h-100 block md:hidden">
+            <Image
+              src="/images/Combine-Mobile.png"
+              alt="Combine & Save Mobile"
+              fill
+              className="object-contain"
+            />
+          </div>
+
         </div>
       </section>
     </main>

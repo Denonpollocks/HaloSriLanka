@@ -87,7 +87,7 @@ export const dubaiHotels: Hotel[] = [
         id: "atlantis-the-palm",
         name: "Atlantis The Palm",
         slug: "atlantis-the-palm-dubai",
-        cardImage: "/images/hotels/france/Campanile-Val-De-France.jpg",
+        cardImage: "/images/destinations/dubai/1.png",
         location: "Dubai, UAE",
         city: "Dubai",
         country: "UAE",
@@ -309,7 +309,7 @@ export const dubaiHotels: Hotel[] = [
           lat: 25.1167,
           lng: 55.1386
         },
-        cardImage: "/images/hotels/dubai/NH-Collection-Dubai-The-Palm.jpg",
+        cardImage: "/images/destinations/dubai/2.png",
         images: [
           "/images/hotels/nh-collection-1.jpg",
           "/images/hotels/nh-collection-2.jpg",

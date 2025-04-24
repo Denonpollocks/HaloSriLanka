@@ -24,30 +24,30 @@ const countries = [
     processingTime: '15-20 business days',
     startingPrice: '£189'
   },
-  {
-    name: 'Bali',
-    image: '/images/visa-featured/Bali.png',
-    processingTime: '3-5 business days',
-    startingPrice: '£69'
-  },
-  {
-    name: 'Vietnam',
-    image: '/images/visa-featured/Vietnam.png',
-    processingTime: '2-4 business days',
-    startingPrice: '£49'
-  },
-  {
-    name: 'UK',
-    image: '/images/visa-featured/UK.png',
-    processingTime: '15-30 business days',
-    startingPrice: '£249'
-  },
-  {
-    name: 'Australia',
-    image: '/images/visa-featured/Australia.png',
-    processingTime: '20-40 business days',
-    startingPrice: '£199'
-  }
+  // {
+  //   name: 'Bali',
+  //   image: '/images/visa-featured/Bali.png',
+  //   processingTime: '3-5 business days',
+  //   startingPrice: '£69'
+  // },
+  // {
+  //   name: 'Vietnam',
+  //   image: '/images/visa-featured/Vietnam.png',
+  //   processingTime: '2-4 business days',
+  //   startingPrice: '£49'
+  // },
+  // {
+  //   name: 'UK',
+  //   image: '/images/visa-featured/UK.png',
+  //   processingTime: '15-30 business days',
+  //   startingPrice: '£249'
+  // },
+  // {
+  //   name: 'Australia',
+  //   image: '/images/visa-featured/Australia.png',
+  //   processingTime: '20-40 business days',
+  //   startingPrice: '£199'
+  // }
 ];
 
 export default function VisaCountrySlider() {
@@ -63,7 +63,7 @@ export default function VisaCountrySlider() {
   return (
     <div className="relative">
       {/* Navigation Buttons */}
-      <button
+      {/* <button
         onClick={() => scroll('left')}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur p-2 rounded-full shadow-lg hover:bg-white transition-colors"
       >
@@ -75,12 +75,12 @@ export default function VisaCountrySlider() {
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur p-2 rounded-full shadow-lg hover:bg-white transition-colors"
       >
         <ArrowRightIcon className="w-6 h-6 text-pink-600" />
-      </button>
+      </button> */}
 
       {/* Slider Container */}
       <div 
         ref={sliderRef}
-        className="flex overflow-x-auto scroll-smooth scrollbar-hide gap-6 px-12 pb-4"
+        className="flex overflow-x-auto scroll-smooth scrollbar-hide gap-6 px-12 pb-4 items-center justify-center"
       >
         {countries.map((country, index) => (
           <div 

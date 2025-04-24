@@ -73,7 +73,7 @@ export default function DubaiVisa() {
             Fast, reliable, and hassle-free visa processing for your journey to Dubai
           </p>
           <Link 
-            href="#visa-types"
+            href="/visa-services"
             className="bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-pink-700 transition-colors inline-flex items-center gap-2"
           >
             Explore Visa Types
